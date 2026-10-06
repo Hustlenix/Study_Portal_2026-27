@@ -38,7 +38,7 @@ jobs:
         run: |
           emcc cpp/adaptive_engine.cpp -std=c++17 -O3 \
             -s WASM=1 \
-            -s EXPORTED_FUNCTIONS='["_adaptive_weight","_mastery_score"]' \
+            -s EXPORTED_FUNCTIONS='["_adaptive_weight","_mastery_score","_next_interval_days","_viva_score","_written_self_score"]' \
             -s EXPORTED_RUNTIME_METHODS='["ccall"]' \
             -o engine.js
 

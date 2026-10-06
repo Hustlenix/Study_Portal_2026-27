@@ -1,0 +1,1053 @@
+{
+  "version": "3.0.0",
+  "topics": {
+    "letter": {
+      "title": "The Letter",
+      "category": "Fiction",
+      "lesson": {
+        "summary": "Coachman Ali, once a skilled hunter, becomes deeply sensitive after his daughter Miriam marries and moves away. He waits at the post office every day for a letter from her, enduring mockery from the staff. Before his death he gives Lakshmi Das five gold guineas and asks him to deliver Miriam's letter if it ever arrives. The Postmaster only understands Ali after becoming anxious about his own sick daughter. Miriam's letter finally arrives after Ali's death and is taken to his grave.",
+        "recall": "Hunter → Miriam leaves → daily wait → mockery → five guineas → Ali dies → Postmaster feels the same fear → letter reaches grave.",
+        "themes": [
+          "Parental love",
+          "Hope and patience",
+          "Empathy through suffering",
+          "Human insensitivity",
+          "Emotional transformation"
+        ],
+        "keywords": [
+          "Miriam",
+          "separation",
+          "post office",
+          "five gold guineas",
+          "Lakshmi Das",
+          "Postmaster",
+          "empathy"
+        ],
+        "answer_frame": "State the incident → explain Ali's emotion → connect it to the Postmaster's later experience → end with the theme of empathy."
+      },
+      "flashcards": [
+        {
+          "front": "Who is Miriam?",
+          "back": "Ali's daughter, whose marriage and move away create the separation at the centre of the story."
+        },
+        {
+          "front": "Why does Ali visit the post office daily?",
+          "back": "He keeps hoping for a letter from Miriam despite years of disappointment."
+        },
+        {
+          "front": "What do the five gold guineas show?",
+          "back": "Ali's desperation and the immense emotional value he places on receiving Miriam's letter."
+        },
+        {
+          "front": "What changes the Postmaster?",
+          "back": "Waiting anxiously for news of his own sick daughter makes him experience the pain he once dismissed."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "How does separation transform Ali?",
+          "points": [
+            "He was once an insensitive hunter",
+            "Miriam's absence makes him understand suffering",
+            "He becomes patient, loving and emotionally aware"
+          ],
+          "model": "Separation transforms Ali from a confident hunter into a deeply sensitive father. When Miriam moves away, he experiences the pain of longing himself. This personal suffering awakens tenderness and patience in him, and his daily wait for her letter becomes an expression of enduring parental love."
+        },
+        {
+          "q": "Why is the Postmaster's change important to the story?",
+          "points": [
+            "Initially dismisses Ali",
+            "Faces similar anxiety about his daughter",
+            "Learns empathy through personal experience"
+          ],
+          "model": "The Postmaster's change completes the story's central lesson about empathy. At first he treats Ali's wait as foolish, but when his own daughter is ill he experiences the same helpless anxiety. He can then understand the value of Miriam's letter and the depth of Ali's suffering."
+        }
+      ],
+      "viva": [
+        {
+          "q": "Explain the title The Letter in about 30 seconds.",
+          "keywords": [
+            "letter",
+            "Miriam",
+            "love",
+            "hope",
+            "connection"
+          ],
+          "answer": "The title is appropriate because Miriam's letter is the object around which the entire story revolves. For Ali it represents love, hope and connection with his daughter, so an ordinary piece of paper becomes emotionally priceless."
+        },
+        {
+          "q": "What is the biggest message of The Letter?",
+          "keywords": [
+            "empathy",
+            "suffering",
+            "understand",
+            "others"
+          ],
+          "answer": "The story shows that people often understand another person's pain only after experiencing similar suffering themselves. The Postmaster's personal anxiety finally teaches him empathy."
+        }
+      ]
+    },
+    "shady": {
+      "title": "A Shady Plot",
+      "category": "Fiction",
+      "lesson": {
+        "summary": "John Hallock, a writer known for ghost stories, is asked by his publisher Jenkins for another supernatural tale. He has no idea until a ghost named Helen appears. She says she belongs to a Writers' Inspiration Bureau and that ghosts have been supplying writers with ideas, but they are now on strike because Ouija-board users keep summoning them. John is supposed to stop the Ouija-board craze, yet his wife Lavinia buys one and hosts a party. The board repeatedly produces Helen's name, causing Lavinia to suspect John. Helen eventually appears, the misunderstanding is cleared, and John gets material for another story.",
+        "recall": "Jenkins demands story → writer's block → Helen appears → ghosts on strike → Ouija party → 'Helen' creates jealousy → real ghost appears → misunderstanding ends.",
+        "themes": [
+          "Humour and the supernatural",
+          "Writer's block",
+          "Misunderstanding",
+          "Marriage and trust",
+          "Irony"
+        ],
+        "keywords": [
+          "John Hallock",
+          "Jenkins",
+          "Helen",
+          "Writers' Inspiration Bureau",
+          "Ouija board",
+          "Lavinia"
+        ],
+        "answer_frame": "Identify the comic situation → explain the misunderstanding → show how the supernatural creates both the problem and the solution."
+      },
+      "flashcards": [
+        {
+          "front": "Who is Helen?",
+          "back": "A ghost connected with the Writers' Inspiration Bureau who claims ghosts supply writers with ideas."
+        },
+        {
+          "front": "Why are the ghosts on strike?",
+          "back": "Ouija-board users keep summoning and disturbing them."
+        },
+        {
+          "front": "Why does Lavinia become suspicious?",
+          "back": "The Ouija board repeatedly spells out Helen's name in connection with John."
+        },
+        {
+          "front": "What is the main irony?",
+          "back": "A writer of fictional ghost stories is actually receiving inspiration from a real ghost."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "How does the Ouija board create the main conflict?",
+          "points": [
+            "Lavinia buys it",
+            "Helen's name appears",
+            "Lavinia suspects John",
+            "John cannot explain the truth easily"
+          ],
+          "model": "The Ouija board turns Helen from John's secret supernatural visitor into what appears to Lavinia to be a secret woman. When the board repeatedly produces Helen's name, Lavinia misunderstands the situation and suspects John, creating the comic marital conflict."
+        },
+        {
+          "q": "Why is A Shady Plot humorous rather than frightening?",
+          "points": [
+            "Ghosts behave like workers",
+            "Bureau and strike idea",
+            "Domestic misunderstanding",
+            "Irony"
+          ],
+          "model": "The story treats the supernatural in an ordinary, comic way. Ghosts run an inspiration bureau, go on strike and complain about Ouija users. The real tension comes from a domestic misunderstanding, so the ghostly elements create irony and humour instead of horror."
+        }
+      ],
+      "viva": [
+        {
+          "q": "Why does Helen visit John?",
+          "keywords": [
+            "writer",
+            "inspiration",
+            "Ouija",
+            "stop",
+            "strike"
+          ],
+          "answer": "Helen visits because the ghosts who inspire writers are on strike. She wants John to help stop people from disturbing them through Ouija boards."
+        },
+        {
+          "q": "Give one example of irony in A Shady Plot.",
+          "keywords": [
+            "ghost",
+            "writer",
+            "story",
+            "real"
+          ],
+          "answer": "John writes invented ghost stories, but the story reveals that a real ghost has actually been helping him get ideas. That contradiction is comic irony."
+        }
+      ]
+    },
+    "patol": {
+      "title": "Patol Babu, Film Star",
+      "category": "Fiction",
+      "lesson": {
+        "summary": "Patol Babu, a former stage actor whose life has become ordinary, is thrilled to receive a film role. His excitement turns to disappointment when he learns that his only dialogue is the word 'Oh!'. He then remembers his mentor Gogon Pakrashi, who taught that no role is too small for a true actor. Patol Babu studies the scene, rehearses different shades of the word and times his movement precisely. His performance is excellent. Satisfied with his art, he leaves without waiting for payment.",
+        "recall": "Old acting passion → film chance → only 'Oh!' → disappointment → mentor remembered → detailed rehearsal → perfect take → art over money.",
+        "themes": [
+          "Professionalism",
+          "Dedication",
+          "Artistic integrity",
+          "Preparation",
+          "Inner satisfaction"
+        ],
+        "keywords": [
+          "Patol Babu",
+          "Oh!",
+          "Gogon Pakrashi",
+          "rehearsal",
+          "precision",
+          "artistic satisfaction",
+          "payment"
+        ],
+        "answer_frame": "Mention the small role → show his change in attitude → describe preparation → conclude with artistic integrity."
+      },
+      "flashcards": [
+        {
+          "front": "What is Patol Babu's dialogue?",
+          "back": "A single word: 'Oh!'"
+        },
+        {
+          "front": "Who influences Patol Babu's approach to the role?",
+          "back": "His former mentor, Gogon Pakrashi."
+        },
+        {
+          "front": "How does he prepare?",
+          "back": "He studies the scene, experiments with tone, rehearses movement and times the collision carefully."
+        },
+        {
+          "front": "Why does he leave without payment?",
+          "back": "The satisfaction of performing the role perfectly matters more to him than the small fee."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "How does Patol Babu turn a tiny role into a serious acting challenge?",
+          "points": [
+            "Rejects initial disappointment",
+            "Remembers mentor",
+            "Experiments with dialogue",
+            "Plans timing and movement"
+          ],
+          "model": "Patol Babu stops judging the role by its size and begins treating every detail as an acting problem. He experiments with different ways of saying 'Oh!', studies the situation and times his collision carefully. This preparation allows him to create a convincing performance from almost nothing."
+        },
+        {
+          "q": "What does the ending reveal about Patol Babu?",
+          "points": [
+            "Values craft",
+            "Not motivated mainly by money",
+            "Regains actor identity"
+          ],
+          "model": "By leaving without collecting payment, Patol Babu shows that his deepest reward is artistic satisfaction. The successful take reconnects him with the serious actor he once was, proving that professional pride can matter more than money."
+        }
+      ],
+      "viva": [
+        {
+          "q": "Why is the word 'Oh!' important in the story?",
+          "keywords": [
+            "small",
+            "role",
+            "challenge",
+            "acting",
+            "expression"
+          ],
+          "answer": "The one-word dialogue tests whether Patol Babu can treat a tiny role seriously. He turns 'Oh!' into a full acting challenge by giving it the exact emotion, timing and movement the scene requires."
+        },
+        {
+          "q": "What is Patol Babu's strongest quality?",
+          "keywords": [
+            "professional",
+            "dedication",
+            "preparation",
+            "integrity"
+          ],
+          "answer": "His strongest quality is professionalism. Once he accepts the role, he prepares with complete dedication and refuses to treat a small part carelessly."
+        }
+      ]
+    },
+    "not-marble": {
+      "title": "Not Marble, nor the Gilded Monuments",
+      "category": "Poetry",
+      "lesson": {
+        "summary": "Shakespeare argues that poetry can preserve a person's memory more effectively than grand physical monuments. Stone and gilded memorials can be stained by time or destroyed by war, but the beloved will continue to live through the poem and through future readers. The sonnet therefore presents art as a form of immortality.",
+        "recall": "Monuments look permanent → time damages them → war destroys them → verse survives → beloved lives in memory.",
+        "themes": [
+          "Immortality through poetry",
+          "Art versus time",
+          "Memory",
+          "Fragility of monuments"
+        ],
+        "keywords": [
+          "poetry",
+          "monuments",
+          "time",
+          "war",
+          "memory",
+          "immortality"
+        ],
+        "answer_frame": "Contrast physical monuments with poetry → explain threats of time/war → conclude that verse preserves memory."
+      },
+      "flashcards": [
+        {
+          "front": "What does the poet claim will outlast monuments?",
+          "back": "His poetry, which preserves the beloved's memory."
+        },
+        {
+          "front": "Why mention war?",
+          "back": "War demonstrates that even grand physical structures can be destroyed."
+        },
+        {
+          "front": "What kind of immortality is promised?",
+          "back": "Immortality through remembrance in poetry, not literal physical immortality."
+        },
+        {
+          "front": "What is the main contrast?",
+          "back": "Temporary material monuments versus the enduring power of verse."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "How does Shakespeare establish the superiority of poetry over monuments?",
+          "points": [
+            "Monuments decay",
+            "War destroys material objects",
+            "Poetry preserves memory",
+            "Future readers sustain the beloved"
+          ],
+          "model": "Shakespeare compares physical monuments with verse and shows that stone is vulnerable to time, neglect and war. Poetry, however, can be read by future generations. In that sense the beloved continues to live in memory even after monuments disappear."
+        },
+        {
+          "q": "Why is the sonnet confident in tone?",
+          "points": [
+            "Strong claim for verse",
+            "Challenges time and war",
+            "Promises remembrance"
+          ],
+          "model": "The speaker confidently declares that verse can defeat the forces that destroy material memorials. This certainty gives the sonnet a triumphant tone and turns poetry into a durable form of remembrance."
+        }
+      ],
+      "viva": [
+        {
+          "q": "What is the main idea of Sonnet 55?",
+          "keywords": [
+            "poetry",
+            "outlive",
+            "monuments",
+            "memory"
+          ],
+          "answer": "The sonnet argues that poetry can outlive physical monuments because verse preserves a person's memory even when stone is destroyed by time or war."
+        },
+        {
+          "q": "Why are monuments not truly permanent?",
+          "keywords": [
+            "time",
+            "war",
+            "destroy",
+            "decay"
+          ],
+          "answer": "They are physical objects, so time can wear them down and war can destroy them. Their appearance of permanence is therefore limited."
+        }
+      ]
+    },
+    "ozymandias": {
+      "title": "Ozymandias",
+      "category": "Poetry",
+      "lesson": {
+        "summary": "A traveller describes the broken remains of a colossal statue in a desert. The face still shows the ruler's pride and cold command, which the sculptor captured well. On the pedestal Ozymandias boasts of his greatness, yet nothing of his empire remains around the ruins. The empty landscape makes his words deeply ironic and shows that political power and human pride are temporary.",
+        "recall": "Traveller → broken statue → proud face → sculptor captured character → boast on pedestal → empire gone → empty desert.",
+        "themes": [
+          "Pride",
+          "Impermanence of power",
+          "Time and decay",
+          "Irony",
+          "Art outlasting empire"
+        ],
+        "keywords": [
+          "traveller",
+          "shattered statue",
+          "sneer",
+          "sculptor",
+          "boast",
+          "ruins",
+          "desert"
+        ],
+        "answer_frame": "Describe the ruins → explain the boast → contrast boast with emptiness → state the warning about pride and power."
+      },
+      "flashcards": [
+        {
+          "front": "Who tells the statue story?",
+          "back": "A traveller from an ancient land."
+        },
+        {
+          "front": "What does the face reveal?",
+          "back": "Ozymandias's arrogance, authority and cold command."
+        },
+        {
+          "front": "Why is the pedestal boast ironic?",
+          "back": "The king claims unmatched greatness, but his empire has vanished."
+        },
+        {
+          "front": "What survives better than the empire?",
+          "back": "The sculptor's representation of the ruler's personality."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "How does Shelley use irony to criticize pride?",
+          "points": [
+            "Boastful inscription",
+            "Broken statue",
+            "Nothing remains",
+            "Desert emphasizes emptiness"
+          ],
+          "model": "The pedestal presents Ozymandias as an unbeatable ruler, but the reader sees only broken stone surrounded by emptiness. The sharp contradiction between his boast and the ruins exposes the foolishness of believing political power can be permanent."
+        },
+        {
+          "q": "What role does the sculptor play in the poem's meaning?",
+          "points": [
+            "Captures ruler's expression",
+            "Art preserves personality",
+            "Empire disappears"
+          ],
+          "model": "The sculptor successfully preserves Ozymandias's proud expression in stone. Ironically, the ruler's empire disappears while the artist's representation of his character survives, giving art a longer life than political power."
+        }
+      ],
+      "viva": [
+        {
+          "q": "What is the biggest irony in Ozymandias?",
+          "keywords": [
+            "boast",
+            "greatness",
+            "ruins",
+            "nothing"
+          ],
+          "answer": "Ozymandias boasts that others should look at his works and despair, but nothing remains of those works. The ruins make his claim to permanent greatness absurd."
+        },
+        {
+          "q": "What does the desert symbolize in the poem?",
+          "keywords": [
+            "empty",
+            "time",
+            "power",
+            "gone"
+          ],
+          "answer": "The vast empty desert emphasizes how completely Ozymandias's power has disappeared and how small human ambition becomes over time."
+        }
+      ]
+    },
+    "mariner": {
+      "title": "The Rime of the Ancient Mariner",
+      "category": "Poetry",
+      "lesson": {
+        "summary": "An Ancient Mariner stops a Wedding Guest and tells of a sea voyage. An albatross appears and is welcomed, but the Mariner kills it without good reason. The ship and crew then suffer terrible supernatural consequences. The dead bird is hung around the Mariner's neck as a symbol of guilt. Alone among the dead crew, he finally looks at the water-snakes with spontaneous love and blesses them. The albatross falls from his neck, beginning his spiritual recovery. His continuing penance is to retell the story and teach respect for all living things.",
+        "recall": "Wedding Guest → voyage → albatross welcomed → bird killed → curse and thirst → guilt → crew dies → water-snakes blessed → spiritual change → lifelong retelling.",
+        "themes": [
+          "Crime and punishment",
+          "Guilt",
+          "Respect for nature",
+          "Isolation",
+          "Redemption"
+        ],
+        "keywords": [
+          "Wedding Guest",
+          "albatross",
+          "thirst",
+          "guilt",
+          "water-snakes",
+          "blessing",
+          "penance"
+        ],
+        "answer_frame": "Identify the crime → show consequences → explain the moment of blessing → connect redemption to respect for life."
+      },
+      "flashcards": [
+        {
+          "front": "What crime begins the crisis?",
+          "back": "The Mariner senselessly kills the albatross."
+        },
+        {
+          "front": "What does the albatross around his neck symbolize?",
+          "back": "The burden of guilt for his destructive act."
+        },
+        {
+          "front": "What begins his redemption?",
+          "back": "He spontaneously appreciates and blesses the water-snakes."
+        },
+        {
+          "front": "What is his continuing penance?",
+          "back": "He must repeatedly tell his story and its moral lesson."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "How does the albatross function as a symbol?",
+          "points": [
+            "Welcomed as good omen",
+            "Killed without cause",
+            "Hung around neck",
+            "Represents guilt"
+          ],
+          "model": "The albatross first represents the natural world that accompanies the sailors. After the Mariner kills it without reason, the dead bird is hung around his neck. It then becomes a visible symbol of guilt and the moral burden of violating nature."
+        },
+        {
+          "q": "Why is blessing the water-snakes a turning point?",
+          "points": [
+            "Spontaneous love",
+            "No selfish calculation",
+            "Respect for life returns",
+            "Albatross falls"
+          ],
+          "model": "The Mariner blesses the water-snakes spontaneously, without trying to gain anything. This shows that his relationship with nature has genuinely changed. Because he can value living creatures again, the symbol of guilt falls from his neck and redemption begins."
+        }
+      ],
+      "viva": [
+        {
+          "q": "What lesson does the Ancient Mariner learn?",
+          "keywords": [
+            "love",
+            "respect",
+            "living",
+            "nature"
+          ],
+          "answer": "He learns that all living things deserve love and respect. His punishment comes from treating life carelessly, and his recovery begins when he can appreciate other creatures."
+        },
+        {
+          "q": "Why is the albatross important?",
+          "keywords": [
+            "nature",
+            "crime",
+            "guilt",
+            "symbol"
+          ],
+          "answer": "The albatross connects the Mariner's crime to nature and later becomes a symbol of his guilt when the sailors hang it around his neck."
+        }
+      ]
+    },
+    "snake": {
+      "title": "Snake",
+      "category": "Poetry",
+      "lesson": {
+        "summary": "On a hot day a snake comes to the speaker's water-trough. The speaker watches with fascination and feels honoured by the visit. Yet his education has taught him that a dangerous snake should be killed. As the snake retreats, he gives in to that learned voice and throws a log. He immediately feels ashamed, recognizes the act as petty and imagines the snake as a king in exile. The poem contrasts instinctive respect for nature with socially learned fear.",
+        "recall": "Hot day → snake drinks first → admiration → 'voice of education' → log thrown → immediate regret → snake as exiled king.",
+        "themes": [
+          "Nature",
+          "Instinct versus conditioning",
+          "Respect",
+          "Fear",
+          "Regret"
+        ],
+        "keywords": [
+          "water-trough",
+          "voice of education",
+          "admiration",
+          "log",
+          "regret",
+          "king in exile"
+        ],
+        "answer_frame": "Describe admiration → identify learned pressure → explain the violent act → end with regret and respect for nature."
+      },
+      "flashcards": [
+        {
+          "front": "What is the 'voice of education'?",
+          "back": "The learned social belief that a dangerous snake should be killed."
+        },
+        {
+          "front": "How does the speaker initially respond?",
+          "back": "With fascination, respect and a feeling of being honoured by the snake's visit."
+        },
+        {
+          "front": "Why does he regret throwing the log?",
+          "back": "He realizes he acted out of learned fear rather than his own instinctive respect."
+        },
+        {
+          "front": "Why compare the snake to a king?",
+          "back": "The comparison gives the snake dignity and majesty, intensifying the speaker's shame."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "Explain the conflict between instinct and education in Snake.",
+          "points": [
+            "Instinct admires snake",
+            "Education says kill",
+            "Speaker obeys learned fear",
+            "Regrets action"
+          ],
+          "model": "The speaker's immediate instinct is to admire the snake and respect its presence. His education, however, tells him that such a snake must be killed. When he obeys that learned rule and throws a log, he feels ashamed because his action contradicts his deeper response to the animal."
+        },
+        {
+          "q": "How does the king-in-exile image affect the ending?",
+          "points": [
+            "Majesty",
+            "Dignity",
+            "Speaker's guilt",
+            "Lost opportunity"
+          ],
+          "model": "Calling the snake a king in exile raises it above the speaker's fearful reaction and gives it dignity. The image makes the attack seem even more petty and deepens the speaker's regret at losing the chance to behave generously toward the creature."
+        }
+      ],
+      "viva": [
+        {
+          "q": "What does 'voice of education' mean?",
+          "keywords": [
+            "learned",
+            "society",
+            "fear",
+            "kill"
+          ],
+          "answer": "It means the social conditioning the speaker has learned: he has been taught to fear and kill a dangerous snake even though his natural response is admiration."
+        },
+        {
+          "q": "Why is the speaker ashamed?",
+          "keywords": [
+            "log",
+            "fear",
+            "respect",
+            "regret"
+          ],
+          "answer": "He is ashamed because he throws a log at a creature he had been respecting. He realizes that learned fear made him act in a petty way."
+        }
+      ]
+    },
+    "departed": {
+      "title": "The Dear Departed",
+      "category": "Drama",
+      "lesson": {
+        "summary": "The Slaters believe Abel Merryweather has died. Instead of grieving sincerely, Amelia and Henry begin taking his belongings before the Jordans arrive. When Elizabeth and Ben Jordan come, the two sisters quarrel over property and arrangements. Abel unexpectedly wakes and discovers how quickly his family tried to divide his possessions. Their hypocrisy is exposed, and Abel decides to take control of his own future rather than reward their greed.",
+        "recall": "Abel presumed dead → Slaters take property → Jordans arrive → sisters quarrel → Abel wakes → greed exposed → Abel changes his plans.",
+        "themes": [
+          "Greed",
+          "Hypocrisy",
+          "Neglect of the elderly",
+          "Family conflict",
+          "Satire"
+        ],
+        "keywords": [
+          "Abel Merryweather",
+          "Slaters",
+          "Jordans",
+          "bureau",
+          "clock",
+          "inheritance",
+          "satire"
+        ],
+        "answer_frame": "Give the comic situation → provide one example of greed → explain Abel's awakening → state what the satire criticizes."
+      },
+      "flashcards": [
+        {
+          "front": "Who is Abel Merryweather?",
+          "back": "The elderly father whose supposed death exposes his daughters' greed."
+        },
+        {
+          "front": "What do the Slaters move?",
+          "back": "Abel's bureau and clock, showing how quickly they begin claiming his property."
+        },
+        {
+          "front": "Why is Abel waking up dramatically important?",
+          "back": "It turns the family's private greed into an exposed humiliation."
+        },
+        {
+          "front": "What does the play satirize?",
+          "back": "Greed, hypocrisy and neglect within family relationships, especially toward the elderly."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "How does the playwright expose materialism in the family?",
+          "points": [
+            "Property taken before mourning",
+            "Sisters quarrel",
+            "Inheritance dominates conversation",
+            "Abel discovers truth"
+          ],
+          "model": "The family behaves as though Abel's death is mainly a property problem. The Slaters move his furniture, the sisters argue over possessions and inheritance, and genuine grief is largely absent. When Abel wakes, the contrast between their words and actions exposes their materialism."
+        },
+        {
+          "q": "Why is Abel's awakening effective as comic drama?",
+          "points": [
+            "Unexpected reversal",
+            "Audience knows family's greed",
+            "Characters embarrassed",
+            "Power shifts to Abel"
+          ],
+          "model": "Abel's awakening suddenly reverses the situation. The relatives who were confidently dividing his property are forced to face the man they had treated as dead. Their embarrassment creates comedy while also delivering the play's criticism of greed."
+        }
+      ],
+      "viva": [
+        {
+          "q": "Why is The Dear Departed a satire?",
+          "keywords": [
+            "greed",
+            "family",
+            "hypocrisy",
+            "property"
+          ],
+          "answer": "The play uses comedy to expose greed and hypocrisy. The family talks about duty and respect but quickly focuses on Abel's property when they think he is dead."
+        },
+        {
+          "q": "What does Abel learn about his daughters?",
+          "keywords": [
+            "possessions",
+            "inheritance",
+            "selfish",
+            "care"
+          ],
+          "answer": "He learns that their concern is strongly tied to his possessions and inheritance, so he refuses to let them control his future."
+        }
+      ]
+    },
+    "email": {
+      "title": "Email",
+      "category": "Writing",
+      "lesson": {
+        "summary": "A formal email should make its purpose obvious immediately. Use a precise subject line, suitable greeting, concise body, necessary details, a clear request or action and an appropriate closing.",
+        "recall": "To → Subject → Greeting → Purpose → Details → Request → Closing.",
+        "themes": [
+          "Clarity",
+          "Brevity",
+          "Formal tone"
+        ],
+        "keywords": [
+          "subject",
+          "purpose",
+          "details",
+          "request",
+          "closing"
+        ],
+        "answer_frame": "Purpose first, supporting details second, requested action last."
+      },
+      "flashcards": [
+        {
+          "front": "What makes a good subject line?",
+          "back": "It states the exact purpose of the email in a short, specific phrase."
+        },
+        {
+          "front": "Where should purpose appear?",
+          "back": "Near the beginning, so the reader knows immediately why you are writing."
+        },
+        {
+          "front": "What should you avoid?",
+          "back": "Chat abbreviations, vague subjects, unnecessary detail and over-casual language."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "List the structure of a formal email.",
+          "points": [
+            "Recipient",
+            "Subject",
+            "Greeting",
+            "Purpose and details",
+            "Request",
+            "Closing"
+          ],
+          "model": "A formal email uses the recipient, a precise subject, an appropriate greeting, a concise body stating purpose and details, a clear request or next action, and a polite closing with the sender's name."
+        }
+      ],
+      "viva": [
+        {
+          "q": "What are the three most important qualities of a formal email?",
+          "keywords": [
+            "clear",
+            "concise",
+            "formal"
+          ],
+          "answer": "It should be clear, concise and appropriately formal for the recipient."
+        }
+      ]
+    },
+    "leave": {
+      "title": "Leave Application",
+      "category": "Writing",
+      "lesson": {
+        "summary": "A leave application is a formal request. Address the correct authority, state the date and subject, explain the reason briefly, mention the exact leave period and request permission respectfully.",
+        "recall": "Address → Date → Subject → Salutation → Reason + dates → Request → Closing.",
+        "themes": [
+          "Precision",
+          "Respect",
+          "Relevance"
+        ],
+        "keywords": [
+          "dates",
+          "duration",
+          "reason",
+          "request",
+          "formal"
+        ],
+        "answer_frame": "Give the exact leave period and reason, then make a polite request."
+      },
+      "flashcards": [
+        {
+          "front": "What must be exact?",
+          "back": "The leave date or period and, where relevant, the number of days."
+        },
+        {
+          "front": "How long should the reason be?",
+          "back": "Brief and sufficient; do not over-explain."
+        },
+        {
+          "front": "What tone is expected?",
+          "back": "Formal, respectful and direct."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "What information cannot be omitted from a leave application?",
+          "points": [
+            "Addressee",
+            "Date/subject",
+            "Leave period",
+            "Reason",
+            "Polite request"
+          ],
+          "model": "A complete leave application identifies the authority, includes the date and subject, states the exact leave period and concise reason, and ends with a respectful request and closing."
+        }
+      ],
+      "viva": [
+        {
+          "q": "Why should a leave application be concise?",
+          "keywords": [
+            "formal",
+            "relevant",
+            "dates",
+            "reason"
+          ],
+          "answer": "Because it is a formal request. The authority mainly needs the relevant dates, reason and request, not a long personal explanation."
+        }
+      ]
+    },
+    "complaint": {
+      "title": "Formal Complaint Letter",
+      "category": "Writing",
+      "lesson": {
+        "summary": "A complaint letter should identify the problem with specific evidence, explain its impact and ask for a reasonable remedy. Stay courteous but firm.",
+        "recall": "Sender → Date → Receiver → Subject → Problem → Evidence → Impact → Remedy → Close.",
+        "themes": [
+          "Evidence",
+          "Professional tone",
+          "Action"
+        ],
+        "keywords": [
+          "problem",
+          "evidence",
+          "impact",
+          "remedy",
+          "courteous"
+        ],
+        "answer_frame": "State what happened, prove it, explain the effect, then request a specific solution."
+      },
+      "flashcards": [
+        {
+          "front": "What evidence can strengthen a complaint?",
+          "back": "Dates, order numbers, bills, reference numbers, defect details or earlier attempts to solve the issue."
+        },
+        {
+          "front": "What should the final paragraph contain?",
+          "back": "A specific and reasonable remedy or action you expect."
+        },
+        {
+          "front": "What tone works best?",
+          "back": "Courteous but firm and factual."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "How should a complaint letter move from problem to solution?",
+          "points": [
+            "Identify problem",
+            "Give evidence",
+            "Explain impact",
+            "Request remedy"
+          ],
+          "model": "First state the problem clearly, then provide verifiable details. Explain the inconvenience or loss caused and finish by requesting a specific remedy such as repair, replacement, refund or corrective action."
+        }
+      ],
+      "viva": [
+        {
+          "q": "What makes a complaint letter effective?",
+          "keywords": [
+            "facts",
+            "evidence",
+            "impact",
+            "remedy"
+          ],
+          "answer": "It combines specific facts and evidence with a clear explanation of the impact and a reasonable requested remedy."
+        }
+      ]
+    },
+    "editor": {
+      "title": "Letter to the Editor",
+      "category": "Writing",
+      "lesson": {
+        "summary": "A letter to the editor discusses an issue of wider public importance. Introduce the problem, explain causes or effects, support it with relevant observations and suggest practical action.",
+        "recall": "Public issue → Why it matters → Causes/effects → Evidence → Solutions → Call to action.",
+        "themes": [
+          "Public awareness",
+          "Reasoned argument",
+          "Solutions"
+        ],
+        "keywords": [
+          "public",
+          "issue",
+          "effects",
+          "solutions",
+          "action"
+        ],
+        "answer_frame": "Move from public problem to consequences to feasible solutions."
+      },
+      "flashcards": [
+        {
+          "front": "What kind of topic fits this letter?",
+          "back": "An issue that affects the public or community, not only a private personal dispute."
+        },
+        {
+          "front": "What should the body explain?",
+          "back": "Why the issue matters, its causes/effects and relevant observations."
+        },
+        {
+          "front": "How should it end?",
+          "back": "With practical suggestions and a call for awareness or action."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "What is the ideal argument flow in a letter to the editor?",
+          "points": [
+            "Issue",
+            "Public significance",
+            "Effects/evidence",
+            "Solutions",
+            "Action"
+          ],
+          "model": "Introduce the public issue, explain why it matters and what effects it has, support the concern with relevant observations, then suggest practical measures and end with a request for awareness or action."
+        }
+      ],
+      "viva": [
+        {
+          "q": "What separates a letter to the editor from a complaint letter?",
+          "keywords": [
+            "public",
+            "awareness",
+            "community",
+            "issue"
+          ],
+          "answer": "A letter to the editor addresses a wider public issue and aims to create awareness or action, while a complaint letter usually seeks a remedy for a specific problem."
+        }
+      ]
+    },
+    "article": {
+      "title": "Article Writing",
+      "category": "Writing",
+      "lesson": {
+        "summary": "An article needs a strong title and byline, an engaging introduction, logically developed paragraphs, relevant examples or evidence and a conclusion that leaves a clear final idea.",
+        "recall": "Title → Byline → Hook → Explain → Evidence/examples → Solutions/insight → Conclusion.",
+        "themes": [
+          "Structure",
+          "Engagement",
+          "Reasoning"
+        ],
+        "keywords": [
+          "title",
+          "byline",
+          "hook",
+          "paragraphs",
+          "conclusion"
+        ],
+        "answer_frame": "Hook the reader, develop one idea per paragraph, support the discussion, then finish decisively."
+      },
+      "flashcards": [
+        {
+          "front": "What comes before the article body?",
+          "back": "A relevant title and the writer's byline."
+        },
+        {
+          "front": "What should the introduction do?",
+          "back": "Engage the reader and establish the topic or argument."
+        },
+        {
+          "front": "What makes the body strong?",
+          "back": "Logical paragraphs supported by examples, explanation or evidence."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "Give a high-scoring article structure.",
+          "points": [
+            "Title/byline",
+            "Hook",
+            "Logical body",
+            "Evidence/examples",
+            "Conclusion"
+          ],
+          "model": "Start with a precise title and byline, then use an engaging introduction. Develop the topic in organized paragraphs using examples or evidence, and finish with a clear conclusion, recommendation or final insight."
+        }
+      ],
+      "viva": [
+        {
+          "q": "Why is paragraphing important in an article?",
+          "keywords": [
+            "logical",
+            "ideas",
+            "reader",
+            "flow"
+          ],
+          "answer": "Paragraphing gives the article a logical flow, keeps each idea focused and makes the argument easier for the reader to follow."
+        }
+      ]
+    },
+    "factual": {
+      "title": "Factual Description",
+      "category": "Writing",
+      "lesson": {
+        "summary": "Factual description presents observable information objectively. Identify the subject, give a general overview, then describe details in a logical spatial, functional or sequential order using precise vocabulary.",
+        "recall": "Identify → Overview → Details in order → Distinctive features → Concise close.",
+        "themes": [
+          "Objectivity",
+          "Precision",
+          "Order"
+        ],
+        "keywords": [
+          "objective",
+          "observable",
+          "logical",
+          "precise",
+          "details"
+        ],
+        "answer_frame": "Move from general identification to ordered specific details without unnecessary opinion."
+      },
+      "flashcards": [
+        {
+          "front": "What tone should you use?",
+          "back": "Objective and precise rather than emotional or persuasive."
+        },
+        {
+          "front": "How should details be ordered?",
+          "back": "Spatially, functionally or sequentially—whichever best fits the subject."
+        },
+        {
+          "front": "What should be avoided?",
+          "back": "Exaggeration, vague adjectives and irrelevant personal opinions."
+        }
+      ],
+      "short_answers": [
+        {
+          "q": "What makes a factual description easy to visualize?",
+          "points": [
+            "Clear identification",
+            "Logical order",
+            "Specific observable details",
+            "Precise vocabulary"
+          ],
+          "model": "A reader can visualize the subject when the description starts with a clear overview and then presents specific observable details in a consistent order using precise vocabulary."
+        }
+      ],
+      "viva": [
+        {
+          "q": "What is the biggest rule of factual description?",
+          "keywords": [
+            "objective",
+            "facts",
+            "logical",
+            "details"
+          ],
+          "answer": "Remain objective and organize accurate observable details in a clear logical order."
+        }
+      ]
+    }
+  }
+}

@@ -726,5 +726,621 @@
     ],
     "correct": 1,
     "explanation": "A clear organizing principle makes the description easy to follow."
+  },
+  {
+    "id": "letter-06",
+    "topic": "letter",
+    "difficulty": "medium",
+    "prompt": "What deeper change occurs in Ali after Miriam leaves?",
+    "options": [
+      "He becomes wealthier",
+      "He understands the pain of separation and becomes more sensitive",
+      "He joins the post office",
+      "He starts travelling"
+    ],
+    "correct": 1,
+    "explanation": "Separation from Miriam teaches the former hunter what emotional pain and longing feel like."
+  },
+  {
+    "id": "letter-07",
+    "topic": "letter",
+    "difficulty": "medium",
+    "prompt": "How do many post-office employees initially treat Ali's daily visits?",
+    "options": [
+      "With admiration",
+      "With mockery and impatience",
+      "With fear",
+      "With complete silence"
+    ],
+    "correct": 1,
+    "explanation": "Their teasing highlights the story's criticism of human insensitivity toward another person's grief."
+  },
+  {
+    "id": "letter-08",
+    "topic": "letter",
+    "difficulty": "hard",
+    "prompt": "Why is the title The Letter especially appropriate?",
+    "options": [
+      "The story teaches handwriting",
+      "The letter becomes a symbol of love, hope and human connection",
+      "Every character writes many letters",
+      "The Postmaster is an author"
+    ],
+    "correct": 1,
+    "explanation": "Miriam's awaited letter carries the emotional meaning of parental love, hope and connection."
+  },
+  {
+    "id": "shady-06",
+    "topic": "shady",
+    "difficulty": "easy",
+    "prompt": "Who pressures John Hallock to produce another ghost story?",
+    "options": [
+      "Lavinia",
+      "Jenkins",
+      "Helen",
+      "Gladolia"
+    ],
+    "correct": 1,
+    "explanation": "Jenkins, his publisher, expects another supernatural story from John."
+  },
+  {
+    "id": "shady-07",
+    "topic": "shady",
+    "difficulty": "medium",
+    "prompt": "What is the purpose of the Writers' Inspiration Bureau in the story?",
+    "options": [
+      "To publish newspapers",
+      "To supply struggling writers with ideas",
+      "To investigate crimes",
+      "To teach handwriting"
+    ],
+    "correct": 1,
+    "explanation": "Helen explains that ghosts in the bureau have been helping writers find story ideas."
+  },
+  {
+    "id": "shady-08",
+    "topic": "shady",
+    "difficulty": "hard",
+    "prompt": "What is the central comic irony of A Shady Plot?",
+    "options": [
+      "John hates all fiction",
+      "A real ghost helps a writer create ghost stories",
+      "Lavinia is a professional medium",
+      "The publisher is frightened of books"
+    ],
+    "correct": 1,
+    "explanation": "The story humorously makes the supernatural source of John's supposedly invented supernatural fiction."
+  },
+  {
+    "id": "patol-06",
+    "topic": "patol",
+    "difficulty": "easy",
+    "prompt": "Why is Patol Babu initially disappointed on the film set?",
+    "options": [
+      "He receives no costume",
+      "His role contains only one spoken word",
+      "He dislikes the hero",
+      "The camera is broken"
+    ],
+    "correct": 1,
+    "explanation": "He expected a meaningful part and feels let down when he sees that his dialogue is only 'Oh!'."
+  },
+  {
+    "id": "patol-07",
+    "topic": "patol",
+    "difficulty": "medium",
+    "prompt": "How does Patol Babu make the word 'Oh!' meaningful?",
+    "options": [
+      "He shouts it once",
+      "He explores different tones and matches it to the situation",
+      "He changes the script",
+      "He refuses to speak"
+    ],
+    "correct": 1,
+    "explanation": "He treats voice, timing, emotion and physical action as part of the performance."
+  },
+  {
+    "id": "patol-08",
+    "topic": "patol",
+    "difficulty": "hard",
+    "prompt": "Which statement best captures the story's message?",
+    "options": [
+      "Only lead roles matter",
+      "True professionalism means giving full effort even to a tiny role",
+      "Money is the only measure of success",
+      "Film acting is easier than theatre"
+    ],
+    "correct": 1,
+    "explanation": "Patol Babu proves that dedication and artistic integrity do not depend on the size of the role."
+  },
+  {
+    "id": "not-marble-05",
+    "topic": "not-marble",
+    "difficulty": "easy",
+    "prompt": "What do the 'gilded monuments' represent in Sonnet 55?",
+    "options": [
+      "Ordinary houses",
+      "Grand memorials built for powerful people",
+      "Schools",
+      "Ships"
+    ],
+    "correct": 1,
+    "explanation": "They stand for impressive physical memorials that appear permanent but are still vulnerable to time."
+  },
+  {
+    "id": "not-marble-06",
+    "topic": "not-marble",
+    "difficulty": "medium",
+    "prompt": "What gives the beloved lasting life in the sonnet?",
+    "options": [
+      "A royal army",
+      "The poem and the memory it carries",
+      "A palace",
+      "A portrait alone"
+    ],
+    "correct": 1,
+    "explanation": "The poet presents verse as a living record that can preserve memory across generations."
+  },
+  {
+    "id": "not-marble-07",
+    "topic": "not-marble",
+    "difficulty": "hard",
+    "prompt": "Why does the poem mention war and destruction?",
+    "options": [
+      "To praise violence",
+      "To show that physical monuments can be destroyed while verse can endure",
+      "To describe a historical battle",
+      "To criticize soldiers personally"
+    ],
+    "correct": 1,
+    "explanation": "The contrast strengthens the claim that art can outlast material structures."
+  },
+  {
+    "id": "ozymandias-06",
+    "topic": "ozymandias",
+    "difficulty": "medium",
+    "prompt": "What survives of Ozymandias's personality even after his empire disappears?",
+    "options": [
+      "His army",
+      "The expression captured by the sculptor",
+      "His palace",
+      "His laws"
+    ],
+    "correct": 1,
+    "explanation": "The sculptor's work preserves signs of the ruler's pride and cold authority."
+  },
+  {
+    "id": "ozymandias-07",
+    "topic": "ozymandias",
+    "difficulty": "medium",
+    "prompt": "How does the empty desert strengthen the poem's irony?",
+    "options": [
+      "It proves the king loved nature",
+      "It shows that almost nothing remains of the greatness he boasted about",
+      "It hides a new city",
+      "It makes the statue more valuable"
+    ],
+    "correct": 1,
+    "explanation": "The vast emptiness directly contradicts the king's claim to overwhelming and permanent power."
+  },
+  {
+    "id": "ozymandias-08",
+    "topic": "ozymandias",
+    "difficulty": "hard",
+    "prompt": "Which power ultimately defeats Ozymandias's claim to permanence?",
+    "options": [
+      "Another named king",
+      "Time and decay",
+      "The sculptor",
+      "The traveller"
+    ],
+    "correct": 1,
+    "explanation": "The ruined statue and vanished empire show that time outlasts political power."
+  },
+  {
+    "id": "mariner-07",
+    "topic": "mariner",
+    "difficulty": "medium",
+    "prompt": "What weakness do the sailors show in judging the killing of the albatross?",
+    "options": [
+      "They never change their minds",
+      "They judge the act according to changing weather and self-interest",
+      "They immediately forgive everything",
+      "They do not notice the bird"
+    ],
+    "correct": 1,
+    "explanation": "Their judgement changes with conditions, showing inconsistency rather than a stable moral principle."
+  },
+  {
+    "id": "mariner-08",
+    "topic": "mariner",
+    "difficulty": "medium",
+    "prompt": "What does the dead albatross around the Mariner's neck symbolize?",
+    "options": [
+      "Victory",
+      "Guilt and the burden of his crime",
+      "Good luck",
+      "Leadership"
+    ],
+    "correct": 1,
+    "explanation": "It becomes a physical sign of the moral burden created by his destructive act."
+  },
+  {
+    "id": "mariner-09",
+    "topic": "mariner",
+    "difficulty": "hard",
+    "prompt": "What lesson lies at the centre of the Mariner's experience?",
+    "options": [
+      "Nature exists only for human use",
+      "All living things deserve reverence and love",
+      "Sailors should avoid weddings",
+      "Travel is always dangerous"
+    ],
+    "correct": 1,
+    "explanation": "His redemption begins when he learns to value living creatures rather than treating nature carelessly."
+  },
+  {
+    "id": "snake-06",
+    "topic": "snake",
+    "difficulty": "medium",
+    "prompt": "Why does the speaker wait while the snake drinks?",
+    "options": [
+      "He is unable to move",
+      "He recognizes that the snake reached the trough first",
+      "He wants to trap it",
+      "He has no water"
+    ],
+    "correct": 1,
+    "explanation": "The speaker initially treats the snake almost like a respected guest with prior claim to the trough."
+  },
+  {
+    "id": "snake-07",
+    "topic": "snake",
+    "difficulty": "medium",
+    "prompt": "What is suggested by comparing the snake to a king in exile?",
+    "options": [
+      "The snake is comic",
+      "The snake possesses dignity and majesty",
+      "The snake is weak",
+      "The snake belongs in a zoo"
+    ],
+    "correct": 1,
+    "explanation": "The royal comparison reveals the speaker's deep respect after he recognizes the pettiness of his attack."
+  },
+  {
+    "id": "snake-08",
+    "topic": "snake",
+    "difficulty": "hard",
+    "prompt": "What conflict drives the speaker's behaviour in Snake?",
+    "options": [
+      "Work versus leisure",
+      "Instinctive admiration versus learned fear",
+      "Youth versus age",
+      "Truth versus lying"
+    ],
+    "correct": 1,
+    "explanation": "His natural respect for the snake clashes with social conditioning that tells him to kill it."
+  },
+  {
+    "id": "departed-06",
+    "topic": "departed",
+    "difficulty": "easy",
+    "prompt": "Who are Abel Merryweather's two daughters?",
+    "options": [
+      "Amelia Slater and Elizabeth Jordan",
+      "Victoria and Lavinia",
+      "Miriam and Helen",
+      "Anne and Jane"
+    ],
+    "correct": 0,
+    "explanation": "The rivalry between Amelia Slater and Elizabeth Jordan helps expose the family's selfishness."
+  },
+  {
+    "id": "departed-07",
+    "topic": "departed",
+    "difficulty": "medium",
+    "prompt": "Why is moving Abel's bureau and clock important to the satire?",
+    "options": [
+      "It improves the room",
+      "It shows the family claiming his property before even properly mourning him",
+      "It hides a secret letter",
+      "It protects the furniture"
+    ],
+    "correct": 1,
+    "explanation": "The act makes their materialism visible before Abel is even confirmed dead."
+  },
+  {
+    "id": "departed-08",
+    "topic": "departed",
+    "difficulty": "hard",
+    "prompt": "What does Abel's response after discovering the family's behaviour show?",
+    "options": [
+      "He remains unaware",
+      "He refuses to let his daughters control his property and future",
+      "He gives everything away immediately",
+      "He apologizes to them"
+    ],
+    "correct": 1,
+    "explanation": "Abel regains agency and changes his plans after seeing that their concern is driven by inheritance."
+  },
+  {
+    "id": "email-03",
+    "topic": "email",
+    "difficulty": "medium",
+    "prompt": "Where should the main purpose of a formal email appear?",
+    "options": [
+      "Only in the final line",
+      "Near the beginning",
+      "Inside the signature",
+      "Nowhere explicitly"
+    ],
+    "correct": 1,
+    "explanation": "The reader should understand the purpose quickly, usually in the opening lines."
+  },
+  {
+    "id": "email-04",
+    "topic": "email",
+    "difficulty": "hard",
+    "prompt": "Which feature should be avoided in a formal exam email?",
+    "options": [
+      "A precise subject",
+      "Relevant details",
+      "Chat abbreviations and overly casual language",
+      "A polite closing"
+    ],
+    "correct": 2,
+    "explanation": "Formal email writing should remain clear, complete and appropriate to the recipient."
+  },
+  {
+    "id": "leave-03",
+    "topic": "leave",
+    "difficulty": "medium",
+    "prompt": "Which subject line is most appropriate for a school leave application?",
+    "options": [
+      "Hi",
+      "Application for leave on 6 October",
+      "Something important",
+      "Read this"
+    ],
+    "correct": 1,
+    "explanation": "A direct subject line states the request and relevant date clearly."
+  },
+  {
+    "id": "leave-04",
+    "topic": "leave",
+    "difficulty": "hard",
+    "prompt": "What should a strong leave application avoid?",
+    "options": [
+      "Exact dates",
+      "A concise reason",
+      "Unnecessary personal detail and over-explanation",
+      "A polite request"
+    ],
+    "correct": 2,
+    "explanation": "The task rewards clarity, relevance and formal tone rather than a long personal narrative."
+  },
+  {
+    "id": "complaint-03",
+    "topic": "complaint",
+    "difficulty": "medium",
+    "prompt": "Why should a complaint letter include dates, order numbers or other evidence when available?",
+    "options": [
+      "To make it longer",
+      "To make the complaint specific and verifiable",
+      "To sound emotional",
+      "To avoid asking for action"
+    ],
+    "correct": 1,
+    "explanation": "Concrete evidence makes the problem easier to verify and resolve."
+  },
+  {
+    "id": "complaint-04",
+    "topic": "complaint",
+    "difficulty": "hard",
+    "prompt": "What tone is most effective in a formal complaint?",
+    "options": [
+      "Courteous but firm",
+      "Mocking",
+      "Threatening",
+      "Extremely casual"
+    ],
+    "correct": 0,
+    "explanation": "A professional complaint is factual, clear about the problem, and firm about the expected remedy."
+  },
+  {
+    "id": "editor-03",
+    "topic": "editor",
+    "difficulty": "medium",
+    "prompt": "What makes a letter to the editor different from a personal complaint letter?",
+    "options": [
+      "It must contain jokes",
+      "It addresses an issue of wider public interest",
+      "It cannot suggest solutions",
+      "It has no subject line"
+    ],
+    "correct": 1,
+    "explanation": "Its aim is usually to raise awareness or encourage action on a community or public issue."
+  },
+  {
+    "id": "editor-04",
+    "topic": "editor",
+    "difficulty": "hard",
+    "prompt": "Which conclusion is strongest in a letter to the editor?",
+    "options": [
+      "A vague goodbye",
+      "A practical call for awareness or action",
+      "A personal insult",
+      "A new unrelated topic"
+    ],
+    "correct": 1,
+    "explanation": "The ending should connect the issue to feasible action by citizens or authorities."
+  },
+  {
+    "id": "article-03",
+    "topic": "article",
+    "difficulty": "medium",
+    "prompt": "What is the function of a byline in article writing?",
+    "options": [
+      "It gives the writer's name",
+      "It gives the receiver's address",
+      "It replaces the title",
+      "It lists references"
+    ],
+    "correct": 0,
+    "explanation": "The byline identifies who wrote the article."
+  },
+  {
+    "id": "article-04",
+    "topic": "article",
+    "difficulty": "hard",
+    "prompt": "Why should an article use organized paragraphs?",
+    "options": [
+      "To increase word count only",
+      "To develop the argument or explanation logically",
+      "To imitate a letter",
+      "To hide the conclusion"
+    ],
+    "correct": 1,
+    "explanation": "Clear paragraphing helps the reader follow the progression from introduction to development and conclusion."
+  },
+  {
+    "id": "factual-03",
+    "topic": "factual",
+    "difficulty": "medium",
+    "prompt": "Which detail is strongest in a factual description?",
+    "options": [
+      "It was absolutely amazing",
+      "The room contains four windows along the eastern wall",
+      "I loved it very much",
+      "Everyone should visit it"
+    ],
+    "correct": 1,
+    "explanation": "Observable, precise details are stronger than personal reactions in factual description."
+  },
+  {
+    "id": "factual-04",
+    "topic": "factual",
+    "difficulty": "hard",
+    "prompt": "Why is logical order important in factual description?",
+    "options": [
+      "It makes the response poetic",
+      "It helps the reader build a clear mental or procedural picture",
+      "It allows more opinions",
+      "It removes the need for detail"
+    ],
+    "correct": 1,
+    "explanation": "Spatial, functional or sequential order makes factual information easier to understand."
+  },
+  {
+    "id": "cross-01",
+    "topic": "ozymandias",
+    "difficulty": "hard",
+    "prompt": "Which pair of texts most directly explores the limits of physical permanence?",
+    "options": [
+      "Ozymandias and Sonnet 55",
+      "The Letter and A Shady Plot",
+      "Snake and The Dear Departed",
+      "Patol Babu and A Shady Plot"
+    ],
+    "correct": 0,
+    "explanation": "Ozymandias shows monuments and empires decaying, while Sonnet 55 contrasts such decay with the endurance of poetry."
+  },
+  {
+    "id": "cross-02",
+    "topic": "snake",
+    "difficulty": "hard",
+    "prompt": "Which two texts most strongly ask readers to reconsider human treatment of other living creatures?",
+    "options": [
+      "Snake and The Rime of the Ancient Mariner",
+      "The Letter and The Dear Departed",
+      "Ozymandias and Patol Babu",
+      "A Shady Plot and Sonnet 55"
+    ],
+    "correct": 0,
+    "explanation": "Both poems connect moral insight with respect for non-human life."
+  },
+  {
+    "id": "cross-03",
+    "topic": "letter",
+    "difficulty": "hard",
+    "prompt": "Which theme connects The Letter and The Dear Departed most clearly?",
+    "options": [
+      "Space travel",
+      "Family relationships reveal moral character",
+      "Supernatural comedy",
+      "Political ambition"
+    ],
+    "correct": 1,
+    "explanation": "Both texts use family relationships to expose compassion or the lack of it."
+  },
+  {
+    "id": "cross-04",
+    "topic": "patol",
+    "difficulty": "hard",
+    "prompt": "Which idea best connects Patol Babu, Film Star with effective exam writing?",
+    "options": [
+      "Length guarantees quality",
+      "Small tasks deserve careful preparation and precision",
+      "Money should guide every decision",
+      "Improvisation is always enough"
+    ],
+    "correct": 1,
+    "explanation": "Patol Babu's professionalism is a useful parallel for treating even short-mark questions carefully."
+  },
+  {
+    "id": "cross-05",
+    "topic": "not-marble",
+    "difficulty": "hard",
+    "prompt": "Which literary idea is shared by Sonnet 55 and Ozymandias?",
+    "options": [
+      "Human creations are judged by time",
+      "Ghosts control writers",
+      "Family greed is comic",
+      "Hunting changes people"
+    ],
+    "correct": 0,
+    "explanation": "Both texts examine what survives across time, though they reach different conclusions about art and monuments."
+  },
+  {
+    "id": "cross-06",
+    "topic": "departed",
+    "difficulty": "hard",
+    "prompt": "Why is irony especially important in both Ozymandias and The Dear Departed?",
+    "options": [
+      "It makes both texts rhyme",
+      "Reality contradicts what characters expect or claim",
+      "It introduces ghosts",
+      "It removes conflict"
+    ],
+    "correct": 1,
+    "explanation": "Ozymandias's boast is contradicted by ruins, while the family's behaviour is exposed when the supposedly dead Abel wakes."
+  },
+  {
+    "id": "cross-07",
+    "topic": "article",
+    "difficulty": "hard",
+    "prompt": "Which revision strategy best fits both article writing and literature answers?",
+    "options": [
+      "Write everything you remember",
+      "Use a clear claim, relevant evidence/points and a focused conclusion",
+      "Avoid paragraphing",
+      "Use informal chat language"
+    ],
+    "correct": 1,
+    "explanation": "Both tasks benefit from purposeful structure rather than unfiltered recall."
+  },
+  {
+    "id": "cross-08",
+    "topic": "editor",
+    "difficulty": "hard",
+    "prompt": "Which writing task most clearly requires a public-interest perspective?",
+    "options": [
+      "Leave application",
+      "Letter to the editor",
+      "Personal email to a friend",
+      "Factual description of an object"
+    ],
+    "correct": 1,
+    "explanation": "A letter to the editor is designed to raise or discuss matters affecting the wider public."
   }
 ]

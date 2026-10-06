@@ -54,10 +54,10 @@
       <section class="hero" id="english">
         <div class="hero-copy">
           <span class="status-dot"><i></i> English is live</span>
-          <h2>Study for marks.<br><em>Not for screen time.</em></h2>
-          <p>Your exact exam syllabus is organized into short revision blocks, writing formats, active recall and a timed quiz.</p>
+          <h2>Read. Recall. Speak.<br><em>Then test.</em></h2>
+          <p>Your exact English portion is now a full study system: lessons, flashcards, written answers, adaptive questions, voice-over and oral viva practice.</p>
           <div class="hero-actions">
-            <button class="primary-btn" id="startNextBtn">Start next unfinished topic</button>
+            <button class="primary-btn" id="examSprint">Start exam sprint</button><a class="secondary-btn" href="#studyLab">Open Study Lab</a>
             <a class="secondary-btn" href="#quiz">Take quick test</a>
           </div>
         </div>
@@ -105,6 +105,51 @@
         <div class="topic-grid" id="topicGrid"></div>
       </section>
 
+
+      <section class="section-block study-lab" id="studyLab">
+        <div class="section-head">
+          <div><span class="eyebrow">Study engine 3.0</span><h3>Study Lab</h3></div>
+          <div class="lab-top-controls">
+            <label>Topic <select id="labTopic"></select></label>
+            <label class="toggle-label"><input type="checkbox" id="autoNarrate"> Auto voice-over</label>
+          </div>
+        </div>
+
+        <div class="lab-dashboard">
+          <div class="lab-stat"><span class="eyebrow">Study bank</span><strong id="totalStudyItems">…</strong><small>MCQ + recall + written + viva</small></div>
+          <div class="lab-stat"><span class="eyebrow">Study streak</span><strong id="studyStreak">0d</strong><small>local-device activity</small></div>
+          <div class="priority-box"><span class="eyebrow">Priority queue</span><div id="priorityQueue"></div></div>
+        </div>
+
+        <div class="lab-shell">
+          <div class="lab-toolbar">
+            <div>
+              <span class="lab-category" id="labCategory">Fiction</span>
+              <h4 id="labTitle">The Letter</h4>
+            </div>
+            <nav class="lab-modes" aria-label="Study mode">
+              <button class="active" data-lab-mode="learn">Learn</button>
+              <button data-lab-mode="flash">Flashcards</button>
+              <button data-lab-mode="written">Written</button>
+              <button data-lab-mode="viva">Voice viva</button>
+            </nav>
+          </div>
+          <div class="lab-content">
+            <div class="lab-pane" data-pane="learn" id="learnPane"></div>
+            <div class="lab-pane" data-pane="flash" id="flashPane" hidden></div>
+            <div class="lab-pane" data-pane="written" id="writtenPane" hidden></div>
+            <div class="lab-pane" data-pane="viva" id="vivaPane" hidden></div>
+          </div>
+          <div class="voice-console">
+            <span class="eyebrow">Narrator</span>
+            <select id="voiceSelect" aria-label="Narrator voice"></select>
+            <label>Speed <input id="voiceRate" type="range" min="0.75" max="1.2" value="0.95" step="0.05"></label>
+            <button class="ghost-btn compact" id="labStopVoice">Stop voice</button>
+            <small id="labVoiceStatus">Voice ready.</small>
+          </div>
+        </div>
+      </section>
+
       <section class="section-block writing-section" id="writing">
         <div class="section-head">
           <div><span class="eyebrow">Scoring formats</span><h3>Writing vault</h3></div>
@@ -119,7 +164,7 @@
 
       <section class="section-block intelligence-section" id="smartDrill">
         <div class="section-head">
-          <div><span class="eyebrow">Study engine 2.0</span><h3>Adaptive study + voice</h3></div>
+          <div><span class="eyebrow">Adaptive testing</span><h3>Smart MCQ Drill</h3></div>
           <p class="section-note" id="dataStatus">Loading the Python dataset and C++ engine…</p>
         </div>
 
@@ -132,9 +177,9 @@
         <div class="engine-grid">
           <article class="smart-card">
             <div id="smartIntro">
-              <span class="tech-row"><b>PY</b><b>C++ → WASM</b><b>VOICE</b></span>
+              <span class="tech-row"><b>PY DATA</b><b>C++ WASM</b><b>JS UI</b><b>VOICE</b></span>
               <h4>Smart Drill</h4>
-              <p>Python validates and packages the study bank. The C++ WebAssembly engine increases the probability of questions from weak or forgotten topics. Your results stay on this device.</p>
+              <p>Python validates and packages the study bank. C++ WebAssembly ranks weak topics and review timing. JavaScript runs the interface, progress and browser voice tools. Your results stay on this device.</p>
               <div class="hero-actions">
                 <button class="primary-btn" id="smartStart">Start 20-question smart drill</button>
                 <button class="secondary-btn" id="weakStart">Weak areas only</button>

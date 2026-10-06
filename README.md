@@ -46,7 +46,7 @@ GitHub Pages is intended to publish from the root of `main`.
 https://hustlenix.github.io/Study_Portal_2026-27/
 
 
-## Study Engine 2.0
+## Study Engine 3.0
 
 The portal now uses a mixed stack intentionally:
 
@@ -54,7 +54,20 @@ The portal now uses a mixed stack intentionally:
 - **C++** (`cpp/adaptive_engine.cpp`) is compiled to **WebAssembly** and scores topic priority/mastery for adaptive drills.
 - **JavaScript** owns the UI, local progress state, browser speech synthesis and speech recognition.
 - **Voice study** can read questions and chapter summaries aloud and, where the browser supports it, accepts spoken A/B/C/D answers.
-- **52-question English bank** is stored in `data/questions.json`, with difficulty, topic, answer and explanation metadata.
+- **96-question English MCQ bank** is stored in `data/questions.json`, with difficulty, topic, answer and explanation metadata.
+- **190 total study prompts**: 96 MCQs + 50 flashcards + 22 written-answer tasks + 22 voice-viva prompts.
 - **GitHub Actions** rebuilds the Python data and C++ WASM, then deploys the generated site to GitHub Pages.
 
 The browser falls back to the JavaScript adaptive formula if WebAssembly has not loaded, so the study experience still works on limited browsers.
+
+
+### Study Lab
+
+The front end now has four dedicated learning modes:
+
+- **Learn** — concise chapter lesson, recall chain, themes, scoring keywords and answer frame.
+- **Flashcards** — fast retrieval practice with local progress.
+- **Written practice** — type an exam-style response, compare against scoring points and a model answer.
+- **Voice viva** — the browser reads the question, listens to the spoken answer, then scores key-idea coverage. It scores content coverage, not accent.
+
+The C++ WebAssembly module now also calculates review intervals, oral-viva coverage scores and written-practice scores. Python validates both the MCQ bank and structured study content before every deployment.
