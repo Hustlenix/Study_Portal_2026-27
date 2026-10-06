@@ -36,7 +36,7 @@ jobs:
 
       - name: Compile C++ adaptive engine to WebAssembly
         run: |
-          emcc cpp/adaptive_engine.cpp -O3 \
+          emcc cpp/adaptive_engine.cpp -std=c++17 -O3 \
             -s WASM=1 \
             -s EXPORTED_FUNCTIONS='["_adaptive_weight","_mastery_score"]' \
             -s EXPORTED_RUNTIME_METHODS='["ccall"]' \
