@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="description" content="Study Portal 2026–27 — focused CBSE Class 10 revision, starting with English Communicative." />
+  <title>Study Portal 2026–27</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#top" aria-label="Study Portal home">
+        <span class="brand-mark">SP</span>
+        <span><strong>Study Portal</strong><small>2026–27</small></span>
+      </a>
+
+      <div class="side-label">Subjects</div>
+      <nav class="subject-nav" aria-label="Subjects">
+        <a class="subject active" href="#english"><span>EN</span><b>English</b><small>Active</small></a>
+        <div class="subject muted"><span>MA</span><b>Mathematics</b><small>Later</small></div>
+        <div class="subject muted"><span>SC</span><b>Science</b><small>Later</small></div>
+        <div class="subject muted"><span>SS</span><b>Social Science</b><small>Later</small></div>
+        <div class="subject muted"><span>TA</span><b>Tamil</b><small>Later</small></div>
+      </nav>
+
+      <div class="side-card">
+        <span class="eyebrow">Focus rule</span>
+        <strong>One chapter at a time.</strong>
+        <p>Read → recall → test → mark done. No endless scrolling.</p>
+      </div>
+    </aside>
+
+    <main id="top">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">Class X · CBSE Communicative</span>
+          <h1>English Command Center</h1>
+        </div>
+        <div class="top-actions">
+          <div class="date-chip" id="todayLabel">Exam mode</div>
+          <button class="ghost-btn" id="resetProgressBtn">Reset progress</button>
+        </div>
+      </header>
+
+      <section class="hero" id="english">
+        <div class="hero-copy">
+          <span class="status-dot"><i></i> English is live</span>
+          <h2>Study for marks.<br><em>Not for screen time.</em></h2>
+          <p>Your exact exam syllabus is organized into short revision blocks, writing formats, active recall and a timed quiz.</p>
+          <div class="hero-actions">
+            <button class="primary-btn" id="startNextBtn">Start next unfinished topic</button>
+            <a class="secondary-btn" href="#quiz">Take quick test</a>
+          </div>
+        </div>
+        <div class="progress-panel">
+          <div class="progress-ring" id="progressRing"><span id="progressPercent">0%</span></div>
+          <div>
+            <span class="eyebrow">Syllabus progress</span>
+            <strong id="progressText">0 of 14 complete</strong>
+            <small>Saved automatically on this device</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="mission-grid" aria-label="Study plan">
+        <article class="mission">
+          <span class="mission-no">01</span>
+          <div><b>Literature</b><p>3 fiction · 4 poems · 1 drama</p></div>
+        </article>
+        <article class="mission">
+          <span class="mission-no">02</span>
+          <div><b>Writing vault</b><p>6 scoring formats</p></div>
+        </article>
+        <article class="mission">
+          <span class="mission-no">03</span>
+          <div><b>MCB</b><p>Units 2, 3 and 4</p></div>
+        </article>
+        <article class="mission">
+          <span class="mission-no">04</span>
+          <div><b>Rapid test</b><p>Mixed recall questions</p></div>
+        </article>
+      </section>
+
+      <section class="section-block" id="syllabus">
+        <div class="section-head">
+          <div><span class="eyebrow">Exact portion</span><h3>Syllabus map</h3></div>
+          <div class="filters" id="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="fiction">Fiction</button>
+            <button class="filter" data-filter="poetry">Poetry</button>
+            <button class="filter" data-filter="drama">Drama</button>
+            <button class="filter" data-filter="writing">Writing</button>
+            <button class="filter" data-filter="mcb">MCB</button>
+          </div>
+        </div>
+        <div class="topic-grid" id="topicGrid"></div>
+      </section>
+
+      <section class="section-block writing-section" id="writing">
+        <div class="section-head">
+          <div><span class="eyebrow">Scoring formats</span><h3>Writing vault</h3></div>
+          <p class="section-note">Use the structure first. Add content second.</p>
+        </div>
+        <div class="writing-layout">
+          <div class="writing-tabs" id="writingTabs"></div>
+          <article class="writing-guide" id="writingGuide"></article>
+        </div>
+      </section>
+
+      <section class="section-block focus-section">
+        <div>
+          <span class="eyebrow">Deep work</span>
+          <h3>25-minute focus sprint</h3>
+          <p>Put the phone face-down. One topic only. When the timer ends, do a 2-minute closed-book recall.</p>
+        </div>
+        <div class="timer-card">
+          <div class="timer" id="timerDisplay">25:00</div>
+          <div class="timer-actions">
+            <button class="primary-btn compact" id="timerToggle">Start</button>
+            <button class="ghost-btn compact" id="timerReset">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block quiz-section" id="quiz">
+        <div class="section-head">
+          <div><span class="eyebrow">Active recall</span><h3>Rapid test</h3></div>
+          <p class="section-note">10 mixed questions. No notes.</p>
+        </div>
+        <div class="quiz-card" id="quizCard">
+          <div id="quizIntro">
+            <p>Questions are drawn from your literature and writing portion. Finish the test, then revise only what you missed.</p>
+            <button class="primary-btn" id="startQuizBtn">Start 10-question test</button>
+          </div>
+          <div id="quizBody" hidden>
+            <div class="quiz-meta"><span id="quizCounter">1 / 10</span><span id="quizScore">Score 0</span></div>
+            <div class="quiz-progress"><i id="quizProgress"></i></div>
+            <h4 id="quizQuestion"></h4>
+            <div class="answers" id="quizAnswers"></div>
+            <div class="explain" id="quizExplain" hidden></div>
+            <button class="primary-btn compact" id="nextQuestionBtn" hidden>Next</button>
+          </div>
+          <div id="quizResult" hidden></div>
+        </div>
+      </section>
+
+      <footer>
+        <strong>Study Portal 2026–27</strong>
+        <span>English first. Built for focused revision.</span>
+      </footer>
+    </main>
+  </div>
+
+  <dialog class="topic-modal" id="topicModal">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+</body>
+</html>
