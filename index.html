@@ -10,7 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <script>var Module = { onRuntimeInitialized: function(){ window.studyEngineReady = true; window.dispatchEvent(new Event("study-engine-ready")); } };</script>
+  <script defer src="engine.js"></script>
   <script defer src="app.js"></script>
+  <script defer src="enhanced.js"></script>
 </head>
 <body>
   <div class="app-shell">
@@ -110,6 +113,62 @@
         <div class="writing-layout">
           <div class="writing-tabs" id="writingTabs"></div>
           <article class="writing-guide" id="writingGuide"></article>
+        </div>
+      </section>
+
+
+      <section class="section-block intelligence-section" id="smartDrill">
+        <div class="section-head">
+          <div><span class="eyebrow">Study engine 2.0</span><h3>Adaptive study + voice</h3></div>
+          <p class="section-note" id="dataStatus">Loading the Python dataset and C++ engine…</p>
+        </div>
+
+        <div class="engine-stats">
+          <article><span class="eyebrow">Question bank</span><strong id="questionCount">…</strong><small>validated questions</small></article>
+          <article><span class="eyebrow">Accuracy</span><strong id="overallAccuracy">—</strong><small>across adaptive drills</small></article>
+          <article><span class="eyebrow">Priority topic</span><strong id="weakTopic">Start a drill</strong><small>updates after every answer</small></article>
+        </div>
+
+        <div class="engine-grid">
+          <article class="smart-card">
+            <div id="smartIntro">
+              <span class="tech-row"><b>PY</b><b>C++ → WASM</b><b>VOICE</b></span>
+              <h4>Smart Drill</h4>
+              <p>Python validates and packages the study bank. The C++ WebAssembly engine increases the probability of questions from weak or forgotten topics. Your results stay on this device.</p>
+              <div class="hero-actions">
+                <button class="primary-btn" id="smartStart">Start 20-question smart drill</button>
+                <button class="secondary-btn" id="weakStart">Weak areas only</button>
+              </div>
+            </div>
+            <div id="smartBody" hidden>
+              <div class="quiz-meta"><span id="smartCounter">1 / 20</span><span id="smartScore">Score 0</span></div>
+              <div class="quiz-progress"><i id="smartProgress"></i></div>
+              <span class="smart-topic" id="smartTopic"></span>
+              <h4 id="smartQuestion"></h4>
+              <div class="answers" id="smartAnswers"></div>
+              <div class="explain" id="smartExplain" hidden></div>
+              <button class="primary-btn compact" id="smartNext" hidden>Next adaptive question</button>
+            </div>
+            <div id="smartResult" hidden></div>
+          </article>
+
+          <aside class="engine-side">
+            <div class="mastery-card">
+              <div class="mini-head"><span class="eyebrow">What to revise next</span><button id="resetMastery">Reset</button></div>
+              <div id="masteryList"></div>
+            </div>
+            <div class="voice-card">
+              <span class="eyebrow">Voice study</span>
+              <h4>Hands-free quiz mode</h4>
+              <p>Start a smart drill, then have the portal read the current question and answer by saying A, B, C or D.</p>
+              <div class="voice-actions">
+                <button class="primary-btn compact" id="voiceReadCurrent">Read question</button>
+                <button class="secondary-btn compact" id="voiceAnswerCurrent">Answer by voice</button>
+                <button class="ghost-btn compact" id="voiceStop">Stop</button>
+              </div>
+              <small id="voiceStatus">Voice is off. Microphone permission is requested only when you choose voice answer.</small>
+            </div>
+          </aside>
         </div>
       </section>
 

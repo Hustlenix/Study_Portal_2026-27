@@ -44,3 +44,17 @@ Open `index.html` directly, or serve the folder with any static server.
 GitHub Pages is intended to publish from the root of `main`.
 
 https://hustlenix.github.io/Study_Portal_2026-27/
+
+
+## Study Engine 2.0
+
+The portal now uses a mixed stack intentionally:
+
+- **Python** (`tools/build_study_data.py`) validates the question bank and builds browser-ready study data.
+- **C++** (`cpp/adaptive_engine.cpp`) is compiled to **WebAssembly** and scores topic priority/mastery for adaptive drills.
+- **JavaScript** owns the UI, local progress state, browser speech synthesis and speech recognition.
+- **Voice study** can read questions and chapter summaries aloud and, where the browser supports it, accepts spoken A/B/C/D answers.
+- **52-question English bank** is stored in `data/questions.json`, with difficulty, topic, answer and explanation metadata.
+- **GitHub Actions** rebuilds the Python data and C++ WASM, then deploys the generated site to GitHub Pages.
+
+The browser falls back to the JavaScript adaptive formula if WebAssembly has not loaded, so the study experience still works on limited browsers.

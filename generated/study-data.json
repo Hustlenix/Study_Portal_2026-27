@@ -1,0 +1,752 @@
+{
+  "version": "2.0.0",
+  "subject": "English Communicative",
+  "generated_by": "tools/build_study_data.py",
+  "question_count": 52,
+  "topic_counts": {
+    "letter": 5,
+    "shady": 5,
+    "patol": 5,
+    "not-marble": 4,
+    "ozymandias": 5,
+    "mariner": 6,
+    "snake": 5,
+    "departed": 5,
+    "email": 2,
+    "leave": 2,
+    "complaint": 2,
+    "editor": 2,
+    "article": 2,
+    "factual": 2
+  },
+  "questions": [
+    {
+      "id": "letter-01",
+      "topic": "letter",
+      "difficulty": "easy",
+      "prompt": "What was Coachman Ali before separation from his daughter changed him?",
+      "options": [
+        "A postman",
+        "A skilled hunter",
+        "A soldier",
+        "A teacher"
+      ],
+      "correct": 1,
+      "explanation": "Ali had been a skilled hunter before longing for Miriam changed his outlook."
+    },
+    {
+      "id": "letter-02",
+      "topic": "letter",
+      "difficulty": "easy",
+      "prompt": "Why did Ali visit the post office every day?",
+      "options": [
+        "To meet Lakshmi Das",
+        "To collect his pension",
+        "To wait for a letter from Miriam",
+        "To send hunting reports"
+      ],
+      "correct": 2,
+      "explanation": "His daily visits were sustained by hope that his daughter Miriam would write."
+    },
+    {
+      "id": "letter-03",
+      "topic": "letter",
+      "difficulty": "medium",
+      "prompt": "What did Ali give Lakshmi Das before he stopped visiting the post office?",
+      "options": [
+        "Five gold guineas",
+        "A silver watch",
+        "His hunting gun",
+        "Miriam's photograph"
+      ],
+      "correct": 0,
+      "explanation": "He gave Lakshmi Das five gold guineas and asked him to deliver Miriam's letter if it arrived."
+    },
+    {
+      "id": "letter-04",
+      "topic": "letter",
+      "difficulty": "medium",
+      "prompt": "What makes the Postmaster finally understand Ali's pain?",
+      "options": [
+        "Ali argues with him",
+        "His own daughter becomes ill and he waits for news",
+        "Lakshmi Das scolds him",
+        "Miriam visits the post office"
+      ],
+      "correct": 1,
+      "explanation": "Personal anxiety about his own daughter awakens the empathy he had lacked."
+    },
+    {
+      "id": "letter-05",
+      "topic": "letter",
+      "difficulty": "medium",
+      "prompt": "Where is Miriam's letter ultimately taken after Ali's death?",
+      "options": [
+        "To the Postmaster's house",
+        "To Miriam's husband",
+        "To Ali's grave",
+        "Back to the sender"
+      ],
+      "correct": 2,
+      "explanation": "The letter is finally placed on Ali's grave, completing the story's emotional arc."
+    },
+    {
+      "id": "shady-01",
+      "topic": "shady",
+      "difficulty": "easy",
+      "prompt": "What problem does John Hallock face at the beginning of A Shady Plot?",
+      "options": [
+        "He has lost his house",
+        "He must produce another ghost story",
+        "He cannot find Lavinia",
+        "He wants to stop writing forever"
+      ],
+      "correct": 1,
+      "explanation": "His publisher expects another supernatural story, but John lacks an idea."
+    },
+    {
+      "id": "shady-02",
+      "topic": "shady",
+      "difficulty": "easy",
+      "prompt": "Who is Helen in A Shady Plot?",
+      "options": [
+        "John's editor",
+        "Lavinia's sister",
+        "A ghost connected with the Writers' Inspiration Bureau",
+        "A maid"
+      ],
+      "correct": 2,
+      "explanation": "Helen is a ghost who says she and others have been supplying writers with ideas."
+    },
+    {
+      "id": "shady-03",
+      "topic": "shady",
+      "difficulty": "medium",
+      "prompt": "Why are the ghosts on strike?",
+      "options": [
+        "Writers never pay them",
+        "Ouija-board users keep summoning and disturbing them",
+        "They dislike John",
+        "They have no stories left"
+      ],
+      "correct": 1,
+      "explanation": "The ghosts complain that Ouija-board enthusiasts constantly disturb them."
+    },
+    {
+      "id": "shady-04",
+      "topic": "shady",
+      "difficulty": "easy",
+      "prompt": "Who brings an Ouija board into John's home?",
+      "options": [
+        "Helen",
+        "Jenkins",
+        "Lavinia",
+        "Gladolia"
+      ],
+      "correct": 2,
+      "explanation": "Lavinia buys an Ouija board and later hosts a party around it."
+    },
+    {
+      "id": "shady-05",
+      "topic": "shady",
+      "difficulty": "medium",
+      "prompt": "Why does Lavinia become suspicious of John?",
+      "options": [
+        "She sees him writing to Helen",
+        "The Ouija board repeatedly gives the name Helen",
+        "John leaves home at night",
+        "Jenkins tells her a secret"
+      ],
+      "correct": 1,
+      "explanation": "The board's repeated reference to Helen makes Lavinia believe John is hiding another woman."
+    },
+    {
+      "id": "patol-01",
+      "topic": "patol",
+      "difficulty": "easy",
+      "prompt": "What is Patol Babu's only spoken word in the film role?",
+      "options": [
+        "Stop!",
+        "Oh!",
+        "Sorry!",
+        "Wait!"
+      ],
+      "correct": 1,
+      "explanation": "His entire dialogue is the single word 'Oh!', which he learns to treat as an acting challenge."
+    },
+    {
+      "id": "patol-02",
+      "topic": "patol",
+      "difficulty": "medium",
+      "prompt": "Whose teaching changes Patol Babu's attitude toward his tiny role?",
+      "options": [
+        "Chanchal Kumar's",
+        "Naresh Dutt's",
+        "Gogon Pakrashi's",
+        "Nishikanto Ghosh's"
+      ],
+      "correct": 2,
+      "explanation": "He remembers his mentor Gogon Pakrashi's principle that no role is too small for a true actor."
+    },
+    {
+      "id": "patol-03",
+      "topic": "patol",
+      "difficulty": "medium",
+      "prompt": "What does Patol Babu do before the take?",
+      "options": [
+        "Refuses to rehearse",
+        "Experiments with ways of saying his word and plans the timing",
+        "Demands a longer dialogue",
+        "Leaves the set"
+      ],
+      "correct": 1,
+      "explanation": "He studies the situation closely and rehearses tone, timing and movement."
+    },
+    {
+      "id": "patol-04",
+      "topic": "patol",
+      "difficulty": "medium",
+      "prompt": "Why does Patol Babu leave without collecting his payment?",
+      "options": [
+        "He is offended by the director",
+        "He forgets about it",
+        "The satisfaction of performing well matters more to him",
+        "He is called to another job"
+      ],
+      "correct": 2,
+      "explanation": "Artistic fulfilment becomes more valuable to him than the small payment."
+    },
+    {
+      "id": "patol-05",
+      "topic": "patol",
+      "difficulty": "hard",
+      "prompt": "Which quality best explains Patol Babu's final success?",
+      "options": [
+        "Luck",
+        "Professional dedication to even a minor task",
+        "Fame",
+        "Anger at the crew"
+      ],
+      "correct": 1,
+      "explanation": "He treats a tiny opportunity with complete seriousness, showing professionalism and integrity."
+    },
+    {
+      "id": "not-marble-01",
+      "topic": "not-marble",
+      "difficulty": "easy",
+      "prompt": "In Sonnet 55, what does Shakespeare claim will outlive marble monuments?",
+      "options": [
+        "Gold",
+        "Poetry",
+        "Kings",
+        "Weapons"
+      ],
+      "correct": 1,
+      "explanation": "The poet argues that verse can preserve memory beyond physical monuments."
+    },
+    {
+      "id": "not-marble-02",
+      "topic": "not-marble",
+      "difficulty": "medium",
+      "prompt": "What is the central contrast in Not Marble, nor the Gilded Monuments?",
+      "options": [
+        "Nature and technology",
+        "Temporary monuments and enduring poetry",
+        "Youth and age",
+        "Peace and love"
+      ],
+      "correct": 1,
+      "explanation": "Stone structures decay or are destroyed, while poetry keeps the subject's memory alive."
+    },
+    {
+      "id": "not-marble-03",
+      "topic": "not-marble",
+      "difficulty": "medium",
+      "prompt": "What forces threaten physical monuments in the poem?",
+      "options": [
+        "Only rain",
+        "Time and war",
+        "Jealousy alone",
+        "Poverty"
+      ],
+      "correct": 1,
+      "explanation": "Time, war and destruction can ruin monuments, but the poem claims verse will survive."
+    },
+    {
+      "id": "not-marble-04",
+      "topic": "not-marble",
+      "difficulty": "hard",
+      "prompt": "What kind of immortality does the sonnet promise?",
+      "options": [
+        "Physical immortality",
+        "Political power",
+        "Immortality through remembrance in verse",
+        "Wealth passed to heirs"
+      ],
+      "correct": 2,
+      "explanation": "The beloved lives on through the poem and the memory of future readers."
+    },
+    {
+      "id": "ozymandias-01",
+      "topic": "ozymandias",
+      "difficulty": "easy",
+      "prompt": "Who describes the ruined statue in Ozymandias?",
+      "options": [
+        "Ozymandias himself",
+        "A traveller from an antique land",
+        "The sculptor",
+        "A soldier"
+      ],
+      "correct": 1,
+      "explanation": "The poem uses a traveller's account to distance the once-powerful king from the present."
+    },
+    {
+      "id": "ozymandias-02",
+      "topic": "ozymandias",
+      "difficulty": "easy",
+      "prompt": "What remains most visibly of Ozymandias's statue?",
+      "options": [
+        "A complete palace",
+        "Two vast trunkless legs and a shattered face",
+        "A golden crown",
+        "A standing army"
+      ],
+      "correct": 1,
+      "explanation": "The broken remains emphasize decay and the collapse of worldly power."
+    },
+    {
+      "id": "ozymandias-03",
+      "topic": "ozymandias",
+      "difficulty": "medium",
+      "prompt": "What does the expression on the shattered face reveal?",
+      "options": [
+        "Gentleness",
+        "Fear",
+        "Arrogance and cold command",
+        "Confusion"
+      ],
+      "correct": 2,
+      "explanation": "The sculptor captured the ruler's pride and authoritarian personality."
+    },
+    {
+      "id": "ozymandias-04",
+      "topic": "ozymandias",
+      "difficulty": "medium",
+      "prompt": "Why is the inscription on the pedestal ironic?",
+      "options": [
+        "It is written in another language",
+        "It boasts of unmatched greatness while the empire has vanished",
+        "It praises the sculptor",
+        "It asks travellers for help"
+      ],
+      "correct": 1,
+      "explanation": "The king's boast is contradicted by the empty desert and ruined statue."
+    },
+    {
+      "id": "ozymandias-05",
+      "topic": "ozymandias",
+      "difficulty": "hard",
+      "prompt": "What major idea does Ozymandias communicate?",
+      "options": [
+        "Art has no value",
+        "Human political power is temporary",
+        "Deserts are dangerous",
+        "Travellers should distrust kings"
+      ],
+      "correct": 1,
+      "explanation": "Time outlasts rulers and empires, making absolute claims to power temporary."
+    },
+    {
+      "id": "mariner-01",
+      "topic": "mariner",
+      "difficulty": "easy",
+      "prompt": "Whom does the Ancient Mariner stop to tell his story?",
+      "options": [
+        "A sailor",
+        "A Wedding Guest",
+        "A priest",
+        "A king"
+      ],
+      "correct": 1,
+      "explanation": "He detains a Wedding Guest and compels him to hear the cautionary tale."
+    },
+    {
+      "id": "mariner-02",
+      "topic": "mariner",
+      "difficulty": "easy",
+      "prompt": "What creature does the Mariner kill?",
+      "options": [
+        "A gull",
+        "An albatross",
+        "A whale",
+        "A snake"
+      ],
+      "correct": 1,
+      "explanation": "His senseless killing of the albatross triggers the poem's moral and supernatural crisis."
+    },
+    {
+      "id": "mariner-03",
+      "topic": "mariner",
+      "difficulty": "medium",
+      "prompt": "What is hung around the Mariner's neck?",
+      "options": [
+        "A chain",
+        "The dead albatross",
+        "A compass",
+        "A cross"
+      ],
+      "correct": 1,
+      "explanation": "The albatross is hung around his neck as a visible symbol of guilt."
+    },
+    {
+      "id": "mariner-04",
+      "topic": "mariner",
+      "difficulty": "medium",
+      "prompt": "What is one major consequence of the Mariner's act?",
+      "options": [
+        "The ship instantly reaches home",
+        "The crew suffers isolation, thirst and supernatural punishment",
+        "He becomes captain",
+        "The albatross returns to life"
+      ],
+      "correct": 1,
+      "explanation": "The voyage turns into extreme suffering and supernatural punishment."
+    },
+    {
+      "id": "mariner-05",
+      "topic": "mariner",
+      "difficulty": "medium",
+      "prompt": "What marks the beginning of the Mariner's spiritual change?",
+      "options": [
+        "He throws away the bird",
+        "He spontaneously blesses the water-snakes",
+        "He meets the Wedding Guest",
+        "He sees land"
+      ],
+      "correct": 1,
+      "explanation": "His spontaneous appreciation of the water-snakes shows renewed love for living creatures."
+    },
+    {
+      "id": "mariner-06",
+      "topic": "mariner",
+      "difficulty": "hard",
+      "prompt": "What is the Mariner's continuing penance?",
+      "options": [
+        "He must remain at sea forever",
+        "He must repeatedly tell his story and its lesson",
+        "He must never speak again",
+        "He must rebuild the ship"
+      ],
+      "correct": 1,
+      "explanation": "He is driven to retell the experience so others learn reverence for life."
+    },
+    {
+      "id": "snake-01",
+      "topic": "snake",
+      "difficulty": "easy",
+      "prompt": "Where does the speaker encounter the snake?",
+      "options": [
+        "In a forest",
+        "At his water-trough",
+        "Inside a classroom",
+        "On a ship"
+      ],
+      "correct": 1,
+      "explanation": "The snake comes to the speaker's water-trough to drink on a hot day."
+    },
+    {
+      "id": "snake-02",
+      "topic": "snake",
+      "difficulty": "medium",
+      "prompt": "What does the 'voice of education' tell the speaker?",
+      "options": [
+        "Feed the snake",
+        "Admire the snake",
+        "A dangerous snake should be killed",
+        "Leave the house"
+      ],
+      "correct": 2,
+      "explanation": "Learned social conditioning tells him that such a snake should be killed."
+    },
+    {
+      "id": "snake-03",
+      "topic": "snake",
+      "difficulty": "medium",
+      "prompt": "How does the speaker initially feel about the snake?",
+      "options": [
+        "Only disgust",
+        "Fascination and a sense of honour at its visit",
+        "Complete indifference",
+        "Immediate anger"
+      ],
+      "correct": 1,
+      "explanation": "His instinctive response is respectful and fascinated, not violent."
+    },
+    {
+      "id": "snake-04",
+      "topic": "snake",
+      "difficulty": "easy",
+      "prompt": "What does the speaker throw as the snake retreats?",
+      "options": [
+        "A stone wall",
+        "A log",
+        "A shoe",
+        "Water"
+      ],
+      "correct": 1,
+      "explanation": "He throws a log at the retreating snake and then regrets the act."
+    },
+    {
+      "id": "snake-05",
+      "topic": "snake",
+      "difficulty": "hard",
+      "prompt": "Why is the speaker ashamed at the end?",
+      "options": [
+        "He failed to capture the snake",
+        "He allowed learned fear to override his instinctive respect",
+        "The snake drank all the water",
+        "His neighbour saw him"
+      ],
+      "correct": 1,
+      "explanation": "He recognizes his action as petty and wishes he had honoured the creature instead."
+    },
+    {
+      "id": "departed-01",
+      "topic": "departed",
+      "difficulty": "easy",
+      "prompt": "Who is the supposedly dead old man in The Dear Departed?",
+      "options": [
+        "Ben Jordan",
+        "Henry Slater",
+        "Abel Merryweather",
+        "Jimmy"
+      ],
+      "correct": 2,
+      "explanation": "Abel Merryweather is the father whose supposed death exposes his family's greed."
+    },
+    {
+      "id": "departed-02",
+      "topic": "departed",
+      "difficulty": "medium",
+      "prompt": "What do the Slaters do before the Jordans arrive?",
+      "options": [
+        "Call a doctor immediately",
+        "Move some of Abel's possessions downstairs",
+        "Write a new will",
+        "Leave the house"
+      ],
+      "correct": 1,
+      "explanation": "They begin appropriating Abel's property, revealing their materialism."
+    },
+    {
+      "id": "departed-03",
+      "topic": "departed",
+      "difficulty": "medium",
+      "prompt": "What do the sisters mainly quarrel about?",
+      "options": [
+        "Their childhood",
+        "Abel's possessions and arrangements",
+        "A wedding invitation",
+        "School fees"
+      ],
+      "correct": 1,
+      "explanation": "Their argument is dominated by property and self-interest rather than grief."
+    },
+    {
+      "id": "departed-04",
+      "topic": "departed",
+      "difficulty": "easy",
+      "prompt": "What dramatic event exposes the family's hypocrisy?",
+      "options": [
+        "A police officer arrives",
+        "Abel wakes up",
+        "The house catches fire",
+        "A letter arrives"
+      ],
+      "correct": 1,
+      "explanation": "Abel's unexpected return to consciousness lets him witness and expose their greed."
+    },
+    {
+      "id": "departed-05",
+      "topic": "departed",
+      "difficulty": "hard",
+      "prompt": "What is the play primarily satirizing?",
+      "options": [
+        "Education",
+        "Greed, hypocrisy and neglect within families",
+        "Military life",
+        "Village politics"
+      ],
+      "correct": 1,
+      "explanation": "The comedy attacks materialism and insincere family affection, especially toward the elderly."
+    },
+    {
+      "id": "email-01",
+      "topic": "email",
+      "difficulty": "easy",
+      "prompt": "What should a strong formal email subject line do?",
+      "options": [
+        "Use emojis",
+        "State the purpose clearly",
+        "Repeat the greeting",
+        "Stay intentionally vague"
+      ],
+      "correct": 1,
+      "explanation": "A specific subject tells the recipient immediately what the email concerns."
+    },
+    {
+      "id": "email-02",
+      "topic": "email",
+      "difficulty": "medium",
+      "prompt": "Which email opening is strongest for an exam response?",
+      "options": [
+        "Hey there!",
+        "I am writing to request/inform...",
+        "What's up?",
+        "Read this urgently!!!"
+      ],
+      "correct": 1,
+      "explanation": "A formal email should state its purpose promptly and professionally."
+    },
+    {
+      "id": "leave-01",
+      "topic": "leave",
+      "difficulty": "easy",
+      "prompt": "What information is essential in a leave application?",
+      "options": [
+        "Favourite subject",
+        "Exact leave dates or duration and reason",
+        "A quotation",
+        "A newspaper headline"
+      ],
+      "correct": 1,
+      "explanation": "The authority needs to know when the leave is required and the concise reason."
+    },
+    {
+      "id": "leave-02",
+      "topic": "leave",
+      "difficulty": "medium",
+      "prompt": "What tone should a leave application use?",
+      "options": [
+        "Casual and humorous",
+        "Formal, concise and respectful",
+        "Aggressive",
+        "Poetic"
+      ],
+      "correct": 1,
+      "explanation": "It is a formal request, so clarity and courtesy are more important than elaboration."
+    },
+    {
+      "id": "complaint-01",
+      "topic": "complaint",
+      "difficulty": "easy",
+      "prompt": "What makes a complaint letter persuasive?",
+      "options": [
+        "Exaggeration",
+        "Specific facts, impact and a reasonable remedy",
+        "Threats",
+        "Very long background"
+      ],
+      "correct": 1,
+      "explanation": "Evidence plus a clear requested remedy gives the recipient something actionable."
+    },
+    {
+      "id": "complaint-02",
+      "topic": "complaint",
+      "difficulty": "medium",
+      "prompt": "Which ending best suits a formal complaint?",
+      "options": [
+        "Fix it now.",
+        "I request you to kindly arrange a replacement/refund at the earliest.",
+        "Bye.",
+        "You people are terrible."
+      ],
+      "correct": 1,
+      "explanation": "A firm but courteous request is appropriate in formal correspondence."
+    },
+    {
+      "id": "editor-01",
+      "topic": "editor",
+      "difficulty": "easy",
+      "prompt": "What kind of issue is most suitable for a letter to the editor?",
+      "options": [
+        "A purely private disagreement",
+        "An issue of public concern",
+        "A fictional story",
+        "A personal diary entry"
+      ],
+      "correct": 1,
+      "explanation": "The purpose is to raise public awareness or encourage action on a wider issue."
+    },
+    {
+      "id": "editor-02",
+      "topic": "editor",
+      "difficulty": "medium",
+      "prompt": "What should follow the explanation of a public problem in a letter to the editor?",
+      "options": [
+        "Only blame",
+        "Practical suggestions or solutions",
+        "A joke",
+        "A product advertisement"
+      ],
+      "correct": 1,
+      "explanation": "Exam responses score better when they move from issue and effects to feasible action."
+    },
+    {
+      "id": "article-01",
+      "topic": "article",
+      "difficulty": "easy",
+      "prompt": "What normally appears at the beginning of an article?",
+      "options": [
+        "Receiver's address",
+        "Title and byline",
+        "Invoice number",
+        "Formal salutation"
+      ],
+      "correct": 1,
+      "explanation": "A clear title and byline identify the article before the main body."
+    },
+    {
+      "id": "article-02",
+      "topic": "article",
+      "difficulty": "medium",
+      "prompt": "Which structure is strongest for an article?",
+      "options": [
+        "Random points",
+        "Hook → explanation/evidence → solutions or insight → conclusion",
+        "Dialogue only",
+        "Address → subject → salutation"
+      ],
+      "correct": 1,
+      "explanation": "Articles need coherent development rather than formal-letter formatting."
+    },
+    {
+      "id": "factual-01",
+      "topic": "factual",
+      "difficulty": "easy",
+      "prompt": "What tone should a factual description mainly use?",
+      "options": [
+        "Objective and precise",
+        "Highly emotional",
+        "Sarcastic",
+        "Argumentative"
+      ],
+      "correct": 0,
+      "explanation": "The task is to communicate observable facts accurately and clearly."
+    },
+    {
+      "id": "factual-02",
+      "topic": "factual",
+      "difficulty": "medium",
+      "prompt": "How should details in a factual description be organized?",
+      "options": [
+        "Randomly",
+        "In a logical spatial, functional or sequential order",
+        "Only alphabetically",
+        "As dialogue"
+      ],
+      "correct": 1,
+      "explanation": "A clear organizing principle makes the description easy to follow."
+    }
+  ]
+}
