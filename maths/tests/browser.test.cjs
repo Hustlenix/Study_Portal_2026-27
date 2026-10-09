@@ -38,6 +38,28 @@ async function run(){
     await page.goto(url,{waitUntil:'networkidle'});
     await page.getByRole('heading',{name:/Understand the maths/i}).waitFor();
     assert.equal(await page.locator('.chapter-card').count(),10,'Ten chapter cards');
+
+    // Persisting theme toggle: check state, computed colors and reload on desktop/mobile.
+    const theme=page.locator('#theme-toggle');
+    await theme.waitFor();
+    await theme.click();
+    assert.equal(await page.locator('html').getAttribute('data-theme'),'dark','Toggle enables dark mode');
+    assert.equal(await theme.getAttribute('aria-pressed'),'true','Dark mode has accessible pressed state');
+    assert.equal(await page.evaluate(()=>getComputedStyle(document.body).backgroundColor),'rgb(11, 20, 24)','Dark background is applied');
+    assert.equal(await page.evaluate(()=>getComputedStyle(document.querySelector('.chapter-card')).backgroundColor),'rgb(20, 35, 42)','Chapter surface is dark');
+    await snap('dark-home');
+    await page.reload({waitUntil:'networkidle'});
+    assert.equal(await page.locator('html').getAttribute('data-theme'),'dark','Dark mode persists across reload');
+    assert.equal(await page.evaluate(()=>localStorage.getItem('maths-studio-theme')),'dark','Theme preference stored locally');
+    await page.locator('button[data-action="open-flow"]').click();
+    await page.locator('button[data-flow-action="choose"][data-chapter="quadratics"]').click();
+    assert.equal(await page.evaluate(()=>getComputedStyle(document.querySelector('.flow-assessment')).backgroundColor),'rgb(20, 35, 42)','Guided learning dark surface');
+    await snap('dark-guided');
+    await page.locator('#theme-toggle').click();
+    assert.equal(await page.locator('html').getAttribute('data-theme'),'light','Toggle restores light mode');
+    await page.reload({waitUntil:'networkidle'});
+    assert.equal(await page.locator('html').getAttribute('data-theme'),'light','Light mode persists after reload');
+
     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
     assert.ok(overflow<=3,'Page horizontal overflow '+overflow+' px on '+name);
     await snap('home');
