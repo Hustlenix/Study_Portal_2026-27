@@ -144,7 +144,7 @@ window.MATH_LESSONS = [
         "work": "a = 7, d = 4. a₂₀ = 7 + 19(4) = 83. S₂₀ = 20(7 + 83)/2 = 900."
       },
       {
-        "q": "The first row has 12 seats. Every next row has 3 more seats. Find seats in 15 rows.",
+        "q": "An auditorium has 12 seats in its first row and 3 MORE seats in every following row. How many seats are there in TOTAL across the first 15 rows?",
         "a": "495 seats",
         "work": "AP: a = 12, d = 3, n = 15. Last row = 12 + 14(3) = 54. S₁₅ = 15(12 + 54)/2 = 495."
       }
@@ -164,7 +164,7 @@ window.MATH_LESSONS = [
       "Similar triangles' areas are in the SQUARE of the matching sides' ratio; right triangle: a² + b² = c²."
     ],
     "example": {
-      "q": "In triangle ABC, DE ∥ BC, AD = 4, DB = 6 and AE = 6. Find EC.",
+      "q": "In △ABC, D lies on AB and E lies on AC, DE ∥ BC, AD = 4 cm, DB = 6 cm and AE = 6 cm. Find EC.",
       "steps": [
         "Use Basic Proportionality Theorem: AD/DB = AE/EC.",
         "Substitute: 4/6 = 6/EC.",
@@ -177,7 +177,7 @@ window.MATH_LESSONS = [
     "formula": "AD/DB = AE/EC when DE ∥ BC; Area ratio = side ratio²",
     "practice": [
       {
-        "q": "DE ∥ BC in △ABC. AD = 4 cm, DB = 6 cm, AE = 6 cm. Find EC.",
+        "q": "In △ABC, D lies on AB and E lies on AC, with DE ∥ BC. If AD = 4 cm, DB = 6 cm and AE = 6 cm, find EC.",
         "a": "9 cm",
         "work": "AD/DB = AE/EC → 4/6 = 6/EC → EC = 9 cm."
       },
@@ -202,9 +202,9 @@ window.MATH_LESSONS = [
       "sin²θ + cos²θ = 1; 1 + tan²θ = sec²θ; 1 + cot²θ = cosec²θ."
     ],
     "example": {
-      "q": "A right triangle has perpendicular 3, base 4, hypotenuse 5. Find sin θ, cos θ, tan θ.",
+      "q": "A right triangle has perpendicular 3 cm, base 4 cm and hypotenuse 5 cm. Let θ be the acute angle BETWEEN the base and hypotenuse (opposite the 3 cm side). Find sin θ, cos θ and tan θ.",
       "steps": [
-        "Mark θ next to the side of length 4, so P = 3 and B = 4.",
+        "θ is specified BETWEEN the base (4 cm) and hypotenuse (5 cm), so opposite P = 3 cm, adjacent B = 4 cm, and hypotenuse H = 5 cm.",
         "sin θ = P/H = 3/5.",
         "cos θ = B/H = 4/5.",
         "tan θ = P/B = 3/4."
@@ -336,7 +336,7 @@ window.MATH_LESSONS = [
         "work": "Mean = (2×5 + 5×15 + 3×25)/10 = 16. N/2 = 5; median class = 10–20. l=10, cf=2, f=5, h=10: median = 10 + (5−2)/5×10 = 16."
       },
       {
-        "q": "For three neighbouring classes, modal class 20–30 has frequency 10; previous class frequency 6; next class frequency 4. Find mode.",
+        "q": "For grouped classes 10–20, 20–30, 30–40 with respective frequencies 6, 10, 4, find the MODE using the grouped-data formula.",
         "a": "Mode = 24",
         "work": "l = 20, h = 10, f₁ = 10, f₀ = 6, f₂ = 4. Mode = 20 + [(10−6)/(20−6−4)]10 = 20 + 4 = 24."
       }
@@ -368,7 +368,7 @@ window.MATH_LESSONS = [
     "formula": "P(E) = favourable / total; P(not E) = 1 − P(E)",
     "practice": [
       {
-        "q": "Bag contains 5 red, 3 blue and 2 green balls. Find probability of NOT red.",
+        "q": "A bag contains 5 red, 3 blue and 2 green identical balls. One ball is selected uniformly at random. Find the probability that it is NOT red.",
         "a": "1/2",
         "work": "Total = 10. Not red = 3 + 2 = 5. P = 5/10 = 1/2."
       },
