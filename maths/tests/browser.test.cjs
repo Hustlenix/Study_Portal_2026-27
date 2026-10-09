@@ -62,7 +62,7 @@ async function run(){
     await page.locator('.test-question').first().locator('input[type="radio"]').first().check();
     await page.locator('button[data-action="test-submit"]').click();
     await page.getByText('Correct:',{exact:false}).first().waitFor();
-    await page.locator('button[data-action="test-reset"]').click();
+    await page.locator('button[data-action="test-reset"]').first().click();
     await page.locator('button[data-action="written-start"]').click();
     assert.equal(await page.locator('.test-question').count(),10,'Written 10-question exam');
     await page.locator('button[data-action="written-reveal"]').first().click();
