@@ -127,10 +127,11 @@ return header('Formula library.','EVERY INCLUDED CHAPTER / ONE REFERENCE','The f
 }
 function exam(){
 let test=state.exam;
+if(state.writtenTest)return writtenExam();
 if(!test)return header('Mock test lab.','SELF CHECK / MARKED INSTANTLY','Tests sample questions across included chapters. Work without checking notes, then reveal explanations for every answer.')+
 '<section class="section">'+section('Choose your test length','MCQ MODE','All tests contain original concept and calculation questions.')+
-'<div class="grid three">'+[10,20,30].map(n=>'<button class="test-choice '+(state.examSize===n?'active':'')+'" data-action="test-size" data-size="'+n+'"><strong>'+n+' questions</strong><small>'+Math.round(n*1.5)+' minutes suggested · mixed topics</small></button>').join('')+'</div><div style="margin:22px 0">'+button('Start '+state.examSize+'-question mock test →','test-start','','data-size="'+state.examSize+'"')+'</div></section>'+
-'<div class="why"><strong>Real examination technique</strong><p>Use pencil and paper to work out answers first. Each MCQ checks a small idea. The app saves neither personal information nor your written workings.</p></div>';
+'<div class="grid three">'+[10,20,30].map(n=>'<button aria-pressed="'+(state.examSize===n)+'" class="test-choice '+(state.examSize===n?'active':'')+'" data-action="test-size" data-size="'+n+'"><strong>'+n+' questions</strong><small>'+Math.round(n*1.5)+' minutes suggested · mixed topics</small></button>').join('')+'</div><div class="actions" style="margin:22px 0">'+button('Start '+state.examSize+'-question MCQ test →','test-start','','data-size="'+state.examSize+'"')+button('Create a mixed written exam paper','written-start','light')+'</div></section>'+
+'<div class="why"><strong>Real examination technique</strong><p>For a proper written exam, generate a 10-question paper covering every chapter. For faster diagnostics, take an MCQ test; incorrect answers automatically enter your mistake notebook. Your answers and results are stored locally in this browser.</p></div>';
 let score=0;if(state.quizResult){test.questions.forEach(q=>{if(test.answers[q.id]===q.correct)score++})}
 return '<div class="section-heading"><div><div class="eyebrow">ASSESSMENT MODE · '+test.questions.length+' QUESTIONS</div><h1 style="margin:7px 0">'+(state.quizResult?'Your results':'Maths mixed quiz')+'</h1><p class="muted">'+(state.quizResult?'Read each explanation and revise weaker chapters.':'Select one option for each question. Submit whenever you are done.')+'</p></div><div class="actions">'+button('Start a new quiz','test-reset','light')+'</div></div>'+
 (state.quizResult?'<div class="score"><small>YOUR RESULT</small><b>'+score+' / '+test.questions.length+' correct · '+Math.round(score/test.questions.length*100)+'%</b><span>'+ (score===test.questions.length?'Excellent accuracy. Increase difficulty with written problems.':score>test.questions.length/2?'Review your incorrect responses below.':'Revise the chapter concepts first, then retake the quiz.') +'</span></div>':'')+
@@ -139,9 +140,34 @@ test.questions.map((q,i)=>'<article class="test-question"><span class="eyebrow">
 }
 function startTest(n){
 const byChapter=lessons.map(l=>(extra[l.id]?.mcq||[]).map((q,i)=>({...q,chapter:l.id,title:l.title,id:l.id+'-q'+i})));
-const buckets=byChapter.map(arr=>arr.slice().sort(()=>Math.random()-.5)),pick=[];
+const shuffled=arr=>{const copy=arr.slice();for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]]}return copy};
+const buckets=byChapter.map(shuffled),pick=[];
 for(let i=0;i<3&&pick.length<n;i++)for(const bucket of buckets){if(bucket[i]&&pick.length<n)pick.push(bucket[i])}
-state.exam={questions:pick,answers:{}};state.quizResult=null;navigate('exam');
+state.writtenTest=null;state.exam={questions:pick,answers:{}};state.quizResult=null;navigate('exam');
+}
+
+function startWritten(){
+ const mix=[];
+ for(let i=0;i<7&&mix.length<10;i++)for(const lesson of lessons){
+   const pool=exercises.filter(q=>q.chapter===lesson.id);
+   if(pool[i]&&mix.length<10)mix.push(pool[i]);
+ }
+ const rotate=Math.floor(Math.random()*7);
+ const byChapter=lessons.map(l=>{
+   const pool=exercises.filter(q=>q.chapter===l.id);
+   return pool[(rotate+lessons.indexOf(l))%pool.length];
+ });
+ state.exam=null;state.quizResult=null;
+ state.writtenTest={questions:byChapter,showAnswers:false};
+ navigate('exam');
+}
+function writtenExam(){
+ const paper=state.writtenTest;
+ const marks=[2,3,3,3,3,3,3,3,4,3]; // total 30
+ return header('Written Maths mock examination','ORIGINAL PRACTICE PAPER / NOT OFFICIAL CBSE PYQ','Ten written-answer questions across all ten included chapters. Solve in a notebook before opening the worked marking guide.')+
+ '<div class="panel" style="margin:19px 0;background:#f2f7ec"><div class="eyebrow">PRACTICE PAPER</div><h2 style="margin:9px 0">10 questions · 30 marks · 60 minutes suggested</h2><p class="muted">Write full workings, state units, justify rejected roots, and simplify final answers. Time is a suggestion, not an enforced limit.</p><div class="actions">'+button('Print blank paper','print','light')+button('Generate another paper','written-start','light')+button(paper.showAnswers?'Hide solutions':'Show marking guide','written-reveal','highlight')+'</div></div>'+
+ paper.questions.map((q,i)=>'<div class="test-question"><div class="eyebrow">Q'+(i+1)+' · '+marks[i]+' MARKS · '+esc(q.title)+'</div><h3>'+esc(q.q)+'</h3>'+(paper.showAnswers?'<div class="test-explain"><strong>Expected result: '+esc(q.a)+'</strong><p>'+esc(q.work)+'</p></div>':'<div class="writing-space" aria-hidden="true"><span>Write your method and full answer in a notebook</span></div>')+'</div>').join('')+
+ '<div class="actions" style="margin:22px 0">'+button(paper.showAnswers?'Hide solutions':'Reveal full marking guide','written-reveal','highlight')+button('Back to test selection','written-reset','light')+'</div>';
 }
 function lab(){
 return header('Math playground.','INTERACTIVE LEARNING / CHANGE THE VALUES','Change numbers yourself and watch how formulas work. Three interactive mini-labs help you connect the method to the answer.')+
@@ -194,8 +220,25 @@ if(act==='clear-mistakes'){state.mistakes.clear();persist();render()}
 if(act==='print')window.print();
 if(act==='test-size'){state.examSize=Number(el.dataset.size);render()}
 if(act==='test-start')startTest(Number(el.dataset.size||state.examSize));
-if(act==='test-submit'){state.quizResult=true;render();window.scrollTo({top:0,behavior:'smooth'})}
-if(act==='test-reset'){state.exam=null;state.quizResult=null;navigate('exam')}
+if(act==='test-submit'){
+ let score=0;
+ state.exam.questions.forEach(q=>{
+    const pass=state.exam.answers[q.id]===q.correct;
+    if(pass)score++;
+    const m=state.mastery[q.chapter]||{correctIds:[],testedIds:[]};
+    const correct=new Set(m.correctIds||[]),tested=new Set(m.testedIds||[]);
+    tested.add(q.id);if(pass)correct.add(q.id);else correct.delete(q.id);
+    m.correctIds=[...correct];m.testedIds=[...tested];m.correct=correct.size;m.tested=tested.size;
+    state.mastery[q.chapter]=m;
+    confidence(q.id,pass);
+ });
+ state.history.push({date:Date.now(),score,total:state.exam.questions.length});
+ persist();state.quizResult=true;render();window.scrollTo({top:0,behavior:'smooth'});
+}
+if(act==='test-reset'){state.exam=null;state.writtenTest=null;state.quizResult=null;navigate('exam')}
+if(act==='written-start'){startWritten()}
+if(act==='written-reveal'){state.writtenTest.showAnswers=!state.writtenTest.showAnswers;render()}
+if(act==='written-reset'){state.writtenTest=null;navigate('exam')}
 if(act==='lab-switch'){state.lab=el.dataset.lab;render()}
 }
 document.addEventListener('click',event=>{
