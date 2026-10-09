@@ -725,7 +725,7 @@ window.MATH_EXTRA = {
       {
         "q": "Volume of a cube of edge 4 cm?",
         "a": "64 cm³",
-        "work": "4³=64.",
+        "work": "The volume of a cube is side × side × side = 4 × 4 × 4 = 64 cm³.",
         "level": "easy"
       },
       {
