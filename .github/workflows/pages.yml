@@ -48,6 +48,7 @@ jobs:
           cp index.html styles.css app.js enhanced.js engine.js engine.wasm _site/
           cp -R generated _site/generated
           cp -R sst-crash-course _site/sst-crash-course
+          cp -R maths _site/maths
           touch _site/.nojekyll
 
       - name: Configure Pages
