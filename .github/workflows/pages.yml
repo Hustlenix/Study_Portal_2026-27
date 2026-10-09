@@ -26,6 +26,16 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Check Maths Studio JavaScript syntax
+        run: |
+          node --check maths/app.js
+          node --check maths/data.js
+          node --check maths/enrichment.js
+          node --check maths/coach-data.js
+
+      - name: Validate Maths Studio content and sample answers
+        run: node maths/tests/content.test.cjs
+
       - name: Validate and build study data
         run: python tools/build_study_data.py
 
