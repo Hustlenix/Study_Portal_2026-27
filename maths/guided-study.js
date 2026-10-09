@@ -9,6 +9,18 @@ const clean=x=>String(x??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(
 const raw=()=>{try{const d=JSON.parse(localStorage.getItem(KEY)||'{}');return d&&typeof d==='object'&&!Array.isArray(d)?d:{}}catch{return {}}};
 let data=raw();
 if(!data.responses||typeof data.responses!=='object')data.responses={};
+const VERSION=2;
+if(data.contentVersion!==VERSION){
+  const updatedQuestions={
+    polynomials:[0,1],linear:[1],quadratics:[0,1,2],
+    triangles:[0,2],trig:[1],coordinate:[0],
+    statistics:[0,1],probability:[1,2]
+  };
+  for(const [chapter,indices] of Object.entries(updatedQuestions)){
+    indices.forEach(i=>delete data.responses[chapter+'-'+i]);
+  }
+  data.contentVersion=VERSION;
+}
 if(!data.homeworkDone||typeof data.homeworkDone!=='object')data.homeworkDone={};
 if(!data.chapter||!lessons.some(x=>x.id===data.chapter))data.chapter='quadratics';
 if(!Number.isInteger(data.stage)||data.stage<0||data.stage>3)data.stage=0;
@@ -26,7 +38,7 @@ mensuration:{q:'Volume is measured in square units such as cm².',correct:1,why:
 statistics:{q:'For grouped median, cf refers to cumulative frequency before the median class.',correct:0,why:'The grouped-data median formula uses cumulative frequency before the median class.'},
 probability:{q:'The probability of an impossible event is zero.',correct:0,why:'No equally likely outcomes satisfy an impossible event.'}
 };
-function save(){try{localStorage.setItem(KEY,JSON.stringify({responses:data.responses,homeworkDone:data.homeworkDone,chapter:data.chapter,stage:data.stage}))}catch{}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify({responses:data.responses,homeworkDone:data.homeworkDone,chapter:data.chapter,stage:data.stage,contentVersion:VERSION}))}catch{}}
 function lesson(id){return lessons.find(l=>l.id===id)||lessons[0]}
 function qid(id,i){return id+'-'+i}
 function getQ(id,i){
