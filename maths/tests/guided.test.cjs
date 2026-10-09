@@ -1,0 +1,66 @@
+
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const home=path.resolve(__dirname,'..');
+const local={};
+const sandbox={window:{},localStorage:{getItem:key=>local[key]||null,setItem:(key,value)=>{local[key]=value}}};
+for(const file of ['data.js','enrichment.js','coach-data.js','guided-study.js']){
+ vm.runInNewContext(fs.readFileSync(path.join(home,file),'utf8'),sandbox,{filename:file,timeout:3000});
+}
+const lessons=sandbox.window.MATH_LESSONS;
+const study=sandbox.window.MATH_STUDY_FLOW;
+assert.equal(lessons.length,10);
+assert.ok(study&&typeof study.render==='function');
+const current=()=>JSON.parse(local['maths-guided-study-v1']||'{}');
+const act=(action,props={})=>study.handle({dataset:{flowAction:action,...props}});
+const check=fragment=>assert.ok(study.render().includes(fragment),'Expected '+fragment);
+check('Learn it. Check it. Fix the gaps.');
+check('One concept at a time.');
+check('40 checks completed');
+act('choose',{chapter:'quadratics'});
+check('Immediate feedback');
+check('Concept 1');
+let q=sandbox.window.MATH_EXTRA.quadratics.mcq[0];
+let wrong=(q.correct+1)%4;
+act('answer',{choice:String(wrong)});
+let record=current().responses['quadratics-0'];
+assert.equal(record.firstCorrect,false);
+assert.equal(record.correct,false);
+check('Not quite');
+act('help');check('Study help');
+act('answer',{choice:String(q.correct)});
+record=current().responses['quadratics-0'];
+assert.equal(record.firstCorrect,false,'Retry must not overwrite first-attempt accuracy');
+assert.equal(record.correct,true);
+assert.equal(record.helped,true);
+check('Correct');
+act('next');check('Concept 2');
+for(let i=1;i<3;i++){
+ const qq=sandbox.window.MATH_EXTRA.quadratics.mcq[i];
+ act('answer',{choice:String(qq.correct)});
+ if(i<2)act('next');
+}
+act('next');
+check('Quick recap');
+const t={polynomials:0,linear:1,quadratics:0,ap:0,triangles:1,trig:0,coordinate:1,mensuration:1,statistics:0,probability:0};
+act('answer',{choice:String(t.quadratics)});
+assert.equal(study.chapterStats('quadratics').completed,4);
+act('insights');check('Know what to revise next');
+check('4/40');
+check('first attempts');
+act('homework');check('Your next practice tasks');
+assert.ok(study.render().includes('Quadratic Equations'),'Weak chapter must be in homework');
+const match=study.render().match(/data-flow-homework="([^"]+)"/);
+assert.ok(match,'No homework tasks generated');
+const saved=study.handleChange({dataset:{flowHomework:match[1]},checked:true});
+assert.equal(saved,true);
+assert.equal(current().homeworkDone[match[1]],true);
+act('overview');check('One concept at a time.');
+const replay={window:{MATH_LESSONS:sandbox.window.MATH_LESSONS,MATH_EXTRA:sandbox.window.MATH_EXTRA,MATH_COACH:sandbox.window.MATH_COACH},localStorage:sandbox.localStorage};
+vm.runInNewContext(fs.readFileSync(path.join(home,'guided-study.js'),'utf8'),replay,{filename:'guided-study.js'});
+assert.equal(replay.window.MATH_STUDY_FLOW.chapterStats('quadratics').completed,4,'Progress should survive app reload');
+assert.equal(replay.window.MATH_STUDY_FLOW.stats().firstRight,3);
+const missing=lessons.filter(l=>!sandbox.window.MATH_EXTRA[l.id]?.mcq||!sandbox.window.MATH_COACH[l.id]);
+assert.equal(missing.length,0,'Chapters lack checkpoint content');
+console.log('Guided study model PASS: 10 chapters, 40 checks, feedback, retries, first-attempt tracking, help, targeted homework, persistence.');
