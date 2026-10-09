@@ -18,3 +18,13 @@
 .panel.stat[data-page]:hover{transform:translateY(-2px);border-color:#8bbc9a}
 @media(max-width:740px){.filters .actions{width:100%;align-items:stretch}.filters .field{flex:1}.search-input{width:100%}.chapter-tools .button{flex:1}.panel.stat{padding:15px}.review-date{font-size:10px}}
 @media print{.study-grid{display:block}.test-question,.question-card,.panel{break-inside:avoid;box-shadow:none}.writing-space{min-height:160px}.answer-reveal{display:none!important}.hint-stack{display:none!important}}
+
+/* Accessible reading and keyboard navigation */
+.skip-link{position:absolute;left:14px;top:-90px;z-index:100;background:#e6f6b4;color:#173f39;border:3px solid #153f30;border-radius:10px;padding:9px 14px;font-weight:900}
+.skip-link:focus{top:12px}
+.test-question:focus-within,.question-card:focus-within{border-color:#6aab81}
+.field:focus-within{color:#234e3a}
+.question-card .button:focus-visible,.chapter-card:focus-visible{outline:3px solid #5f9a6e;outline-offset:3px}
+.answer-reveal b{overflow-wrap:anywhere}
+.nav-item,.chapter-item{min-height:42px}
+@media print{.skip-link{display:none}.writing-space{min-height:120px}.hero{print-color-adjust:exact}.side{display:none!important}}
