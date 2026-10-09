@@ -33,6 +33,7 @@ jobs:
           node --check maths/enrichment.js
           node --check maths/coach-data.js
           node --check maths/guided-study.js
+          node --check maths/theme.js
 
       - name: Validate Maths Studio content and sample answers
         run: node maths/tests/content.test.cjs
