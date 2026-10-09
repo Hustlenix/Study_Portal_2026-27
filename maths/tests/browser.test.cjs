@@ -54,7 +54,7 @@ async function run(){
     await page.locator('button[data-flow-action="answer"][data-choice="2"]').click();
     await page.locator('.flow-feedback.correct').waitFor();
     await page.locator('button[data-flow-action="next"]').click();
-    await page.getByRole('heading',{name:/Splitting the middle term/i}).waitFor();
+    await page.getByRole('heading',{name:/Factorisation: fastest when it works/i}).waitFor();
     await snap('guided-lesson');
     await page.locator('button[data-flow-action="overview"]').click();
     await page.locator('button[data-flow-action="insights"]').click();
