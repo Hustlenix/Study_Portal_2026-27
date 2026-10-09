@@ -42,6 +42,23 @@ jobs:
       - name: Check offline worker syntax
         run: node --check maths/sw.js
 
+      - name: Install Chromium for real-browser tests
+        run: |
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+
+      - name: Test Maths Studio on desktop and mobile Chromium
+        timeout-minutes: 8
+        run: node maths/tests/browser.test.cjs
+
+      - name: Upload browser screenshots when tests fail
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: maths-browser-debug
+          path: maths/tests/screenshots/
+          if-no-files-found: ignore
+
       - name: Validate and build study data
         run: python tools/build_study_data.py
 
