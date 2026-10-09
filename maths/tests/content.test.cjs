@@ -62,7 +62,7 @@ assert.equal(2*linearTicket.a+3*linearTicket.c,390);
 assert.equal(3*linearTicket.a+2*linearTicket.c,460);
 roughlyEqual(20/2*(2*2+19*3),610); // 20-term AP
 assert.equal((6*6+8*8)**.5,10); // Distance formula
-assert.equal(2/3*Math.PI*3**3,18*Math.PI); // Hemisphere volume
+roughlyEqual(2/3*Math.PI*3**3,18*Math.PI); // Floating point volume check with tolerance
 roughlyEqual((4+0.5*(12/6)*10),14); // independent arithmetic consistency example
 assert.equal((2+5+3),10); // grouped frequencies
 assert.equal(4/36,1/9); // two dice sum 9
