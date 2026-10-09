@@ -36,6 +36,12 @@ jobs:
       - name: Validate Maths Studio content and sample answers
         run: node maths/tests/content.test.cjs
 
+      - name: Exercise Maths Studio interactive learning flows
+        run: node maths/tests/app.test.cjs
+
+      - name: Check offline worker syntax
+        run: node --check maths/sw.js
+
       - name: Validate and build study data
         run: python tools/build_study_data.py
 
