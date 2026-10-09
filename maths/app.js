@@ -36,7 +36,7 @@ function button(text,action,type,attrs){return '<button type="button" class="but
 function header(title,over,desc){return '<div class="eyebrow">'+esc(over)+'</div><h1 class="page-title">'+esc(title)+'</h1><p class="lede">'+esc(desc)+'</p>'}
 function section(title,over,desc){return '<div class="section-heading"><div><div class="eyebrow">'+esc(over)+'</div><h2>'+esc(title)+'</h2>'+(desc?'<p>'+esc(desc)+'</p>':'')+'</div></div>'}
 function renderNav(){
-const tabs=[['home','⌂','Overview'],['chapter','▤','Learn chapters'],['practice','✎','Question bank'],['exam','☑','Mock tests'],['formulas','∑','Formula library'],['lab','⌁','Math playground'],['mistakes','↻','Mistake notebook'],['due','◷','Due for review']];
+const tabs=[['home','⌂','Overview'],['flow','◈','Guided study'],['chapter','▤','Learn chapters'],['practice','✎','Question bank'],['exam','☑','Mock tests'],['formulas','∑','Formula library'],['lab','⌁','Math playground'],['mistakes','↻','Mistake notebook'],['due','◷','Due for review']];
 dom('nav-main').innerHTML=tabs.map(t=>'<button class="nav-item '+(state.page===t[0]?'active':'')+'" data-page="'+t[0]+'"><span style="font-size:17px;width:19px">'+t[1]+'</span><strong>'+t[2]+'</strong></button>').join('');
 dom('nav-lessons').innerHTML=lessons.map(l=>'<button class="chapter-item '+(state.page==='chapter'&&state.id===l.id?'active':'')+'" data-page="chapter" data-chapter="'+l.id+'"><span class="num">'+esc(l.code)+'</span><strong>'+esc(l.title)+'</strong><span class="done-dot">'+(state.done.has(l.id)?'✓':'')+'</span></button>').join('');
 dom('pct').textContent=Math.round(state.done.size/10*100)+'%';
@@ -49,10 +49,10 @@ if(page==='practice'&&id)state.filter=id;
 render();window.scrollTo({top:0,behavior:'auto'});
 dom('sidebar').classList.remove('open');dom('shade').classList.remove('show');dom('menu').setAttribute('aria-expanded','false');
 }
-function render(){renderNav();dom('main-content').innerHTML=({home:home,chapter:chapter,practice:practice,exam:exam,formulas:formulas,lab:lab,mistakes:mistakes,due:due}[state.page]||home)();if(state.page==='lab')computeLab();}
+function render(){renderNav();dom('main-content').innerHTML=({home:home,flow:()=>window.MATH_STUDY_FLOW?window.MATH_STUDY_FLOW.render():home(),chapter:chapter,practice:practice,exam:exam,formulas:formulas,lab:lab,mistakes:mistakes,due:due}[state.page]||home)();if(state.page==='lab')computeLab();}
 function home(){
 const undone=lessons.find(l=>(state.mastery[l.id]?.correct||0)<2)||lessons[0];
-return '<section class="hero"><div><div class="eyebrow" style="color:#d0e8a4">CBSE CLASS 10 · PERSONALISED MATHS PORTION</div><h1>Understand the maths.<br><span>Not just the formula.</span></h1><p>Learn from zero, follow step-by-step examples, request hints, solve notebook rounds, complete chapter diagnostics, revisit mistakes, and practise a full written paper. Work at your own pace.</p><div class="actions">'+button('Continue: '+esc(undone.title),'continue','highlight')+button('Explore the questions','to-practice','light')+'</div></div><aside class="hero-card"><small>CHAPTERS YOU MARKED REVIEWED</small><b>'+state.done.size+' / 10</b><div class="hero-meter"><i style="width:'+(state.done.size/10*100)+'%"></i></div><p style="font-size:12px;margin:12px 0 0">Progress is saved locally in this browser.</p></aside></section>'+
+return '<section class="hero"><div><div class="eyebrow" style="color:#d0e8a4">CBSE CLASS 10 · PERSONALISED MATHS PORTION</div><h1>Understand the maths.<br><span>Not just the formula.</span></h1><p>Learn from zero, follow step-by-step examples, request hints, solve notebook rounds, complete chapter diagnostics, revisit mistakes, and practise a full written paper. Work at your own pace.</p><div class="actions">'+button('Start guided study →','open-flow','highlight')+button('Continue: '+esc(undone.title),'continue','light')+button('Explore the questions','to-practice','light')+'</div></div><aside class="hero-card"><small>CHAPTERS YOU MARKED REVIEWED</small><b>'+state.done.size+' / 10</b><div class="hero-meter"><i style="width:'+(state.done.size/10*100)+'%"></i></div><p style="font-size:12px;margin:12px 0 0">Progress is saved locally in this browser.</p></aside></section>'+
 '<div class="notice"><b>Excluded by your exam portion:</b> Real Numbers, Some Applications of Trigonometry, Circles and Areas Related to Circles. Ten other Class 10 chapters are covered here.</div>'+
 '<section class="section"><div class="grid three"><button class="panel stat" style="text-align:left;cursor:pointer" data-page="due"><span class="symbol">◷</span><div><strong>'+dueIds().length+'</strong><span>due for spaced review</span></div></button><button class="panel stat" style="text-align:left;cursor:pointer" data-page="exam"><span class="symbol">✓</span><div><strong>'+masteredCount()+' / 10</strong><span>chapters with MCQ proficiency</span></div></button><div class="panel stat"><span class="symbol">✎</span><div><strong>'+exercises.length+' + '+mcqs.length+'</strong><span>written problems + MCQs</span></div></div></div></section>'+
 '<section class="section">'+section('All the chapters, in one place','CHAPTER LIBRARY','Pick any lesson, learn it from zero, then practise independently.')+
@@ -198,6 +198,7 @@ if(plot){const padX=Math.max(4,Math.min(30,Math.sqrt(Math.abs(D)||1)/Math.max(1,
 }
 function eventAction(el){
 const act=el.dataset.action;
+if(act==='open-flow')navigate('flow');
 if(act==='continue'){navigate('chapter',(lessons.find(l=>!state.done.has(l.id))||lessons[0]).id)}
 if(act==='to-practice')navigate('practice');
 if(act==='to-chapter')navigate('chapter',el.dataset.chapter);
@@ -252,10 +253,12 @@ document.addEventListener('click',event=>{
 const el=event.target.closest('button');if(!el)return;
 if(el.id==='menu'){const open=!dom('sidebar').classList.contains('open');dom('sidebar').classList.toggle('open',open);dom('shade').classList.toggle('show',open);el.setAttribute('aria-expanded',String(open));return}
 if(el.dataset.page){navigate(el.dataset.page,el.dataset.chapter);return}
+if(el.dataset.flowAction&&window.MATH_STUDY_FLOW){const next=window.MATH_STUDY_FLOW.handle(el);if(next){render();return}}
 if(el.dataset.action)eventAction(el);
 });
 dom('shade').addEventListener('click',()=>{dom('sidebar').classList.remove('open');dom('shade').classList.remove('show');dom('menu').setAttribute('aria-expanded','false')});
 document.addEventListener('change',e=>{
+if(e.target.dataset?.flowHomework&&window.MATH_STUDY_FLOW){if(window.MATH_STUDY_FLOW.handleChange(e.target)){render();return}}
 if(e.target.id==='chapter-filter'){state.filter=e.target.value;state.limit=12;render()}
 if(e.target.matches('input[data-testid]')&&state.exam&&!state.quizResult){state.exam.answers[e.target.dataset.testid]=Number(e.target.value)}
 });
