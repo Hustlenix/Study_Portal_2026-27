@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#142b29">
+  <meta name="color-scheme" content="light">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
   <meta name="description" content="Maths Revision — Class 10 CBSE, 10 chapters, detailed lessons, 100 practice questions, mock tests, formula library and interactive labs.">
   <title>Maths Revision Studio · Class 10 | Study Portal 2026–27</title>
   <link rel="stylesheet" href="./styles.css">
@@ -13,6 +16,7 @@
   <script defer src="./app.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to lesson content</a>
   <div id="shade" class="mobile-backdrop"></div>
   <div class="app">
     <aside id="sidebar" class="side" aria-label="Maths study navigation">
@@ -23,7 +27,7 @@
       <nav id="nav-lessons" class="side-chapters" aria-label="Chapter list"></nav>
       <div class="side-foot">Made for Class 10 Maths understanding, not passive video watching.<p>Real Numbers, Applications of Trigonometry, Circles, and Areas Related to Circles are excluded.</p><a href="../index.html">← Main study portal</a></div>
     </aside>
-    <main class="workspace">
+    <main class="workspace" id="workspace">
       <header class="top">
         <div class="actions">
           <button id="menu" class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
@@ -31,9 +35,10 @@
         </div>
         <div class="top-right"><div class="top-mini"><span id="pct">0%</span><i><b id="pct-bar" style="width:0"></b></i></div></div>
       </header>
-      <div id="main-content"></div>
+      <div id="main-content" tabindex="-1"></div>
       <footer class="foot">Maths Revision Studio · Study Portal 2026–27 · CBSE Class 10. Original educational explanations and exam-style questions. Your progress is stored only in this browser. The site is not an official CBSE examination paper.</footer>
     </main>
   </div>
+  <script>if ("serviceWorker" in navigator) window.addEventListener("load", function(){navigator.serviceWorker.register("./sw.js").catch(function(){})});</script>
 </body>
 </html>
