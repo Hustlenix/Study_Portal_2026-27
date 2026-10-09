@@ -11,7 +11,7 @@ const exercises=lessons.flatMap(l=>[...l.practice.map((q,i)=>({...q,chapter:l.id
 const mcqs=lessons.flatMap(l=>(extra[l.id]?.mcq||[]).map((q,i)=>({...q,chapter:l.id,title:l.title,id:l.id+'-q'+i})));
 const reviewMCQ=q=>({...q,q:q.q+' ('+q.options.map((o,i)=>String.fromCharCode(65+i)+': '+o).join(' · ')+')',a:String.fromCharCode(65+q.correct)+'. '+q.options[q.correct],work:q.explanation,level:'medium'});
 const lookup=Object.fromEntries([...exercises,...mcqs.map(reviewMCQ)].map(q=>[q.id,q]));
-const today=()=>Math.floor(Date.now()/86400000);
+const today=()=>{const d=new Date();return Math.floor(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate())/86400000)};
 const dueIds=()=>Object.keys(state.review).filter(id=>state.review[id].next<=today()&&lookup[id]);
 const masteredCount=()=>lessons.filter(l=>(state.mastery[l.id]?.correct||0)>=2).length;
 function confidence(qid,correct){
