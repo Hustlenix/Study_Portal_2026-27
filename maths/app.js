@@ -51,12 +51,12 @@ dom('sidebar').classList.remove('open');dom('shade').classList.remove('show');do
 }
 function render(){renderNav();dom('main-content').innerHTML=({home:home,chapter:chapter,practice:practice,exam:exam,formulas:formulas,lab:lab,mistakes:mistakes,due:due}[state.page]||home)();if(state.page==='lab')computeLab();}
 function home(){
-const undone=lessons.find(l=>!state.done.has(l.id))||lessons[0];
-return '<section class="hero"><div><div class="eyebrow" style="color:#d0e8a4">CBSE CLASS 10 · PERSONALISED MATHS PORTION</div><h1>Understand the maths.<br><span>Not just the formula.</span></h1><p>A complete revision workspace for every included chapter: plain-language concepts, solved methods, self-checks, question bank, mock tests and a maths playground. Take your time—there is no 20-minute study restriction.</p><div class="actions">'+button('Continue: '+esc(undone.title),'continue','highlight')+button('Explore the questions','to-practice','light')+'</div></div><aside class="hero-card"><small>YOUR CHAPTER PROGRESS</small><b>'+state.done.size+' / 10</b><div class="hero-meter"><i style="width:'+(state.done.size/10*100)+'%"></i></div><p style="font-size:12px;margin:12px 0 0">Progress is saved locally in this browser.</p></aside></section>'+
+const undone=lessons.find(l=>(state.mastery[l.id]?.correct||0)<2)||lessons[0];
+return '<section class="hero"><div><div class="eyebrow" style="color:#d0e8a4">CBSE CLASS 10 · PERSONALISED MATHS PORTION</div><h1>Understand the maths.<br><span>Not just the formula.</span></h1><p>Learn from zero, follow step-by-step examples, request hints, solve notebook rounds, complete chapter diagnostics, revisit mistakes, and practise a full written paper. Work at your own pace.</p><div class="actions">'+button('Continue: '+esc(undone.title),'continue','highlight')+button('Explore the questions','to-practice','light')+'</div></div><aside class="hero-card"><small>CHAPTERS YOU MARKED REVIEWED</small><b>'+state.done.size+' / 10</b><div class="hero-meter"><i style="width:'+(state.done.size/10*100)+'%"></i></div><p style="font-size:12px;margin:12px 0 0">Progress is saved locally in this browser.</p></aside></section>'+
 '<div class="notice"><b>Excluded by your exam portion:</b> Real Numbers, Some Applications of Trigonometry, Circles and Areas Related to Circles. Ten other Class 10 chapters are covered here.</div>'+
-'<section class="section"><div class="grid three"><div class="panel stat"><span class="symbol">▤</span><div><strong>10</strong><span>full chapter guides</span></div></div><div class="panel stat"><span class="symbol">✎</span><div><strong>'+exercises.length+'</strong><span>written problems with solutions</span></div></div><div class="panel stat"><span class="symbol">✓</span><div><strong>'+mcqs.length+'</strong><span>auto-marked MCQs</span></div></div></div></section>'+
+'<section class="section"><div class="grid three"><button class="panel stat" style="text-align:left;cursor:pointer" data-page="due"><span class="symbol">◷</span><div><strong>'+dueIds().length+'</strong><span>due for spaced review</span></div></button><button class="panel stat" style="text-align:left;cursor:pointer" data-page="exam"><span class="symbol">✓</span><div><strong>'+masteredCount()+' / 10</strong><span>chapters with MCQ proficiency</span></div></button><div class="panel stat"><span class="symbol">✎</span><div><strong>'+exercises.length+' + '+mcqs.length+'</strong><span>written problems + MCQs</span></div></div></div></section>'+
 '<section class="section">'+section('All the chapters, in one place','CHAPTER LIBRARY','Pick any lesson, learn it from zero, then practise independently.')+
-'<div class="chapter-grid">'+lessons.map(l=>'<button class="chapter-card" data-page="chapter" data-chapter="'+l.id+'"><span class="chapter-n">CHAPTER '+esc(l.code)+' <span style="float:right">'+(state.done.has(l.id)?'✓ COMPLETE':'OPEN ↗')+'</span></span><h3>'+esc(l.title)+'</h3><p>'+esc(l.hook)+'</p><footer><span>'+esc(l.tag)+'</span><span>3 explanations · 2 examples</span></footer><div class="progress-track"><i style="width:'+(state.done.has(l.id)?100:0)+'%"></i></div></button>').join('')+'</div></section>'+
+'<div class="chapter-grid">'+lessons.map(l=>'<button class="chapter-card" data-page="chapter" data-chapter="'+l.id+'"><span class="chapter-n">CHAPTER '+esc(l.code)+' <span style="float:right">'+(state.done.has(l.id)?'✓ COMPLETE':'OPEN ↗')+'</span></span><h3>'+esc(l.title)+'</h3><p>'+esc(l.hook)+'</p><footer><span>'+esc(l.tag)+'</span><span>3 concepts · 2 examples · 7 problems</span></footer><div class="progress-track"><i style="width:'+(state.done.has(l.id)?100:0)+'%"></i></div></button>').join('')+'</div></section>'+
 '<section class="section"><div class="grid two"><div class="panel"><div class="eyebrow">LEARN HOW TO LEARN</div><h2 style="margin-top:9px">A method that actually works</h2><div class="concept-stack">'+['Understand the story behind the formula','Copy and explain a fully worked answer','Solve seven problems without stopping','Check your solutions; save mistakes'].map((t,i)=>'<div class="concept"><span class="concept-index">0'+(i+1)+'</span><div><h3>'+esc(t)+'</h3><p>'+['Don’t memorise symbols before you know what they mean.','Notice how every line follows from the previous one.','Use paper. Revealing all solutions immediately reduces learning.','Wrong answers show what to revise tomorrow.'][i]+'</p></div></div>').join('')+'</div></div><div class="panel"><div class="eyebrow">READY TO TEST YOURSELF?</div><h2 style="margin-top:9px">Mixed-chapter quizzes</h2><p class="muted">Take a 10-, 20-, or 30-question MCQ test. Immediate score and detailed answer explanations.</p><div class="actions" style="margin:21px 0">'+button('Start 10 MCQs','test-start','','data-size="10"')+button('Full 30 MCQs','test-start','light','data-size="30"')+'</div><div class="why"><strong>Save hard questions</strong><p>Use the “Save mistake” control under any written question, then review your personalised mistake notebook.</p></div></div></div></section>';
 }
 function diagram(id){
@@ -78,11 +78,11 @@ return '<article class="panel worked"><div><div class="eyebrow">WORKED EXAMPLE '
 }
 function chapter(){
 const l=get(state.id),x=extra[l.id]||{},idx=lessons.findIndex(t=>t.id===l.id),done=state.done.has(l.id),c=coach[l.id]||{};
-return '<div class="chapter-head"><div><div class="eyebrow">CHAPTER '+l.code+' / 10 · '+esc(l.tag)+'</div><h1>'+esc(l.title)+'</h1><p>'+esc(l.hook)+'</p></div><div class="chapter-tools">'+button(done?'✓ Reviewed':'Mark as reviewed','mark-done',done?'highlight':'light')+button('Next chapter →','shift-chapter','','data-offset="1"')+'</div></div><div class="path"><span>01 / UNDERSTAND</span><span>02 / SEE EXAMPLES</span><span>03 / SOLVE SEVEN</span><span>04 / REVISE</span></div>'+
+return '<div class="chapter-head"><div><div class="eyebrow">CHAPTER '+l.code+' / 10 · '+esc(l.tag)+'</div><h1>'+esc(l.title)+'</h1><p>'+esc(l.hook)+'</p><p class="muted" style="font-size:12px">Chapter check: '+(state.mastery[l.id]?.correct||0)+' / 3 distinct MCQs correct · '+((state.mastery[l.id]?.correct||0)>=2?'Proficiency demonstrated':'Not yet demonstrated')+'</p></div><div class="chapter-tools">'+button('Listen to explanation','speak','light')+button('3-question chapter check','chapter-test','highlight')+button(done?'✓ Reviewed':'Mark as reviewed','mark-done',done?'highlight':'light')+button('Next chapter →','shift-chapter','','data-offset="1"')+'</div></div><div class="path"><span>01 / UNDERSTAND</span><span>02 / SEE EXAMPLES</span><span>03 / SOLVE SEVEN</span><span>04 / REVISE</span></div>'+
 '<div class="panel" style="background:#e4f1e5;border-color:#d0e5d5"><div class="eyebrow">THE ENTIRE IDEA IN PLAIN ENGLISH</div><h2 style="font-size:24px;margin:12px 0">'+esc(l.tiny)+'</h2><p>'+esc(c.analogy||l.hook)+'</p><div class="grid two" style="margin-top:18px"><div class="why"><strong>Your target</strong><p>'+esc(c.mission||l.hook)+'</p></div><div class="why"><strong>Before you start</strong><p>'+esc(c.prereq||'Revise basic calculations.')+'</p></div></div></div>'+
 '<section class="section">'+section('Three ideas you must know','A / THE EXPLANATION','Every new idea comes with an example and a method you can repeat.')+'<div class="concept-stack">'+(x.sections||[]).map((s,i)=>'<article class="panel concept"><span class="concept-index">0'+(i+1)+'</span><div><h3>'+esc(s.title)+'</h3><p>'+esc(s.explain)+'</p><div class="try"><strong>FOR EXAMPLE</strong>'+esc(s.example)+'</div><div class="method" style="margin-top:13px"><strong>Do it like this:</strong> '+esc(s.method)+'</div></div></article>').join('')+'</div></section>'+
 '<section class="section">'+section('Two step-by-step solutions','B / WORKED EXAMPLES','Try to predict the next step before scrolling.')+'<div class="grid">'+worked(l.example,1,l)+worked(x.worked,2,l)+'</div></section>'+
-'<div class="exam-tip"><strong>Exam mistake to avoid</strong><p>'+esc(l.trap)+'</p></div>'+
+'<div class="exam-tip"><strong>Exam mistake to avoid</strong><p>'+esc(c.pitfall||l.trap)+'</p><p style="margin-top:8px">'+esc(l.trap)+'</p></div>'+
 '<section class="section">'+section('Seven questions. One uninterrupted round.','C / PRACTICE','Solve in a rough notebook. Reveal solutions after attempting—not before.')+'<div class="study-grid">'+exercises.filter(q=>q.chapter===l.id).map(question).join('')+'</div></section>'+
 '<div class="sticky-actions"><span class="muted" style="font-size:12px">Finish this chapter at your own pace.</span><div class="actions">'+button('← Previous','shift-chapter','light','data-offset="-1"')+button(done?'✓ Reviewed':'Mark as reviewed','mark-done','highlight')+button('Next →','shift-chapter','','data-offset="1"')+'</div></div>';
 }
@@ -147,11 +147,6 @@ state.writtenTest=null;state.exam={questions:pick,answers:{}};state.quizResult=n
 }
 
 function startWritten(){
- const mix=[];
- for(let i=0;i<7&&mix.length<10;i++)for(const lesson of lessons){
-   const pool=exercises.filter(q=>q.chapter===lesson.id);
-   if(pool[i]&&mix.length<10)mix.push(pool[i]);
- }
  const rotate=Math.floor(Math.random()*7);
  const byChapter=lessons.map(l=>{
    const pool=exercises.filter(q=>q.chapter===l.id);
@@ -220,6 +215,18 @@ if(act==='clear-mistakes'){state.mistakes.clear();persist();render()}
 if(act==='print')window.print();
 if(act==='test-size'){state.examSize=Number(el.dataset.size);render()}
 if(act==='test-start')startTest(Number(el.dataset.size||state.examSize));
+if(act==='chapter-test'){
+ state.exam={questions:mcqs.filter(q=>q.chapter===state.id),answers:{}};
+ state.writtenTest=null;state.quizResult=null;navigate('exam');
+}
+if(act==='speak'){
+ const l=get(state.id),info=coach[l.id]||{};
+ if('speechSynthesis' in window && 'SpeechSynthesisUtterance' in window){
+   window.speechSynthesis.cancel();
+   const speech=new window.SpeechSynthesisUtterance([l.title,info.analogy||l.hook,info.mission||'',...((extra[l.id]?.sections||[]).map(x=>x.title+'. '+x.explain))].join('. '));
+   speech.lang='en-IN';speech.rate=0.9;window.speechSynthesis.speak(speech);
+ }else if(typeof window.alert==='function'){window.alert('Your browser does not support text-to-speech. The lesson remains available as text.')}
+}
 if(act==='test-submit'){
  let score=0;
  state.exam.questions.forEach(q=>{
