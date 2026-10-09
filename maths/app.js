@@ -6,6 +6,17 @@ const esc=v=>String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').rep
 const get=id=>lessons.find(x=>x.id===id)||lessons[0];
 const progressKey='hustlenix-maths-complete-v2';
 let saved={};try{saved=JSON.parse(localStorage.getItem(progressKey)||'{}')}catch(e){}
+const CONTENT_KEY_VERSION=2;
+// A changed question must not inherit its former answer score.
+// Preserve written-solution progress and completed chapter flags while clearing stale graded results.
+if(saved.questionBankVersion!==CONTENT_KEY_VERSION){
+  saved.mastery={};
+  if(Array.isArray(saved.mistakes))saved.mistakes=saved.mistakes.filter(id=>!/-q\d+$/.test(id));
+  if(Array.isArray(saved.solved))saved.solved=saved.solved.filter(id=>!/-q\d+$/.test(id));
+  if(saved.review&&typeof saved.review==='object')Object.keys(saved.review).forEach(id=>{if(/-q\d+$/.test(id))delete saved.review[id]});
+  saved.questionBankVersion=CONTENT_KEY_VERSION;
+  try{localStorage.setItem(progressKey,JSON.stringify(saved))}catch(e){}
+}
 const state={page:'home',id:'quadratics',done:new Set(saved.done||[]),mistakes:new Set(saved.mistakes||[]),review:saved.review||{},mastery:saved.mastery||{},history:saved.history||[],solved:new Set(saved.solved||[]),revealed:new Set(),hint:{},filter:'all',level:'all',search:'',limit:12,exam:null,examSize:10,quizResult:null,writtenTest:null};
 const exercises=lessons.flatMap(l=>[...l.practice.map((q,i)=>({...q,chapter:l.id,title:l.title,id:l.id+'-b'+i,level:i?'medium':'easy'})),...(extra[l.id]?.challenge||[]).map((q,i)=>({...q,chapter:l.id,title:l.title,id:l.id+'-c'+i}))]);
 const mcqs=lessons.flatMap(l=>(extra[l.id]?.mcq||[]).map((q,i)=>({...q,chapter:l.id,title:l.title,id:l.id+'-q'+i})));
@@ -23,7 +34,7 @@ function confidence(qid,correct){
   if(correct){state.solved.add(qid);state.mistakes.delete(qid)}else state.mistakes.add(qid);
   persist();
 }
-function persist(){try{localStorage.setItem(progressKey,JSON.stringify({done:[...state.done],mistakes:[...state.mistakes],review:state.review,mastery:state.mastery,history:state.history.slice(-40),solved:[...state.solved]}))}catch(e){}}
+function persist(){try{localStorage.setItem(progressKey,JSON.stringify({done:[...state.done],mistakes:[...state.mistakes],review:state.review,mastery:state.mastery,history:state.history.slice(-40),solved:[...state.solved],questionBankVersion:CONTENT_KEY_VERSION}))}catch(e){}}
 function getHints(q){
  const matched=q.id.match(/-(b|c)([0-9]+)$/),pairs=coach[q.chapter]?.hints||[];
  if(!matched)return [];
