@@ -8,7 +8,7 @@ window.MATH_LESSONS = [
     "hook": "A zero is just an x-value that makes the whole polynomial equal 0.",
     "tiny": "Set the expression to zero. Factor it. Each factor gives one zero.",
     "rules": [
-      "For ax² + bx + c, sum of zeroes = −b/a.",
+      "For a quadratic polynomial ax² + bx + c with a ≠ 0 and roots α, β, their SUM is −b/a.",
       "Product of zeroes = c/a.",
       "Given zeroes p and q: polynomial = k(x − p)(x − q), where k ≠ 0."
     ],
@@ -159,7 +159,7 @@ window.MATH_LESSONS = [
     "hook": "Similar triangles have the same shape, even when one is bigger.",
     "tiny": "Look for parallel lines or equal angles; match corresponding sides carefully.",
     "rules": [
-      "Similarity tests: AA, SAS proportional included sides, and SSS proportional sides.",
+      "Similarity tests: AA (two corresponding angles equal); SAS (two pairs of corresponding sides proportional AND included angles equal); SSS (all three pairs of corresponding sides proportional).",
       "BPT: if DE ∥ BC in triangle ABC, AD/DB = AE/EC.",
       "Similar triangles' areas are in the SQUARE of the matching sides' ratio; right triangle: a² + b² = c²."
     ],
@@ -195,7 +195,7 @@ window.MATH_LESSONS = [
     "tag": "Triangles + ratios",
     "minute": 2,
     "hook": "Sine, cosine and tangent are just three ways to compare sides of a right triangle.",
-    "tiny": "First mark the angle θ. Then label opposite P, adjacent B and longest side H.",
+    "tiny": "For a RIGHT-ANGLED triangle, first choose the acute angle θ, then compare its opposite side, adjacent side and hypotenuse.",
     "rules": [
       "SOH: sin θ = P/H; CAH: cos θ = B/H; TOA: tan θ = P/B.",
       "cosec θ = H/P; sec θ = H/B; cot θ = B/P.",
@@ -315,7 +315,7 @@ window.MATH_LESSONS = [
     "rules": [
       "Grouped mean: x̄ = Σ(fᵢxᵢ) / Σfᵢ, where xᵢ is the class midpoint.",
       "Median: l + [(N/2 − cf)/f]h. Pick class where cumulative frequency first reaches/exceeds N/2.",
-      "Mode: l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)]h. Pick the highest-frequency class."
+      "For equal-width, consecutive grouped classes, Mode = l + [(f₁ − f₀)/(2f₁ − f₀ − f₂)]h. Pick the class with the highest frequency."
     ],
     "example": {
       "q": "Class 0–10 has frequency 2; 10–20 has 5; 20–30 has 3. Find mean.",
