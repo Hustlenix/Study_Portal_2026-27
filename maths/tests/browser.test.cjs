@@ -41,6 +41,33 @@ async function run(){
     const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
     assert.ok(overflow<=3,'Page horizontal overflow '+overflow+' px on '+name);
     await snap('home');
+    // Verify the formative-learning pathway in a real browser before testing legacy views.
+    await page.locator('button[data-action="open-flow"]').click();
+    assert.equal(await page.locator('.flow-chapter').count(),10,'All ten guided chapters appear');
+    await page.locator('button[data-flow-action="choose"][data-chapter="quadratics"]').click();
+    await page.locator('.flow-lesson h2').waitFor();
+    assert.equal(await page.locator('button[data-flow-action="answer"]').count(),4,'Four checkpoint options');
+    await page.locator('button[data-flow-action="answer"][data-choice="0"]').click();
+    await page.locator('.flow-feedback.incorrect').waitFor();
+    await page.locator('button[data-flow-action="help"]').click();
+    await page.locator('.flow-hint').waitFor();
+    await page.locator('button[data-flow-action="answer"][data-choice="2"]').click();
+    await page.locator('.flow-feedback.correct').waitFor();
+    await page.locator('button[data-flow-action="next"]').click();
+    await page.getByRole('heading',{name:/Splitting the middle term/i}).waitFor();
+    await snap('guided-lesson');
+    await page.locator('button[data-flow-action="overview"]').click();
+    await page.locator('button[data-flow-action="insights"]').click();
+    await page.getByRole('heading',{name:/Know what to revise next/i}).waitFor();
+    await page.locator('button[data-flow-action="homework"]').click();
+    await page.getByText('Your next practice tasks.').waitFor();
+    const task=page.locator('input[data-flow-homework]').first();
+    await task.check();
+    const localStudy=await page.evaluate(()=>JSON.parse(localStorage.getItem('maths-guided-study-v1')));
+    assert.ok(Object.values(localStudy.homeworkDone).some(Boolean),'Homework check persisted');
+    await snap('personalised-homework');
+    await page.reload({waitUntil:'networkidle'});
+    await page.getByRole('heading',{name:/Understand the maths/i}).waitFor();
     if(isMobile){
       await page.locator('#menu').click();
       await page.locator('#sidebar').evaluate(el=>{if(!el.classList.contains('open'))throw Error('Drawer failed to open')});
