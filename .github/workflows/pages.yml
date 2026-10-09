@@ -32,12 +32,16 @@ jobs:
           node --check maths/data.js
           node --check maths/enrichment.js
           node --check maths/coach-data.js
+          node --check maths/guided-study.js
 
       - name: Validate Maths Studio content and sample answers
         run: node maths/tests/content.test.cjs
 
       - name: Exercise Maths Studio interactive learning flows
         run: node maths/tests/app.test.cjs
+
+      - name: Test guided classroom-style learning pathway
+        run: node maths/tests/guided.test.cjs
 
       - name: Check offline worker syntax
         run: node --check maths/sw.js
