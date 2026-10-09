@@ -1,6 +1,6 @@
 
-const CACHE='maths-studio-v4';
-const STATIC=['./','./index.html','./styles.css','./data.js','./enrichment.js','./coach-data.js','./guided-study.js','./app.js','./manifest.webmanifest','./icon.svg'];
+const CACHE='maths-studio-v5';
+const STATIC=['./','./index.html','./styles.css','./dark.css','./theme.js','./data.js','./enrichment.js','./coach-data.js','./guided-study.js','./app.js','./manifest.webmanifest','./icon.svg'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(STATIC)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('maths-studio-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',event=>{
