@@ -1,0 +1,148 @@
+/* Maths Revision Studio dark theme.
+   Neutral near-black reading surfaces, mint accents, high-contrast study feedback. */
+:root[data-theme="dark"]{
+  --bg:#0b1418;--paper:#14232a;--paper2:#1b2d33;
+  --ink:#edf6ee;--muted:#aec2b8;--border:#35504f;
+  --teal:#87c6a6;--teal-dark:#274f45;--pale:#213c37;
+  --lime:#cee88e;--orange:#dfae7d;--red:#e6a497;
+  --shadow:0 17px 46px rgba(0,0,0,.19);
+  color-scheme:dark;
+}
+:root[data-theme="dark"] body{background:var(--bg);color:var(--ink)}
+:root[data-theme="dark"] .side{background:#091e21;color:#eff9ef}
+:root[data-theme="dark"] .nav-item,:root[data-theme="dark"] .chapter-item{color:#cfe3d6}
+:root[data-theme="dark"] .nav-item:hover,:root[data-theme="dark"] .chapter-item:hover{background:#254841}
+:root[data-theme="dark"] .nav-item.active,:root[data-theme="dark"] .chapter-item.active{background:#d8ed9b;color:#1b3b2b}
+:root[data-theme="dark"] .side-foot{border-color:#31504a;color:#aecaba}
+:root[data-theme="dark"] .sidebar-label{color:#b7cfbe}
+:root[data-theme="dark"] .brand small{color:#aac3af}
+:root[data-theme="dark"] .top{border-color:var(--border)}
+:root[data-theme="dark"] .crumb,:root[data-theme="dark"] .foot{color:#b0c6bc}
+:root[data-theme="dark"] .top-mini{color:#d3e7d8}
+:root[data-theme="dark"] .top-mini i{background:#2b4840}
+:root[data-theme="dark"] .top-mini i b{background:#8dcda2}
+:root[data-theme="dark"] .eyebrow{color:#a1d4b2}
+:root[data-theme="dark"] .panel,:root[data-theme="dark"] .question-card,:root[data-theme="dark"] .chapter-card,
+:root[data-theme="dark"] .drill-card,:root[data-theme="dark"] .test-question,:root[data-theme="dark"] .test-choice,
+:root[data-theme="dark"] .flow-chapter,:root[data-theme="dark"] .flow-task,:root[data-theme="dark"] .flow-insight-row,
+:root[data-theme="dark"] .sticky-actions{background:var(--paper);color:var(--ink);border-color:var(--border)}
+:root[data-theme="dark"] .chapter-card:hover,:root[data-theme="dark"] .flow-chapter:hover{border-color:#95c9a4}
+:root[data-theme="dark"] .chapter-card p,:root[data-theme="dark"] .flow-chapter p,
+:root[data-theme="dark"] .chapter-head p,:root[data-theme="dark"] .section-heading p,
+:root[data-theme="dark"] .concept p,:root[data-theme="dark"] .worked li,
+:root[data-theme="dark"] .muted,:root[data-theme="dark"] .lede{color:var(--muted)}
+:root[data-theme="dark"] .chapter-card footer,:root[data-theme="dark"] .flow-chapter>small,
+:root[data-theme="dark"] .flow-insight-row small,:root[data-theme="dark"] .flow-insight-row>span,
+:root[data-theme="dark"] .question-no,:root[data-theme="dark"] .field,
+:root[data-theme="dark"] .chapter-card .chapter-n{color:#b5d6bf}
+:root[data-theme="dark"] .button:not(.light):not(.highlight):not(.ghost){background:#2d6655;border-color:#4f9475;color:#f4fff2}
+:root[data-theme="dark"] .button.light{background:#20383a;border-color:#466660;color:#e3f2e6}
+:root[data-theme="dark"] .button.highlight{background:#dbeca0;border-color:#daef9d;color:#193525}
+:root[data-theme="dark"] .button.ghost{color:#b6dec1}
+:root[data-theme="dark"] .pill,:root[data-theme="dark"] .tag,:root[data-theme="dark"] .mark{background:#25453d;border-color:#466957;color:#cce8cc}
+:root[data-theme="dark"] .pill.alt{background:#4b3527;border-color:#79583c;color:#ffd0a4}
+:root[data-theme="dark"] .pill.done{background:#34482d;border-color:#6a8440;color:#e3f5b6}
+:root[data-theme="dark"] .hero,:root[data-theme="dark"] .flow-hero{background:#15382f;color:#f5fff5}
+:root[data-theme="dark"] .hero p,:root[data-theme="dark"] .flow-hero p{color:#e0eade}
+:root[data-theme="dark"] .hero .eyebrow,:root[data-theme="dark"] .flow-hero .eyebrow{color:#e0f3b1}
+:root[data-theme="dark"] .hero h1 span{color:#d7f0a1}
+:root[data-theme="dark"] .hero-card,:root[data-theme="dark"] .flow-hero-aside{background:#ffffff10;border-color:#73968668}
+:root[data-theme="dark"] .notice,:root[data-theme="dark"] .flow-study-note{background:#203932;border-color:#4e9266;color:#d7e9dc}
+:root[data-theme="dark"] .stat .symbol,:root[data-theme="dark"] .concept-index,:root[data-theme="dark"] .worked li:before{background:#29483c;color:#d2f4c9}
+:root[data-theme="dark"] .progress-track,:root[data-theme="dark"] .bar,:root[data-theme="dark"] .flow-meter{background:#2a4941}
+:root[data-theme="dark"] .path span,:root[data-theme="dark"] .difficulty{background:#283d3b;border-color:#476358;color:#c7dbcf}
+:root[data-theme="dark"] .difficulty.hard{background:#51392e;color:#ffd1a9}
+:root[data-theme="dark"] .difficulty.medium{background:#4b462b;color:#f1dfa3}
+:root[data-theme="dark"] .why,:root[data-theme="dark"] .panel[style*="background:#e4f1e5"]{
+ background:#203d34!important;border-color:#3b6853!important;color:#f0f9ec
+}
+:root[data-theme="dark"] .why strong,:root[data-theme="dark"] .why p,
+:root[data-theme="dark"] .panel[style*="background:#e4f1e5"] p{color:#d1e6d7}
+:root[data-theme="dark"] .concept .try,:root[data-theme="dark"] .hint-entry,
+:root[data-theme="dark"] .flow-example{background:#1e3a34;color:#e2f3e3;border-color:#365b4c}
+:root[data-theme="dark"] .concept .try strong,:root[data-theme="dark"] .hint-entry strong,
+:root[data-theme="dark"] .flow-example strong{color:#a8deb2}
+:root[data-theme="dark"] .method{color:#dbcfad;border-color:#d2a35c}
+:root[data-theme="dark"] .worked li{border-color:#35554b}
+:root[data-theme="dark"] .answer-bar,:root[data-theme="dark"] .answer-reveal,
+:root[data-theme="dark"] .test-explain,:root[data-theme="dark"] .lab-output{
+ background:#1f4236;border-color:#3a7156;color:#e0f4e1
+}
+:root[data-theme="dark"] .answer-reveal b,:root[data-theme="dark"] .formula-chip,
+:root[data-theme="dark"] .lab-output strong{color:#c2e8ba}
+:root[data-theme="dark"] .answer-reveal p,:root[data-theme="dark"] .lab-output em{color:#c6dcce}
+:root[data-theme="dark"] .figure,:root[data-theme="dark"] .lab-plot{
+ background:#eff5ec;border-color:#758f80
+}
+:root[data-theme="dark"] .exam-tip{background:#483429;border-color:#775b43;color:#f2d6bb}
+:root[data-theme="dark"] .exam-tip strong,:root[data-theme="dark"] .exam-tip p{color:#ffdcbb}
+:root[data-theme="dark"] .chip{background:#1c3030;border-color:#4c6c5f;color:#d0e6d5}
+:root[data-theme="dark"] .chip.active{background:#bde89b;border-color:#bde89b;color:#193b29}
+:root[data-theme="dark"] .filters select,:root[data-theme="dark"] .search-input,
+:root[data-theme="dark"] .field input,:root[data-theme="dark"] input,
+:root[data-theme="dark"] select,:root[data-theme="dark"] textarea{
+ background:#182e32;color:#edf8f0;border-color:#577068
+}
+:root[data-theme="dark"] input::placeholder{color:#a8bfba}
+:root[data-theme="dark"] .values th{background:#26483f;color:#f1ffed}
+:root[data-theme="dark"] .values td,:root[data-theme="dark"] .values th{border-color:#3b5d52}
+:root[data-theme="dark"] .formula-list .formula-chip{background:#213d36;color:#d3f3c6}
+:root[data-theme="dark"] .choice{background:#182c2d;border-color:#446159;color:#e4f1e5}
+:root[data-theme="dark"] .choice:has(input:checked){background:#254d3d;border-color:#75bb84}
+:root[data-theme="dark"] .choice.right,:root[data-theme="dark"] .flow-option.is-correct,
+:root[data-theme="dark"] .flow-feedback.correct{background:#1c4b33;border-color:#60a977;color:#e6f6e9}
+:root[data-theme="dark"] .choice.wrong,:root[data-theme="dark"] .flow-option.is-incorrect,
+:root[data-theme="dark"] .flow-feedback.incorrect{background:#533025;border-color:#d68b72;color:#ffe6d7}
+:root[data-theme="dark"] .test-choice.active,:root[data-theme="dark"] .test-choice[aria-pressed="true"]{background:#244a3b;border-color:#75bb84}
+:root[data-theme="dark"] .test-choice small,:root[data-theme="dark"] .review-date,
+:root[data-theme="dark"] .flow-prereq{color:#b0caba}
+:root[data-theme="dark"] .score{background:#15402f;color:#f4fff2}
+:root[data-theme="dark"] .score span{color:#d3e8d7}
+:root[data-theme="dark"] .writing-space{
+ background:repeating-linear-gradient(to bottom,transparent 0px,transparent 31px,#3c6153 32px,#3c6153 33px);
+ color:#b0c9b7
+}
+:root[data-theme="dark"] .writing-space span{background:var(--paper)}
+:root[data-theme="dark"] .flow-steps>div,:root[data-theme="dark"] .flow-review-reason{
+ background:#1d3732;border-color:#3a5a4d;color:#edf9ec
+}
+:root[data-theme="dark"] .flow-steps span,:root[data-theme="dark"] .flow-review-reason p{color:#c0ddc7}
+:root[data-theme="dark"] .flow-review-reason strong,:root[data-theme="dark"] .flow-breadcrumb strong{color:#ccecc5}
+:root[data-theme="dark"] .flow-breadcrumb,:root[data-theme="dark"] .flow-learning-head p{color:#b7cdbf}
+:root[data-theme="dark"] .flow-stage-tabs button{background:#223a38;border-color:#3e5c50;color:#d5e6d9}
+:root[data-theme="dark"] .flow-stage-tabs button span{background:#2f5043;border-color:#5c8168;color:#edf6e6}
+:root[data-theme="dark"] .flow-stage-tabs button.active{background:#346a51;border-color:#61ad7a;color:#fff}
+:root[data-theme="dark"] .flow-stage-tabs button.active span{background:#d6f1ac;color:#254332}
+:root[data-theme="dark"] .flow-intuition,:root[data-theme="dark"] .flow-question{color:#e7f8e9}
+:root[data-theme="dark"] .flow-method{background:#35372c;border-color:#625b3f}
+:root[data-theme="dark"] .flow-method strong{color:#edcb8c}
+:root[data-theme="dark"] .flow-method p{color:#ece1c5}
+:root[data-theme="dark"] .flow-example p{color:#d6e6d5}
+:root[data-theme="dark"] .flow-option{background:#192e30;border-color:#456359;color:#e1f4e8}
+:root[data-theme="dark"] .flow-option:hover:not(:disabled){background:#26483e;border-color:#77ba8d}
+:root[data-theme="dark"] .flow-option-letter{background:#2d4b42;border-color:#5e836c;color:#ebf7e8}
+:root[data-theme="dark"] .flow-hint{background:#39392a;border-color:#d0a96b;color:#eee3c8}
+:root[data-theme="dark"] .flow-hint strong{color:#f5d392}
+:root[data-theme="dark"] .flow-task details{border-color:#395b4f;color:#c4dec9}
+:root[data-theme="dark"] .flow-task summary,:root[data-theme="dark"] .flow-task-check{color:#d0e8c9}
+:root[data-theme="dark"] .flow-insight-row small{color:#b0c7b9}
+:root[data-theme="dark"] .flow-stats small{color:#afd1b8}
+:root[data-theme="dark"] .theme-toggle{background:#223b3c;border-color:#4f7164;color:#e6f4e8}
+:root[data-theme="dark"] .theme-toggle:hover{background:#2d4e46}
+:root[data-theme="dark"] .menu-toggle{background:#1f3939;color:#e8f6e8;border-color:#506d61}
+/* The illustrative SVGs contain dark ink; keep their canvas pale in dark mode for legibility. */
+:root[data-theme="dark"] .figure svg,:root[data-theme="dark"] .lab-plot svg{color:#1e4032}
+/* Prevent native disabled-button fading from hiding an already answered choice. */
+:root[data-theme="dark"] .flow-option.is-correct:disabled{opacity:1}
+/* Make the toggle prominent but proportional on all screen sizes. */
+.theme-toggle{display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:7px 12px;border:1px solid var(--border);border-radius:11px;background:var(--paper2);color:var(--ink);font-size:12px;font-weight:780;white-space:nowrap;cursor:pointer}
+.theme-toggle:hover{border-color:#76a887;background:#eaf3e8}
+.theme-icon{display:inline-grid;place-items:center;font-size:18px;line-height:1;width:18px}
+.theme-toggle:focus-visible{outline:3px solid #99c27d;outline-offset:3px}
+@media(max-width:740px){
+ .theme-toggle{padding:8px 10px;min-height:36px}
+ .theme-label{display:none}
+ .theme-icon{font-size:18px}
+ .top-right{gap:8px}
+}
+@media print{.theme-toggle{display:none!important}}
