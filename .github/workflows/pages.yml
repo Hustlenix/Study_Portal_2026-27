@@ -82,6 +82,7 @@ jobs:
           cp -R generated _site/generated
           cp -R sst-crash-course _site/sst-crash-course
           cp -R maths _site/maths
+          printf '%s\n' "$GITHUB_SHA" > _site/maths/build.txt
           touch _site/.nojekyll
 
       - name: Configure Pages
@@ -102,3 +103,26 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Verify latest Maths website is actually published
+        env:
+          LIVE_URL: ${{ steps.deployment.outputs.page_url }}
+          EXPECTED_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          BASE="${LIVE_URL%/}/maths"
+          for attempt in $(seq 1 18); do
+            PUBLISHED_SHA="$(curl --connect-timeout 5 --max-time 15 -fsSL "$BASE/build.txt" 2>/dev/null || true)"
+            if [ "$PUBLISHED_SHA" = "$EXPECTED_SHA" ]; then
+              curl --connect-timeout 5 --max-time 15 -fsSL "$BASE/" -o /tmp/maths-live.html
+              curl --connect-timeout 5 --max-time 15 -fsSL "$BASE/app.js" -o /tmp/maths-live.js
+              grep -q 'Maths Revision Studio' /tmp/maths-live.html
+              grep -q 'function startWritten' /tmp/maths-live.js
+              echo "Published current Maths build: $BASE/"
+              exit 0
+            fi
+            echo "Waiting for Pages rollout ($attempt/18), currently deployed: ${PUBLISHED_SHA:-not found}"
+            sleep 10
+          done
+          echo "::error::Published build did not match commit $EXPECTED_SHA"
+          exit 1
