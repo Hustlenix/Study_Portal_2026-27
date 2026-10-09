@@ -369,7 +369,7 @@ window.MATH_EXTRA = {
           "16"
         ],
         "correct": 1,
-        "explanation": "16−20=−4."
+        "explanation": "The common difference is the difference between consecutive terms: d = 16 − 20 = −4. Check: 12 − 16 = −4 too."
       },
       {
         "q": "The nth-term formula is:",
@@ -479,7 +479,7 @@ window.MATH_EXTRA = {
           "at right angles"
         ],
         "correct": 2,
-        "explanation": "That is BPT."
+        "explanation": "By the Basic Proportionality Theorem, a line parallel to one side of a triangle divides the other two sides in the same ratio."
       },
       {
         "q": "If two similar triangles have corresponding sides in the ratio 3:4, what is their AREA ratio?",
@@ -785,7 +785,7 @@ window.MATH_EXTRA = {
           "12"
         ],
         "correct": 1,
-        "explanation": "l=√(9+16)=5."
+        "explanation": "The slant height is the hypotenuse of a right triangle: l = √(r² + h²) = √(3² + 4²) = 5."
       }
     ]
   },
