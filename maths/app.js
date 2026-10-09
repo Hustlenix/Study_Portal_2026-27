@@ -87,20 +87,37 @@ return '<div class="chapter-head"><div><div class="eyebrow">CHAPTER '+l.code+' /
 '<div class="sticky-actions"><span class="muted" style="font-size:12px">Finish this chapter at your own pace.</span><div class="actions">'+button('← Previous','shift-chapter','light','data-offset="-1"')+button(done?'✓ Reviewed':'Mark as reviewed','mark-done','highlight')+button('Next →','shift-chapter','','data-offset="1"')+'</div></div>';
 }
 function question(q){
-let revealed=state.revealed.has(q.id),marked=state.mistakes.has(q.id);
-return '<article class="question-card"><div class="question-head"><span class="question-no">'+esc(q.title)+'</span><span class="difficulty '+esc(q.level)+'">'+esc(q.level)+'</span></div><h3>'+esc(q.q)+'</h3>'+(revealed?'<div class="answer-reveal"><b>Answer: '+esc(q.a)+'</b><p>'+esc(q.work)+'</p></div>':'')+'<div class="question-foot">'+button(revealed?'Hide solution':'Reveal answer','answer','light small','data-qid="'+q.id+'"')+button(marked?'✓ Saved':'Save mistake','mistake','ghost small','data-qid="'+q.id+'"')+'</div></article>';
+ const revealed=state.revealed.has(q.id),marked=state.mistakes.has(q.id),hints=getHints(q),hintCount=state.hint[q.id]||0,review=state.review[q.id];
+ return '<article class="question-card" data-question="'+esc(q.id)+'"><div class="question-head"><span class="question-no">'+esc(q.title)+(state.solved.has(q.id)?' · ✓ solved':'')+'</span><span class="difficulty '+esc(q.level)+'">'+esc(levelText(q))+'</span></div><h3>'+esc(q.q)+'</h3>'+
+ (hintCount?'<div class="hint-stack">'+hints.slice(0,hintCount).map((h,i)=>'<div class="hint-entry"><strong>Hint '+(i+1)+'</strong>'+esc(h)+'</div>').join('')+'</div>':'')+
+ (revealed?'<div class="answer-reveal"><b>Answer: '+esc(q.a)+'</b><p>'+esc(q.work)+'</p></div>':'')+
+ '<div class="question-foot">'+(hints.length&&hintCount<hints.length?button('Need a hint? ('+(hintCount+1)+'/'+hints.length+')','hint','light small','data-qid="'+q.id+'"'):'')+
+ button(revealed?'Hide solution':'Reveal worked answer','answer','light small','data-qid="'+q.id+'"')+
+ (revealed?button('✓ Solved independently','got-it','highlight small','data-qid="'+q.id+'"')+button('↻ Need more practice','retry','light small','data-qid="'+q.id+'"'):'')+
+ button(marked?'✓ Flagged':'Flag difficult','mistake','ghost small','data-qid="'+q.id+'"')+'</div>'+
+ (review?'<div class="review-date">Next review: '+(review.next<=today()?'due now':new Date(review.next*86400000).toLocaleDateString('en-IN',{day:'numeric',month:'short'}))+'</div>':'')+
+ '</article>';
 }
 function practice(){
-const set=exercises.filter(q=>(state.filter==='all'||state.filter===q.chapter)&&(state.level==='all'||state.level===q.level));
-return header('70 worked practice problems.','QUESTION BANK / WRITE FIRST, CHECK AFTER','Chapter-wise questions at three difficulty levels. The complete worked solution is available behind every answer button.')+
-'<div class="filters"><div class="actions"><label class="field">Choose chapter<select id="chapter-filter"><option value="all">All 10 chapters</option>'+lessons.map(l=>'<option value="'+l.id+'" '+(state.filter===l.id?'selected':'')+'>'+esc(l.title)+'</option>').join('')+'</select></label></div><div class="level-filter">'+['all','easy','medium','hard'].map(v=>'<button class="chip '+(state.level===v?'active':'')+'" data-action="level" data-level="'+v+'">'+(v==='all'?'All levels':v.toUpperCase())+'</button>').join('')+'</div></div>'+
+const set=exercises.filter(q=>(state.filter==='all'||state.filter===q.chapter)&&(state.level==='all'||state.level===q.level)&&(!state.search||(q.q+' '+q.title+' '+q.work).toLowerCase().includes(state.search.toLowerCase())));
+return header('70 written practice problems.','QUESTION BANK / WRITE FIRST, CHECK AFTER','Use the hints before revealing a full worked answer. After solving, schedule the next review or flag the question to practise again.')+
+'<div class="filters"><div class="actions"><label class="field">Search questions<input class="search-input" id="practice-search" type="search" placeholder="e.g. quadratic, area..." value="'+esc(state.search)+'"></label><label class="field">Choose chapter<select id="chapter-filter"><option value="all">All 10 chapters</option>'+lessons.map(l=>'<option value="'+l.id+'" '+(state.filter===l.id?'selected':'')+'>'+esc(l.title)+'</option>').join('')+'</select></label></div><div class="level-filter">'+['all','easy','medium','hard'].map(v=>'<button class="chip '+(state.level===v?'active':'')+'" data-action="level" data-level="'+v+'">'+(v==='all'?'All levels':v.toUpperCase())+'</button>').join('')+'</div></div>'+
 '<div class="section-heading"><p>'+set.length+' matching problems · showing '+Math.min(set.length,state.limit)+'</p>'+button('Print worksheet','print','light small')+'</div>'+
 '<div class="study-grid">'+set.slice(0,state.limit).map(question).join('')+'</div>'+(set.length>state.limit?'<div style="text-align:center;margin:23px 0">'+button('Load more questions','more','light')+'</div>':'');
 }
 function mistakes(){
-const set=exercises.filter(q=>state.mistakes.has(q.id));
-return header('Your mistake notebook.','PERSONALISED REVISION / STORED IN BROWSER','Every question you flag is saved here. Solve them again until they become easy.')+
-(set.length?'<div class="actions" style="margin:20px 0">'+button('Show all saved answers','all-mistakes','light')+button('Remove all flags','clear-mistakes','ghost')+'</div><div class="study-grid">'+set.map(question).join('')+'</div>':'<div class="panel" style="padding:32px"><h2>Nothing here yet.</h2><p class="muted">In any chapter or the question bank, click “Save mistake” on a question you want to practise again.</p>'+button('Open question bank','to-practice')+'</div>');
+ const set=Object.keys(lookup).filter(id=>state.mistakes.has(id)).map(id=>lookup[id]);
+ return header('Your mistake notebook.','PERSONALISED REVISION / STORED IN BROWSER','Both self-flagged questions and wrong answers from completed MCQ tests appear here. Solve again, then click “Solved independently”.')+
+ (set.length?'<div class="actions" style="margin:20px 0">'+button('Show all saved answers','all-mistakes','light')+button('Remove all flags','clear-mistakes','ghost')+'</div><div class="study-grid">'+set.map(question).join('')+'</div>':'<div class="panel" style="padding:32px"><h2>Nothing to revisit yet.</h2><p class="muted">Hard questions and incorrectly answered quiz items are collected here for later practice.</p>'+button('Open question bank','to-practice')+'</div>');
+}
+function due(){
+ const set=dueIds().map(id=>lookup[id]);
+ return header('Review what you learned.','SPACED REVISION / REPEAT BEFORE YOU FORGET','A solved question comes back after 1, 3, 7, 14, 30 and 60 days, based on your successful reviews. Questions you found difficult are due immediately.')+
+ '<div class="grid three" style="margin:20px 0">'+
+ '<div class="panel stat"><span class="symbol">◷</span><div><strong>'+set.length+'</strong><span>questions due today</span></div></div>'+
+ '<div class="panel stat"><span class="symbol">✓</span><div><strong>'+state.solved.size+'</strong><span>questions solved independently</span></div></div>'+
+ '<div class="panel stat"><span class="symbol">▤</span><div><strong>'+masteredCount()+'</strong><span>chapters with demonstrated MCQ proficiency</span></div></div></div>'+
+ (set.length?'<div class="study-grid">'+set.map(question).join('')+'</div>':'<div class="panel"><h2>All caught up for today.</h2><p class="muted">When you solve a question, tap “Solved independently” to schedule spaced review.</p>'+button('Practise more','to-practice')+'</div>');
 }
 function formulas(){
 return header('Formula library.','EVERY INCLUDED CHAPTER / ONE REFERENCE','The formulas that unlock common Class 10 questions. Remember why they work, not only how they look.')+
@@ -166,10 +183,13 @@ if(act==='to-chapter')navigate('chapter',el.dataset.chapter);
 if(act==='mark-done'){if(state.done.has(state.id))state.done.delete(state.id);else state.done.add(state.id);persist();render()}
 if(act==='shift-chapter'){const pos=lessons.findIndex(l=>l.id===state.id);navigate('chapter',lessons[(pos+Number(el.dataset.offset)+lessons.length)%lessons.length].id)}
 if(act==='answer'){const id=el.dataset.qid;if(state.revealed.has(id))state.revealed.delete(id);else state.revealed.add(id);render()}
+if(act==='hint'){const id=el.dataset.qid,q=lookup[id];state.hint[id]=Math.min((state.hint[id]||0)+1,getHints(q).length);render()}
+if(act==='got-it'){confidence(el.dataset.qid,true);render()}
+if(act==='retry'){confidence(el.dataset.qid,false);render()}
 if(act==='mistake'){const id=el.dataset.qid;if(state.mistakes.has(id))state.mistakes.delete(id);else state.mistakes.add(id);persist();render()}
 if(act==='level'){state.level=el.dataset.level;state.limit=12;render()}
 if(act==='more'){state.limit+=12;render()}
-if(act==='all-mistakes'){exercises.filter(q=>state.mistakes.has(q.id)).forEach(q=>state.revealed.add(q.id));render()}
+if(act==='all-mistakes'){Object.keys(lookup).filter(id=>state.mistakes.has(id)).forEach(id=>state.revealed.add(id));render()}
 if(act==='clear-mistakes'){state.mistakes.clear();persist();render()}
 if(act==='print')window.print();
 if(act==='test-size'){state.examSize=Number(el.dataset.size);render()}
@@ -189,6 +209,15 @@ document.addEventListener('change',e=>{
 if(e.target.id==='chapter-filter'){state.filter=e.target.value;state.limit=12;render()}
 if(e.target.matches('input[data-testid]')&&state.exam&&!state.quizResult){state.exam.answers[e.target.dataset.testid]=Number(e.target.value)}
 });
-document.addEventListener('input',e=>{if(['lab-a','lab-b','lab-c'].includes(e.target.id))computeLab()});
+document.addEventListener('input',e=>{
+ if(['lab-a','lab-b','lab-c'].includes(e.target.id))computeLab();
+ if(e.target.id==='practice-search'){
+   state.search=e.target.value;
+   const caret=e.target.selectionStart;
+   state.limit=12;render();
+   const input=dom('practice-search');
+   if(input){input.focus();try{input.setSelectionRange(caret,caret)}catch(_){}}
+ }
+});
 render();
 })();
