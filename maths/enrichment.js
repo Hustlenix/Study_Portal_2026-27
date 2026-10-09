@@ -64,26 +64,26 @@ window.MATH_EXTRA = {
     ],
     "mcq": [
       {
-        "q": "The product of the zeroes of 3x²−2x−6 is:",
+        "q": "Which number is a zero of p(x) = x² − 9?",
         "options": [
-          "−2",
-          "2",
-          "−6",
-          "2/3"
+          "3",
+          "9",
+          "0",
+          "1"
         ],
         "correct": 0,
-        "explanation": "c/a = −6/3 = −2."
+        "explanation": "p(3) = 3² − 9 = 0. −3 is also a zero, but is not among the other options."
       },
       {
-        "q": "A quadratic polynomial can have at most how many real zeroes?",
+        "q": "Which are the zeroes of x² − 5x + 6?",
         "options": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "1 and 6",
+          "2 and 3",
+          "−2 and −3",
+          "5 and 6"
         ],
         "correct": 1,
-        "explanation": "Degree 2 means at most two real zeroes."
+        "explanation": "Factor: (x − 2)(x − 3) = 0. The roots are 2 and 3."
       },
       {
         "q": "For x²−5x+6, the sum of zeroes is:",
@@ -174,15 +174,15 @@ window.MATH_EXTRA = {
         "explanation": "4+3=7 and 4−3=1."
       },
       {
-        "q": "If two lines are parallel and distinct, their number of intersection points is:",
+        "q": "Solve x + y = 7 and x − y = 1. What is y?",
         "options": [
-          "one",
-          "two",
-          "none",
-          "infinitely many"
+          "1",
+          "2",
+          "3",
+          "4"
         ],
         "correct": 2,
-        "explanation": "Distinct parallel lines never meet."
+        "explanation": "Add equations: 2x = 8, so x = 4. Then y = 7 − 4 = 3."
       },
       {
         "q": "When both equations represent the same line, the number of solutions is:",
@@ -219,7 +219,7 @@ window.MATH_EXTRA = {
       }
     ],
     "worked": {
-      "q": "A positive number multiplied by the next integer is 72. Find the number.",
+      "q": "A positive INTEGER multiplied by the next consecutive integer is 72. Find the smaller integer.",
       "steps": [
         "Let the first positive integer be n. The next is n+1.",
         "n(n+1)=72 → n²+n−72=0.",
@@ -262,37 +262,37 @@ window.MATH_EXTRA = {
     ],
     "mcq": [
       {
-        "q": "D < 0 means:",
-        "options": [
-          "two distinct real roots",
-          "equal real roots",
-          "no real roots",
-          "infinite roots"
-        ],
-        "correct": 2,
-        "explanation": "A negative discriminant makes √D non-real."
-      },
-      {
-        "q": "Roots of x²−9=0 are:",
+        "q": "Which pair gives BOTH real solutions of x² = 9?",
         "options": [
           "only 3",
-          "3 and −3",
-          "9 and −9",
+          "only −3",
+          "−3 and 3",
           "0 and 9"
         ],
-        "correct": 1,
-        "explanation": "(x−3)(x+3)=0."
+        "correct": 2,
+        "explanation": "Both 3² = 9 and (−3)² = 9. Do not forget the negative root."
       },
       {
-        "q": "The coefficient a in ax²+bx+c=0 must be:",
+        "q": "What are the roots of x² − 5x + 6 = 0?",
         "options": [
-          "zero",
-          "one",
-          "positive",
-          "nonzero"
+          "1 and 6",
+          "2 and 3",
+          "−2 and −3",
+          "3 and −2"
+        ],
+        "correct": 1,
+        "explanation": "x² − 5x + 6 = (x − 2)(x − 3). So x = 2 or x = 3."
+      },
+      {
+        "q": "For ax²+bx+c=0 with real coefficients and a≠0, what does D=b²−4ac<0 mean?",
+        "options": [
+          "two distinct real roots",
+          "one repeated real root",
+          "infinitely many solutions",
+          "no real roots"
         ],
         "correct": 3,
-        "explanation": "If a=0, the x² term disappears and it is no longer quadratic."
+        "explanation": "The quadratic formula has √D. When D is negative, there are no real roots."
       }
     ]
   },
@@ -428,7 +428,7 @@ window.MATH_EXTRA = {
     },
     "challenge": [
       {
-        "q": "DE ∥ BC. AD=3, DB=4, AE=6. Find EC.",
+        "q": "In △ABC, D is on AB and E is on AC. If DE ∥ BC, AD = 3 cm, DB = 4 cm and AE = 6 cm, find EC in cm.",
         "a": "8",
         "work": "3/4=6/EC → EC=8.",
         "level": "easy"
@@ -460,15 +460,15 @@ window.MATH_EXTRA = {
     ],
     "mcq": [
       {
-        "q": "If similar triangle sides are 2:3, their areas are:",
+        "q": "The side lengths (3,4,5) and (6,8,10) describe two triangles. Why are they similar?",
         "options": [
-          "2:3",
-          "4:9",
-          "8:27",
-          "3:2"
+          "They have the same perimeter",
+          "Their corresponding sides are proportional (SSS)",
+          "Their areas are equal",
+          "They are congruent"
         ],
         "correct": 1,
-        "explanation": "Areas depend on the square of the scale factor."
+        "explanation": "All three corresponding side ratios are 3/6 = 4/8 = 5/10 = 1/2, so SSS similarity applies."
       },
       {
         "q": "A line parallel to one triangle side divides the other two sides:",
@@ -482,15 +482,15 @@ window.MATH_EXTRA = {
         "explanation": "That is BPT."
       },
       {
-        "q": "Right triangle legs 5 and 12 give hypotenuse:",
+        "q": "If two similar triangles have corresponding sides in the ratio 3:4, what is their AREA ratio?",
         "options": [
-          "13",
-          "17",
-          "7",
-          "10"
+          "9:16",
+          "3:4",
+          "6:8",
+          "27:64"
         ],
         "correct": 0,
-        "explanation": "√(25+144)=13."
+        "explanation": "Areas of similar triangles are in the square of the ratio of corresponding sides: 3²:4² = 9:16."
       }
     ]
   },
@@ -570,15 +570,15 @@ window.MATH_EXTRA = {
         "explanation": "SOH: opposite over hypotenuse."
       },
       {
-        "q": "sin²θ + cos²θ equals:",
+        "q": "For an acute angle θ with cos θ = 4/5, what is sec θ?",
         "options": [
-          "0",
-          "1",
-          "2",
-          "sinθ"
+          "4/5",
+          "5/4",
+          "3/5",
+          "5/3"
         ],
         "correct": 1,
-        "explanation": "Pythagorean identity."
+        "explanation": "sec θ is reciprocal of cos θ, so 1/(4/5)=5/4."
       },
       {
         "q": "tan90° is:",
@@ -637,7 +637,7 @@ window.MATH_EXTRA = {
         "level": "easy"
       },
       {
-        "q": "Find the point dividing (2,3) and (8,9) internally 1:2.",
+        "q": "A(2,3) and B(8,9). Find P on AB such that AP:PB = 1:2.",
         "a": "(4,5)",
         "work": "Section formula gives (8+4)/3=4, (9+6)/3=5.",
         "level": "medium"
@@ -657,15 +657,15 @@ window.MATH_EXTRA = {
     ],
     "mcq": [
       {
-        "q": "Midpoint of (0,0) and (6,8) is:",
+        "q": "Which quadrant contains the point (−2, 3)?",
         "options": [
-          "(6,8)",
-          "(3,4)",
-          "(4,3)",
-          "(0,4)"
+          "I",
+          "II",
+          "III",
+          "IV"
         ],
         "correct": 1,
-        "explanation": "Average x and y separately."
+        "explanation": "The x-coordinate is negative and the y-coordinate positive, placing it in Quadrant II."
       },
       {
         "q": "Distance between identical points is:",
@@ -735,7 +735,7 @@ window.MATH_EXTRA = {
         "level": "easy"
       },
       {
-        "q": "Cone r=3 cm, h=4 cm. Find curved surface area.",
+        "q": "A right circular cone has radius 3 cm and perpendicular height 4 cm. Find its curved surface area in terms of π.",
         "a": "15π cm²",
         "work": "l=5; CSA=πrl=15π.",
         "level": "medium"
@@ -766,11 +766,11 @@ window.MATH_EXTRA = {
         "explanation": "Volume measures three-dimensional space."
       },
       {
-        "q": "A cone and a cylinder have equal base and height. Cone volume is:",
+        "q": "A right circular cone and a cylinder have equal circular base area and equal perpendicular height. The cone's volume is what FRACTION of the cylinder's volume?",
         "options": [
           "same",
           "three times",
-          "one-third",
+          "one-third of the cylinder's volume",
           "one-half"
         ],
         "correct": 2,
@@ -840,7 +840,7 @@ window.MATH_EXTRA = {
         "level": "hard"
       },
       {
-        "q": "Modal class 20–30, frequency 8, previous 3, next 5. Find mode.",
+        "q": "For grouped classes 10–20, 20–30, 30–40 with respective frequencies 3, 8, 5, find the MODE.",
         "a": "26.25",
         "work": "20+((8−3)/(16−3−5))×10 = 26.25.",
         "level": "hard"
@@ -854,26 +854,26 @@ window.MATH_EXTRA = {
     ],
     "mcq": [
       {
-        "q": "Median is the:",
-        "options": [
-          "largest",
-          "middle value",
-          "most frequent",
-          "total"
-        ],
-        "correct": 1,
-        "explanation": "Median is the central value or central class after ordering."
-      },
-      {
-        "q": "Class mark of 20–30 is:",
+        "q": "The class mark (midpoint) of the interval 20–30 is:",
         "options": [
           "20",
-          "30",
           "25",
+          "30",
           "10"
         ],
+        "correct": 1,
+        "explanation": "Class mark = (20 + 30)/2 = 25."
+      },
+      {
+        "q": "Which measure divides ORDERED observations into two equal halves?",
+        "options": [
+          "Mean",
+          "Mode",
+          "Median",
+          "Range"
+        ],
         "correct": 2,
-        "explanation": "Midpoint = (20+30)/2=25."
+        "explanation": "Median is the centre: for an odd count use the central value; for an even count average the two central values."
       },
       {
         "q": "If a value repeats most often, it is the:",
@@ -921,7 +921,7 @@ window.MATH_EXTRA = {
     },
     "challenge": [
       {
-        "q": "Chance of drawing red from a standard 52-card deck?",
+        "q": "One card is drawn uniformly at random from a well-shuffled standard deck of 52 cards (without jokers). What is the probability that it is red?",
         "a": "1/2",
         "work": "26 red cards / 52 cards = 1/2.",
         "level": "easy"
@@ -939,7 +939,7 @@ window.MATH_EXTRA = {
         "level": "medium"
       },
       {
-        "q": "A bag has 4 black and 3 white balls. Probability of black in one random draw?",
+        "q": "A bag has 4 black and 3 white identical balls. One is drawn uniformly at random. What is the probability it is black?",
         "a": "4/7",
         "work": "Favourable 4, total 7.",
         "level": "medium"
@@ -964,26 +964,26 @@ window.MATH_EXTRA = {
         "explanation": "No favourable outcomes."
       },
       {
-        "q": "Two fair coins have how many ordered outcomes?",
+        "q": "If P(A)=1/4, then P(not A) equals:",
         "options": [
-          "2",
-          "3",
-          "4",
-          "8"
+          "1/4",
+          "1/2",
+          "3/4",
+          "4"
         ],
         "correct": 2,
-        "explanation": "HH, HT, TH, TT."
+        "explanation": "P(not A)=1−P(A)=1−1/4=3/4."
       },
       {
-        "q": "P(not A) equals:",
+        "q": "Two fair coins are tossed once each. How many equally likely ORDERED outcomes are possible?",
         "options": [
-          "P(A)",
-          "1−P(A)",
-          "1+P(A)",
-          "2P(A)"
+          "2",
+          "4",
+          "3",
+          "8"
         ],
         "correct": 1,
-        "explanation": "Complementary probabilities sum to 1."
+        "explanation": "The four possibilities are HH, HT, TH and TT."
       }
     ]
   }
