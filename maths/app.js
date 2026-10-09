@@ -1,21 +1,42 @@
 
 (function(){
 'use strict';
-const lessons=window.MATH_LESSONS||[],extra=window.MATH_EXTRA||{},dom=id=>document.getElementById(id);
+const lessons=window.MATH_LESSONS||[],extra=window.MATH_EXTRA||{},coach=window.MATH_COACH||{},dom=id=>document.getElementById(id);
 const esc=v=>String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const get=id=>lessons.find(x=>x.id===id)||lessons[0];
 const progressKey='hustlenix-maths-complete-v2';
 let saved={};try{saved=JSON.parse(localStorage.getItem(progressKey)||'{}')}catch(e){}
-const state={page:'home',id:'quadratics',done:new Set(saved.done||[]),mistakes:new Set(saved.mistakes||[]),revealed:new Set(),filter:'all',level:'all',limit:12,exam:null,examSize:10,quizResult:null};
+const state={page:'home',id:'quadratics',done:new Set(saved.done||[]),mistakes:new Set(saved.mistakes||[]),review:saved.review||{},mastery:saved.mastery||{},history:saved.history||[],solved:new Set(saved.solved||[]),revealed:new Set(),hint:{},filter:'all',level:'all',search:'',limit:12,exam:null,examSize:10,quizResult:null,writtenTest:null};
 const exercises=lessons.flatMap(l=>[...l.practice.map((q,i)=>({...q,chapter:l.id,title:l.title,id:l.id+'-b'+i,level:i?'medium':'easy'})),...(extra[l.id]?.challenge||[]).map((q,i)=>({...q,chapter:l.id,title:l.title,id:l.id+'-c'+i}))]);
 const mcqs=lessons.flatMap(l=>(extra[l.id]?.mcq||[]).map((q,i)=>({...q,chapter:l.id,title:l.title,id:l.id+'-q'+i})));
-const lookup=Object.fromEntries(exercises.map(q=>[q.id,q]));
-function persist(){try{localStorage.setItem(progressKey,JSON.stringify({done:[...state.done],mistakes:[...state.mistakes]}))}catch(e){}}
+const reviewMCQ=q=>({...q,q:q.q+' ('+q.options.map((o,i)=>String.fromCharCode(65+i)+': '+o).join(' · ')+')',a:String.fromCharCode(65+q.correct)+'. '+q.options[q.correct],work:q.explanation,level:'medium'});
+const lookup=Object.fromEntries([...exercises,...mcqs.map(reviewMCQ)].map(q=>[q.id,q]));
+const today=()=>Math.floor(Date.now()/86400000);
+const dueIds=()=>Object.keys(state.review).filter(id=>state.review[id].next<=today()&&lookup[id]);
+const masteredCount=()=>lessons.filter(l=>(state.mastery[l.id]?.correct||0)>=2).length;
+function confidence(qid,correct){
+  const prior=state.review[qid]||{interval:0,reps:0,next:today()};
+  const reps=correct?(prior.reps||0)+1:0;
+  const intervals=[0,1,3,7,14,30,60];
+  const interval=correct?intervals[Math.min(reps,intervals.length-1)]:0;
+  state.review[qid]={reps,interval,next:today()+interval,last:today()};
+  if(correct){state.solved.add(qid);state.mistakes.delete(qid)}else state.mistakes.add(qid);
+  persist();
+}
+function persist(){try{localStorage.setItem(progressKey,JSON.stringify({done:[...state.done],mistakes:[...state.mistakes],review:state.review,mastery:state.mastery,history:state.history.slice(-40),solved:[...state.solved]}))}catch(e){}}
+function getHints(q){
+ const matched=q.id.match(/-(b|c)([0-9]+)$/),pairs=coach[q.chapter]?.hints||[];
+ if(!matched)return [];
+ const offset=matched[1]==='b'?5:0;
+ return pairs[offset+Number(matched[2])]||[];
+}
+function levelText(q){return state.solved.has(q.id)?'✓ Practised':state.mistakes.has(q.id)?'↻ Review again':q.level}
+
 function button(text,action,type,attrs){return '<button type="button" class="button '+(type||'')+'" data-action="'+action+'" '+(attrs||'')+'>'+text+'</button>'}
 function header(title,over,desc){return '<div class="eyebrow">'+esc(over)+'</div><h1 class="page-title">'+esc(title)+'</h1><p class="lede">'+esc(desc)+'</p>'}
 function section(title,over,desc){return '<div class="section-heading"><div><div class="eyebrow">'+esc(over)+'</div><h2>'+esc(title)+'</h2>'+(desc?'<p>'+esc(desc)+'</p>':'')+'</div></div>'}
 function renderNav(){
-const tabs=[['home','⌂','Overview'],['chapter','▤','Learn chapters'],['practice','✎','Question bank'],['exam','☑','Mock tests'],['formulas','∑','Formula library'],['lab','⌁','Math playground'],['mistakes','↻','Mistake notebook']];
+const tabs=[['home','⌂','Overview'],['chapter','▤','Learn chapters'],['practice','✎','Question bank'],['exam','☑','Mock tests'],['formulas','∑','Formula library'],['lab','⌁','Math playground'],['mistakes','↻','Mistake notebook'],['due','◷','Due for review']];
 dom('nav-main').innerHTML=tabs.map(t=>'<button class="nav-item '+(state.page===t[0]?'active':'')+'" data-page="'+t[0]+'"><span style="font-size:17px;width:19px">'+t[1]+'</span><strong>'+t[2]+'</strong></button>').join('');
 dom('nav-lessons').innerHTML=lessons.map(l=>'<button class="chapter-item '+(state.page==='chapter'&&state.id===l.id?'active':'')+'" data-page="chapter" data-chapter="'+l.id+'"><span class="num">'+esc(l.code)+'</span><strong>'+esc(l.title)+'</strong><span class="done-dot">'+(state.done.has(l.id)?'✓':'')+'</span></button>').join('');
 dom('pct').textContent=Math.round(state.done.size/10*100)+'%';
@@ -28,7 +49,7 @@ if(page==='practice'&&id)state.filter=id;
 render();window.scrollTo({top:0,behavior:'auto'});
 dom('sidebar').classList.remove('open');dom('shade').classList.remove('show');dom('menu').setAttribute('aria-expanded','false');
 }
-function render(){renderNav();dom('main-content').innerHTML=({home:home,chapter:chapter,practice:practice,exam:exam,formulas:formulas,lab:lab,mistakes:mistakes}[state.page]||home)();if(state.page==='lab')computeLab();}
+function render(){renderNav();dom('main-content').innerHTML=({home:home,chapter:chapter,practice:practice,exam:exam,formulas:formulas,lab:lab,mistakes:mistakes,due:due}[state.page]||home)();if(state.page==='lab')computeLab();}
 function home(){
 const undone=lessons.find(l=>!state.done.has(l.id))||lessons[0];
 return '<section class="hero"><div><div class="eyebrow" style="color:#d0e8a4">CBSE CLASS 10 · PERSONALISED MATHS PORTION</div><h1>Understand the maths.<br><span>Not just the formula.</span></h1><p>A complete revision workspace for every included chapter: plain-language concepts, solved methods, self-checks, question bank, mock tests and a maths playground. Take your time—there is no 20-minute study restriction.</p><div class="actions">'+button('Continue: '+esc(undone.title),'continue','highlight')+button('Explore the questions','to-practice','light')+'</div></div><aside class="hero-card"><small>YOUR CHAPTER PROGRESS</small><b>'+state.done.size+' / 10</b><div class="hero-meter"><i style="width:'+(state.done.size/10*100)+'%"></i></div><p style="font-size:12px;margin:12px 0 0">Progress is saved locally in this browser.</p></aside></section>'+
@@ -56,14 +77,14 @@ function worked(w,index,l){
 return '<article class="panel worked"><div><div class="eyebrow">WORKED EXAMPLE '+index+'</div><h3>'+esc(w.q)+'</h3><ol>'+w.steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol><div class="answer-bar">Answer: '+esc(w.answer)+'</div></div><div>'+diagram(l.id)+'<div class="why" style="margin-top:13px"><strong>Core formula</strong><p class="formula-chip">'+esc(l.formula)+'</p></div></div></article>';
 }
 function chapter(){
-const l=get(state.id),x=extra[l.id]||{},idx=lessons.findIndex(t=>t.id===l.id),done=state.done.has(l.id);
-return '<div class="chapter-head"><div><div class="eyebrow">CHAPTER '+l.code+' / 10 · '+esc(l.tag)+'</div><h1>'+esc(l.title)+'</h1><p>'+esc(l.hook)+'</p></div><div class="chapter-tools">'+button(done?'✓ Understood':'Mark understood','mark-done',done?'highlight':'light')+button('Next chapter →','shift-chapter','','data-offset="1"')+'</div></div><div class="path"><span>01 / UNDERSTAND</span><span>02 / SEE EXAMPLES</span><span>03 / SOLVE SEVEN</span><span>04 / REVISE</span></div>'+
-'<div class="panel" style="background:#e4f1e5;border-color:#d0e5d5"><div class="eyebrow">THE ENTIRE IDEA IN PLAIN ENGLISH</div><h2 style="font-size:24px;margin:12px 0">'+esc(l.tiny)+'</h2><p>'+esc(l.hook)+'</p></div>'+
+const l=get(state.id),x=extra[l.id]||{},idx=lessons.findIndex(t=>t.id===l.id),done=state.done.has(l.id),c=coach[l.id]||{};
+return '<div class="chapter-head"><div><div class="eyebrow">CHAPTER '+l.code+' / 10 · '+esc(l.tag)+'</div><h1>'+esc(l.title)+'</h1><p>'+esc(l.hook)+'</p></div><div class="chapter-tools">'+button(done?'✓ Reviewed':'Mark as reviewed','mark-done',done?'highlight':'light')+button('Next chapter →','shift-chapter','','data-offset="1"')+'</div></div><div class="path"><span>01 / UNDERSTAND</span><span>02 / SEE EXAMPLES</span><span>03 / SOLVE SEVEN</span><span>04 / REVISE</span></div>'+
+'<div class="panel" style="background:#e4f1e5;border-color:#d0e5d5"><div class="eyebrow">THE ENTIRE IDEA IN PLAIN ENGLISH</div><h2 style="font-size:24px;margin:12px 0">'+esc(l.tiny)+'</h2><p>'+esc(c.analogy||l.hook)+'</p><div class="grid two" style="margin-top:18px"><div class="why"><strong>Your target</strong><p>'+esc(c.mission||l.hook)+'</p></div><div class="why"><strong>Before you start</strong><p>'+esc(c.prereq||'Revise basic calculations.')+'</p></div></div></div>'+
 '<section class="section">'+section('Three ideas you must know','A / THE EXPLANATION','Every new idea comes with an example and a method you can repeat.')+'<div class="concept-stack">'+(x.sections||[]).map((s,i)=>'<article class="panel concept"><span class="concept-index">0'+(i+1)+'</span><div><h3>'+esc(s.title)+'</h3><p>'+esc(s.explain)+'</p><div class="try"><strong>FOR EXAMPLE</strong>'+esc(s.example)+'</div><div class="method" style="margin-top:13px"><strong>Do it like this:</strong> '+esc(s.method)+'</div></div></article>').join('')+'</div></section>'+
 '<section class="section">'+section('Two step-by-step solutions','B / WORKED EXAMPLES','Try to predict the next step before scrolling.')+'<div class="grid">'+worked(l.example,1,l)+worked(x.worked,2,l)+'</div></section>'+
 '<div class="exam-tip"><strong>Exam mistake to avoid</strong><p>'+esc(l.trap)+'</p></div>'+
 '<section class="section">'+section('Seven questions. One uninterrupted round.','C / PRACTICE','Solve in a rough notebook. Reveal solutions after attempting—not before.')+'<div class="study-grid">'+exercises.filter(q=>q.chapter===l.id).map(question).join('')+'</div></section>'+
-'<div class="sticky-actions"><span class="muted" style="font-size:12px">Finish this chapter at your own pace.</span><div class="actions">'+button('← Previous','shift-chapter','light','data-offset="-1"')+button(done?'✓ Understood':'Mark understood','mark-done','highlight')+button('Next →','shift-chapter','','data-offset="1"')+'</div></div>';
+'<div class="sticky-actions"><span class="muted" style="font-size:12px">Finish this chapter at your own pace.</span><div class="actions">'+button('← Previous','shift-chapter','light','data-offset="-1"')+button(done?'✓ Reviewed':'Mark as reviewed','mark-done','highlight')+button('Next →','shift-chapter','','data-offset="1"')+'</div></div>';
 }
 function question(q){
 let revealed=state.revealed.has(q.id),marked=state.mistakes.has(q.id);
