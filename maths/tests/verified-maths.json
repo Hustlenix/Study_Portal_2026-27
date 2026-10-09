@@ -1,0 +1,687 @@
+{
+  "revision": "2026-10-09",
+  "status": "reviewed",
+  "notes": "Checked chapter by chapter against independent manual calculations and expected answers. Fingerprints make changed prompts/options fail review gate. This is not a proof that every novel question can be verified by syntax.",
+  "records": {
+    "polynomials": {
+      "written": [
+        {
+          "id": "polynomials-0",
+          "promptFingerprint": "ba22af06",
+          "expectedAnswer": "3 and 1/3"
+        },
+        {
+          "id": "polynomials-1",
+          "promptFingerprint": "327b7074",
+          "expectedAnswer": "x² − 3x − 10"
+        },
+        {
+          "id": "polynomials-2",
+          "promptFingerprint": "a9ec06ad",
+          "expectedAnswer": "−3 and 3"
+        },
+        {
+          "id": "polynomials-3",
+          "promptFingerprint": "68e1dd0a",
+          "expectedAnswer": "x² − 3x − 4"
+        },
+        {
+          "id": "polynomials-4",
+          "promptFingerprint": "d1bbca32",
+          "expectedAnswer": "3/2 and −1/2"
+        },
+        {
+          "id": "polynomials-5",
+          "promptFingerprint": "70970955",
+          "expectedAnswer": "x² + 2x − 15"
+        },
+        {
+          "id": "polynomials-6",
+          "promptFingerprint": "869ca6f8",
+          "expectedAnswer": "−1"
+        }
+      ],
+      "worked": [
+        {
+          "id": "polynomials-worked-0",
+          "promptFingerprint": "2e3f30a7",
+          "expectedAnswer": "x = 1/2, 3"
+        },
+        {
+          "id": "polynomials-worked-1",
+          "promptFingerprint": "e14448b5",
+          "expectedAnswer": "k = −1; other zero = −3"
+        }
+      ],
+      "mcq": [
+        {
+          "id": "polynomials-mcq-0",
+          "promptFingerprint": "bd038eda",
+          "expectedCorrectIndex": 0
+        },
+        {
+          "id": "polynomials-mcq-1",
+          "promptFingerprint": "854ebfe5",
+          "expectedCorrectIndex": 1
+        },
+        {
+          "id": "polynomials-mcq-2",
+          "promptFingerprint": "c8409e77",
+          "expectedCorrectIndex": 2
+        }
+      ]
+    },
+    "linear": {
+      "written": [
+        {
+          "id": "linear-0",
+          "promptFingerprint": "1b641b85",
+          "expectedAnswer": "Adult ₹120; child ₹50"
+        },
+        {
+          "id": "linear-1",
+          "promptFingerprint": "79cb0012",
+          "expectedAnswer": "Pen ₹10; eraser ₹7"
+        },
+        {
+          "id": "linear-2",
+          "promptFingerprint": "c1229cad",
+          "expectedAnswer": "x=8, y=4"
+        },
+        {
+          "id": "linear-3",
+          "promptFingerprint": "fb924456",
+          "expectedAnswer": "x=4, y=3"
+        },
+        {
+          "id": "linear-4",
+          "promptFingerprint": "88b0c852",
+          "expectedAnswer": "Infinitely many"
+        },
+        {
+          "id": "linear-5",
+          "promptFingerprint": "5246410f",
+          "expectedAnswer": "63"
+        },
+        {
+          "id": "linear-6",
+          "promptFingerprint": "be0188f2",
+          "expectedAnswer": "Notebook ₹24; pen ₹16"
+        }
+      ],
+      "worked": [
+        {
+          "id": "linear-worked-0",
+          "promptFingerprint": "e8dd91f9",
+          "expectedAnswer": "x = 2, y = 3"
+        },
+        {
+          "id": "linear-worked-1",
+          "promptFingerprint": "dbc6968f",
+          "expectedAnswer": "25 and 17"
+        }
+      ],
+      "mcq": [
+        {
+          "id": "linear-mcq-0",
+          "promptFingerprint": "3483b434",
+          "expectedCorrectIndex": 0
+        },
+        {
+          "id": "linear-mcq-1",
+          "promptFingerprint": "765c51b8",
+          "expectedCorrectIndex": 2
+        },
+        {
+          "id": "linear-mcq-2",
+          "promptFingerprint": "b6898ea7",
+          "expectedCorrectIndex": 3
+        }
+      ]
+    },
+    "quadratics": {
+      "written": [
+        {
+          "id": "quadratics-0",
+          "promptFingerprint": "cf2509a7",
+          "expectedAnswer": "Breadth 7 cm; length 12 cm"
+        },
+        {
+          "id": "quadratics-1",
+          "promptFingerprint": "16667137",
+          "expectedAnswer": "No real solution"
+        },
+        {
+          "id": "quadratics-2",
+          "promptFingerprint": "aead83d8",
+          "expectedAnswer": "3 and 4"
+        },
+        {
+          "id": "quadratics-3",
+          "promptFingerprint": "66b5dc49",
+          "expectedAnswer": "3 and −1/2"
+        },
+        {
+          "id": "quadratics-4",
+          "promptFingerprint": "56460f12",
+          "expectedAnswer": "Real and equal, both −2"
+        },
+        {
+          "id": "quadratics-5",
+          "promptFingerprint": "cf631fe2",
+          "expectedAnswer": "8 and 9"
+        },
+        {
+          "id": "quadratics-6",
+          "promptFingerprint": "0dd9d5fc",
+          "expectedAnswer": "No real roots"
+        }
+      ],
+      "worked": [
+        {
+          "id": "quadratics-worked-0",
+          "promptFingerprint": "79c892a9",
+          "expectedAnswer": "x = 2 or 3"
+        },
+        {
+          "id": "quadratics-worked-1",
+          "promptFingerprint": "f63e131e",
+          "expectedAnswer": "8 (and the next integer is 9)"
+        }
+      ],
+      "mcq": [
+        {
+          "id": "quadratics-mcq-0",
+          "promptFingerprint": "e0fa53e2",
+          "expectedCorrectIndex": 2
+        },
+        {
+          "id": "quadratics-mcq-1",
+          "promptFingerprint": "afe100b8",
+          "expectedCorrectIndex": 1
+        },
+        {
+          "id": "quadratics-mcq-2",
+          "promptFingerprint": "3902067c",
+          "expectedCorrectIndex": 3
+        }
+      ]
+    },
+    "ap": {
+      "written": [
+        {
+          "id": "ap-0",
+          "promptFingerprint": "921079bc",
+          "expectedAnswer": "20th term 83; sum 900"
+        },
+        {
+          "id": "ap-1",
+          "promptFingerprint": "8477c7eb",
+          "expectedAnswer": "495 seats"
+        },
+        {
+          "id": "ap-2",
+          "promptFingerprint": "a9783de7",
+          "expectedAnswer": "47"
+        },
+        {
+          "id": "ap-3",
+          "promptFingerprint": "dd5d108c",
+          "expectedAnswer": "610"
+        },
+        {
+          "id": "ap-4",
+          "promptFingerprint": "c1c7b426",
+          "expectedAnswer": "15th"
+        },
+        {
+          "id": "ap-5",
+          "promptFingerprint": "47f6fc81",
+          "expectedAnswer": "275"
+        },
+        {
+          "id": "ap-6",
+          "promptFingerprint": "94510d99",
+          "expectedAnswer": "10th"
+        }
+      ],
+      "worked": [
+        {
+          "id": "ap-worked-0",
+          "promptFingerprint": "8b55c3ed",
+          "expectedAnswer": "a₁₀ = 39; S₁₀ = 210"
+        },
+        {
+          "id": "ap-worked-1",
+          "promptFingerprint": "7c773165",
+          "expectedAnswer": "10th term"
+        }
+      ],
+      "mcq": [
+        {
+          "id": "ap-mcq-0",
+          "promptFingerprint": "90bf32af",
+          "expectedCorrectIndex": 1
+        },
+        {
+          "id": "ap-mcq-1",
+          "promptFingerprint": "277ee6ac",
+          "expectedCorrectIndex": 2
+        },
+        {
+          "id": "ap-mcq-2",
+          "promptFingerprint": "129f3a39",
+          "expectedCorrectIndex": 1
+        }
+      ]
+    },
+    "triangles": {
+      "written": [
+        {
+          "id": "triangles-0",
+          "promptFingerprint": "38178f10",
+          "expectedAnswer": "9 cm"
+        },
+        {
+          "id": "triangles-1",
+          "promptFingerprint": "ac99aafe",
+          "expectedAnswer": "100 cm²"
+        },
+        {
+          "id": "triangles-2",
+          "promptFingerprint": "cd31b6ce",
+          "expectedAnswer": "8"
+        },
+        {
+          "id": "triangles-3",
+          "promptFingerprint": "b9e02ae9",
+          "expectedAnswer": "100 cm²"
+        },
+        {
+          "id": "triangles-4",
+          "promptFingerprint": "613bf6fb",
+          "expectedAnswer": "15 cm"
+        },
+        {
+          "id": "triangles-5",
+          "promptFingerprint": "3982905c",
+          "expectedAnswer": "15 cm"
+        },
+        {
+          "id": "triangles-6",
+          "promptFingerprint": "487f6eb4",
+          "expectedAnswer": "Yes"
+        }
+      ],
+      "worked": [
+        {
+          "id": "triangles-worked-0",
+          "promptFingerprint": "2daeb8d7",
+          "expectedAnswer": "EC = 9"
+        },
+        {
+          "id": "triangles-worked-1",
+          "promptFingerprint": "d2aa78e3",
+          "expectedAnswer": "100 cm²"
+        }
+      ],
+      "mcq": [
+        {
+          "id": "triangles-mcq-0",
+          "promptFingerprint": "d3c8527f",
+          "expectedCorrectIndex": 1
+        },
+        {
+          "id": "triangles-mcq-1",
+          "promptFingerprint": "ac89efea",
+          "expectedCorrectIndex": 2
+        },
+        {
+          "id": "triangles-mcq-2",
+          "promptFingerprint": "024ff00a",
+          "expectedCorrectIndex": 0
+        }
+      ]
+    },
+    "trig": {
+      "written": [
+        {
+          "id": "trig-0",
+          "promptFingerprint": "1008df35",
+          "expectedAnswer": "sin = 8/17; cos = 15/17; tan = 8/15"
+        },
+        {
+          "id": "trig-1",
+          "promptFingerprint": "bc09d9a5",
+          "expectedAnswer": "cos θ = 4/5; tan θ = 3/4"
+        },
+        {
+          "id": "trig-2",
+          "promptFingerprint": "e1c17919",
+          "expectedAnswer": "5/13 and 12/13"
+        },
+        {
+          "id": "trig-3",
+          "promptFingerprint": "01508015",
+          "expectedAnswer": "1"
+        },
+        {
+          "id": "trig-4",
+          "promptFingerprint": "1a3f7d2a",
+          "expectedAnswer": "1/2"
+        },
+        {
+          "id": "trig-5",
+          "promptFingerprint": "bcf453b6",
+          "expectedAnswer": "sinθ=3/5; cosθ=4/5"
+        },
+        {
+          "id": "trig-6",
+          "promptFingerprint": "c0e1576f",
+          "expectedAnswer": "45°"
+        }
+      ],
+      "worked": [
+        {
+          "id": "trig-worked-0",
+          "promptFingerprint": "cb2c9c10",
+          "expectedAnswer": "sin θ = 3/5; cos θ = 4/5; tan θ = 3/4"
+        },
+        {
+          "id": "trig-worked-1",
+          "promptFingerprint": "562bfac6",
+          "expectedAnswer": "sinθ=5/13, cosθ=12/13"
+        }
+      ],
+      "mcq": [
+        {
+          "id": "trig-mcq-0",
+          "promptFingerprint": "c7ad9605",
+          "expectedCorrectIndex": 0
+        },
+        {
+          "id": "trig-mcq-1",
+          "promptFingerprint": "0e3ae2b0",
+          "expectedCorrectIndex": 1
+        },
+        {
+          "id": "trig-mcq-2",
+          "promptFingerprint": "dc65b4e4",
+          "expectedCorrectIndex": 3
+        }
+      ]
+    },
+    "coordinate": {
+      "written": [
+        {
+          "id": "coordinate-0",
+          "promptFingerprint": "24300590",
+          "expectedAnswer": "Distance 10; midpoint (1,7)"
+        },
+        {
+          "id": "coordinate-1",
+          "promptFingerprint": "b03fc031",
+          "expectedAnswer": "(5,6)"
+        },
+        {
+          "id": "coordinate-2",
+          "promptFingerprint": "0a2f3ff8",
+          "expectedAnswer": "10 units"
+        },
+        {
+          "id": "coordinate-3",
+          "promptFingerprint": "5be99c1a",
+          "expectedAnswer": "(−1,3)"
+        },
+        {
+          "id": "coordinate-4",
+          "promptFingerprint": "d430110f",
+          "expectedAnswer": "(4,5)"
+        },
+        {
+          "id": "coordinate-5",
+          "promptFingerprint": "0fc5d0c2",
+          "expectedAnswer": "Yes"
+        },
+        {
+          "id": "coordinate-6",
+          "promptFingerprint": "d19da1f4",
+          "expectedAnswer": "6 square units"
+        }
+      ],
+      "worked": [
+        {
+          "id": "coordinate-worked-0",
+          "promptFingerprint": "fb119dcb",
+          "expectedAnswer": "Distance = 5 units; midpoint = (2.5, 4)"
+        },
+        {
+          "id": "coordinate-worked-1",
+          "promptFingerprint": "fbb03a5a",
+          "expectedAnswer": "P=(4,5)"
+        }
+      ],
+      "mcq": [
+        {
+          "id": "coordinate-mcq-0",
+          "promptFingerprint": "0ccb2b2a",
+          "expectedCorrectIndex": 1
+        },
+        {
+          "id": "coordinate-mcq-1",
+          "promptFingerprint": "8056ffdc",
+          "expectedCorrectIndex": 0
+        },
+        {
+          "id": "coordinate-mcq-2",
+          "promptFingerprint": "976444ae",
+          "expectedCorrectIndex": 2
+        }
+      ]
+    },
+    "mensuration": {
+      "written": [
+        {
+          "id": "mensuration-0",
+          "promptFingerprint": "8adae93d",
+          "expectedAnswer": "Volume 1540 cm³; curved area 440 cm²"
+        },
+        {
+          "id": "mensuration-1",
+          "promptFingerprint": "13818a25",
+          "expectedAnswer": "TSA = 27π cm²; volume = 18π cm³"
+        },
+        {
+          "id": "mensuration-2",
+          "promptFingerprint": "dc45dbff",
+          "expectedAnswer": "64 cm³"
+        },
+        {
+          "id": "mensuration-3",
+          "promptFingerprint": "a6ddecfa",
+          "expectedAnswer": "90π cm³"
+        },
+        {
+          "id": "mensuration-4",
+          "promptFingerprint": "2cf8f25c",
+          "expectedAnswer": "15π cm²"
+        },
+        {
+          "id": "mensuration-5",
+          "promptFingerprint": "37d2f9cb",
+          "expectedAnswer": "36π cm²"
+        },
+        {
+          "id": "mensuration-6",
+          "promptFingerprint": "2f174b15",
+          "expectedAnswer": "686π/3 cm³"
+        }
+      ],
+      "worked": [
+        {
+          "id": "mensuration-worked-0",
+          "promptFingerprint": "b8681171",
+          "expectedAnswer": "198 cm³ (when π = 22/7)"
+        },
+        {
+          "id": "mensuration-worked-1",
+          "promptFingerprint": "a0549cec",
+          "expectedAnswer": "l=5 cm; CSA=15π cm²; V=12π cm³"
+        }
+      ],
+      "mcq": [
+        {
+          "id": "mensuration-mcq-0",
+          "promptFingerprint": "ead0cb85",
+          "expectedCorrectIndex": 2
+        },
+        {
+          "id": "mensuration-mcq-1",
+          "promptFingerprint": "0d2677fa",
+          "expectedCorrectIndex": 2
+        },
+        {
+          "id": "mensuration-mcq-2",
+          "promptFingerprint": "564573ce",
+          "expectedCorrectIndex": 1
+        }
+      ]
+    },
+    "statistics": {
+      "written": [
+        {
+          "id": "statistics-0",
+          "promptFingerprint": "8480e54a",
+          "expectedAnswer": "Mean = 16; median = 16"
+        },
+        {
+          "id": "statistics-1",
+          "promptFingerprint": "5304ae08",
+          "expectedAnswer": "Mode = 24"
+        },
+        {
+          "id": "statistics-2",
+          "promptFingerprint": "7c86beb2",
+          "expectedAnswer": "5"
+        },
+        {
+          "id": "statistics-3",
+          "promptFingerprint": "a2415b93",
+          "expectedAnswer": "7.5"
+        },
+        {
+          "id": "statistics-4",
+          "promptFingerprint": "5b6a6eb8",
+          "expectedAnswer": "13⅓"
+        },
+        {
+          "id": "statistics-5",
+          "promptFingerprint": "3282d5c5",
+          "expectedAnswer": "26.25"
+        },
+        {
+          "id": "statistics-6",
+          "promptFingerprint": "e2723632",
+          "expectedAnswer": "12"
+        }
+      ],
+      "worked": [
+        {
+          "id": "statistics-worked-0",
+          "promptFingerprint": "56fe6f37",
+          "expectedAnswer": "Mean = 16"
+        },
+        {
+          "id": "statistics-worked-1",
+          "promptFingerprint": "fa4983d6",
+          "expectedAnswer": "Median = 13⅓"
+        }
+      ],
+      "mcq": [
+        {
+          "id": "statistics-mcq-0",
+          "promptFingerprint": "02112832",
+          "expectedCorrectIndex": 1
+        },
+        {
+          "id": "statistics-mcq-1",
+          "promptFingerprint": "1663e149",
+          "expectedCorrectIndex": 2
+        },
+        {
+          "id": "statistics-mcq-2",
+          "promptFingerprint": "10b970e8",
+          "expectedCorrectIndex": 3
+        }
+      ]
+    },
+    "probability": {
+      "written": [
+        {
+          "id": "probability-0",
+          "promptFingerprint": "a59ed797",
+          "expectedAnswer": "1/2"
+        },
+        {
+          "id": "probability-1",
+          "promptFingerprint": "e8a2ddef",
+          "expectedAnswer": "1/6"
+        },
+        {
+          "id": "probability-2",
+          "promptFingerprint": "4a3c678b",
+          "expectedAnswer": "1/2"
+        },
+        {
+          "id": "probability-3",
+          "promptFingerprint": "fdc765fd",
+          "expectedAnswer": "1/2"
+        },
+        {
+          "id": "probability-4",
+          "promptFingerprint": "7574165a",
+          "expectedAnswer": "1/2"
+        },
+        {
+          "id": "probability-5",
+          "promptFingerprint": "bfcf0c21",
+          "expectedAnswer": "4/7"
+        },
+        {
+          "id": "probability-6",
+          "promptFingerprint": "b971806d",
+          "expectedAnswer": "1/9"
+        }
+      ],
+      "worked": [
+        {
+          "id": "probability-worked-0",
+          "promptFingerprint": "ed495819",
+          "expectedAnswer": "1/2"
+        },
+        {
+          "id": "probability-worked-1",
+          "promptFingerprint": "deb93412",
+          "expectedAnswer": "1/9"
+        }
+      ],
+      "mcq": [
+        {
+          "id": "probability-mcq-0",
+          "promptFingerprint": "2bee3c85",
+          "expectedCorrectIndex": 0
+        },
+        {
+          "id": "probability-mcq-1",
+          "promptFingerprint": "a7593dc6",
+          "expectedCorrectIndex": 2
+        },
+        {
+          "id": "probability-mcq-2",
+          "promptFingerprint": "fb805414",
+          "expectedCorrectIndex": 1
+        }
+      ]
+    }
+  }
+}
