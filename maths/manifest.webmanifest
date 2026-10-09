@@ -1,0 +1,18 @@
+{
+  "name": "Maths Revision Studio — Class 10",
+  "short_name": "Maths Studio",
+  "description": "Ten-chapter CBSE Class 10 maths revision and practice",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f7f3",
+  "theme_color": "#142b29",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
