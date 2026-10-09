@@ -1,5 +1,15 @@
 # Study Portal 2026–27
 
+## Mathematics — complete revision studio
+
+The Maths revision site is now available at [Study Portal / Maths](https://hustlenix.github.io/Study_Portal_2026-27/maths/) with ten included chapters, 30 concept guides, 20 fully solved examples, 70 written-response questions, 30 auto-marked MCQs, formula sheets, an interactive maths playground and a saved mistake notebook.
+
+Its excluded chapters are Real Numbers, Some Applications of Trigonometry, Circles and Areas Related to Circles. The older English and SST courses remain in the same portal.
+
+See [maths/README.md](maths/README.md) for usage and source details.
+
+
+
 A focused, app-like study dashboard for Class 10 revision.
 
 ## Current subject: English Communicative
