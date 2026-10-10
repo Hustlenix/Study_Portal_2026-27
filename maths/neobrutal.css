@@ -28,7 +28,7 @@
   --teal-dark:#1c4037;
   --teal:#1c5140;
 }
-html[data-theme="dark"] {
+:root[data-theme="dark"] {
   --nb-ink:#f5f0df;
   --nb-bg:#13151c;
   --nb-surface:#242832;
@@ -455,133 +455,133 @@ h2,h3 { text-wrap:pretty; }
 
 /* Dark mode: material style remains; ink changes from charcoal to chalk.
    Saturated accent sheets keep dark text for reliable contrast. */
-html[data-theme="dark"] .side {
+:root[data-theme="dark"] .side {
   background:#272438;
   border-color:#f5f0df;
   color:#f5f0df;
 }
-html[data-theme="dark"] .brand{border-color:#f5f0df}
-html[data-theme="dark"] .brand strong,html[data-theme="dark"] .brand small,
-html[data-theme="dark"] .sidebar-label,
-html[data-theme="dark"] .nav-item,html[data-theme="dark"] .chapter-item,
-html[data-theme="dark"] .side-foot,html[data-theme="dark"] .side-foot a{color:#f5f0df;}
-html[data-theme="dark"] .nav-item:hover,html[data-theme="dark"] .chapter-item:hover{background:#424054;border-color:#f5f0df;color:#f5f0df}
-html[data-theme="dark"] .nav-item.active,html[data-theme="dark"] .chapter-item.active{
+:root[data-theme="dark"] .brand{border-color:#f5f0df}
+:root[data-theme="dark"] .brand strong,:root[data-theme="dark"] .brand small,
+:root[data-theme="dark"] .sidebar-label,
+:root[data-theme="dark"] .nav-item,:root[data-theme="dark"] .chapter-item,
+:root[data-theme="dark"] .side-foot,:root[data-theme="dark"] .side-foot a{color:#f5f0df;}
+:root[data-theme="dark"] .nav-item:hover,:root[data-theme="dark"] .chapter-item:hover{background:#424054;border-color:#f5f0df;color:#f5f0df}
+:root[data-theme="dark"] .nav-item.active,:root[data-theme="dark"] .chapter-item.active{
  background:var(--nb-acid);color:#151515;border-color:#f5f0df;box-shadow:3px 3px 0 #f5f0df;
 }
-html[data-theme="dark"] .side-foot{border-color:#f5f0df}
-html[data-theme="dark"] .brand-logo{border-color:#f5f0df;box-shadow:4px 4px 0 #f5f0df}
-html[data-theme="dark"] .hero,html[data-theme="dark"] .flow-hero{
+:root[data-theme="dark"] .side-foot{border-color:#f5f0df}
+:root[data-theme="dark"] .brand-logo{border-color:#f5f0df;box-shadow:4px 4px 0 #f5f0df}
+:root[data-theme="dark"] .hero,:root[data-theme="dark"] .flow-hero{
  background:var(--nb-acid);color:#151515;border-color:#f5f0df;box-shadow:9px 9px 0 #797aa3;
 }
-html[data-theme="dark"] .hero h1,html[data-theme="dark"] .flow-hero h1,
-html[data-theme="dark"] .hero .eyebrow,html[data-theme="dark"] .flow-hero .eyebrow,
-html[data-theme="dark"] .hero p,html[data-theme="dark"] .flow-hero p{color:#151515;}
-html[data-theme="dark"] .hero h1 span{color:#151515}
-html[data-theme="dark"] .hero-card,html[data-theme="dark"] .flow-hero-aside{
+:root[data-theme="dark"] .hero h1,:root[data-theme="dark"] .flow-hero h1,
+:root[data-theme="dark"] .hero .eyebrow,:root[data-theme="dark"] .flow-hero .eyebrow,
+:root[data-theme="dark"] .hero p,:root[data-theme="dark"] .flow-hero p{color:#151515;}
+:root[data-theme="dark"] .hero h1 span{color:#151515}
+:root[data-theme="dark"] .hero-card,:root[data-theme="dark"] .flow-hero-aside{
  background:#ffb2ce;color:#151515;border-color:#151515;box-shadow:5px 5px 0 #151515;
 }
-html[data-theme="dark"] .hero-card small,
-html[data-theme="dark"] .flow-hero-aside small,
-html[data-theme="dark"] .flow-hero-aside p {color:#151515}
-html[data-theme="dark"] .hero .button.highlight,html[data-theme="dark"] .flow-hero .button.highlight{
+:root[data-theme="dark"] .hero-card small,
+:root[data-theme="dark"] .flow-hero-aside small,
+:root[data-theme="dark"] .flow-hero-aside p {color:#151515}
+:root[data-theme="dark"] .hero .button.highlight,:root[data-theme="dark"] .flow-hero .button.highlight{
  background:#151515;color:#fff;border-color:#151515;box-shadow:4px 4px 0 #7f7f71;
 }
-html[data-theme="dark"] .chapter-card,html[data-theme="dark"] .flow-chapter {
+:root[data-theme="dark"] .chapter-card,:root[data-theme="dark"] .flow-chapter {
  border-color:var(--nb-ink);box-shadow:5px 5px 0 #797aa3;
 }
-html[data-theme="dark"] .chapter-card h3,html[data-theme="dark"] .flow-chapter strong,
-html[data-theme="dark"] .chapter-card p,html[data-theme="dark"] .flow-chapter p,
-html[data-theme="dark"] .chapter-card .chapter-n,html[data-theme="dark"] .chapter-card footer,
-html[data-theme="dark"] .flow-chapter>small{color:#f7f2eb}
-html[data-theme="dark"] .chapter-card:hover,html[data-theme="dark"] .flow-chapter:hover{box-shadow:2px 2px 0 #797aa3}
-html[data-theme="dark"] .panel,html[data-theme="dark"] .question-card,html[data-theme="dark"] .test-question,
-html[data-theme="dark"] .flow-task,html[data-theme="dark"] .flow-insight-row {
+:root[data-theme="dark"] .chapter-card h3,:root[data-theme="dark"] .flow-chapter strong,
+:root[data-theme="dark"] .chapter-card p,:root[data-theme="dark"] .flow-chapter p,
+:root[data-theme="dark"] .chapter-card .chapter-n,:root[data-theme="dark"] .chapter-card footer,
+:root[data-theme="dark"] .flow-chapter>small{color:#f7f2eb}
+:root[data-theme="dark"] .chapter-card:hover,:root[data-theme="dark"] .flow-chapter:hover{box-shadow:2px 2px 0 #797aa3}
+:root[data-theme="dark"] .panel,:root[data-theme="dark"] .question-card,:root[data-theme="dark"] .test-question,
+:root[data-theme="dark"] .flow-task,:root[data-theme="dark"] .flow-insight-row {
  background:var(--nb-surface);border-color:var(--nb-ink);color:var(--nb-ink);box-shadow:var(--nb-shadow);
 }
-html[data-theme="dark"] .why,html[data-theme="dark"] .panel[style*="background:#e4f1e5"] {
+:root[data-theme="dark"] .why,:root[data-theme="dark"] .panel[style*="background:#e4f1e5"] {
  background:#24473d!important;color:#f5f0df;border-color:#f5f0df!important;
 }
-html[data-theme="dark"] .why strong,html[data-theme="dark"] .why p,
-html[data-theme="dark"] .concept .try,html[data-theme="dark"] .concept .try strong,
-html[data-theme="dark"] .concept p,
-html[data-theme="dark"] .panel[style*="background:#e4f1e5"] p{color:#f5f0df}
-html[data-theme="dark"] .concept .try{background:#24473d;border-color:#f5f0df}
-html[data-theme="dark"] .worked li{color:#f5f0df;border-color:#f5f0df}
-html[data-theme="dark"] .button {background:#d7f366;color:#151515;border-color:#f5f0df;box-shadow:4px 4px 0 #797aa3;}
-html[data-theme="dark"] .button.light{background:#2e3442;color:#f5f0df;border-color:#f5f0df}
-html[data-theme="dark"] .button.highlight{background:#d7f366;color:#151515;border-color:#f5f0df}
-html[data-theme="dark"] .button.ghost{background:transparent;color:#f5f0df;border-color:#f5f0df}
-html[data-theme="dark"] .button:hover:not(:disabled){box-shadow:2px 2px 0 #797aa3}
-html[data-theme="dark"] .pill,html[data-theme="dark"] .difficulty,html[data-theme="dark"] .chip,html[data-theme="dark"] .path span {
+:root[data-theme="dark"] .why strong,:root[data-theme="dark"] .why p,
+:root[data-theme="dark"] .concept .try,:root[data-theme="dark"] .concept .try strong,
+:root[data-theme="dark"] .concept p,
+:root[data-theme="dark"] .panel[style*="background:#e4f1e5"] p{color:#f5f0df}
+:root[data-theme="dark"] .concept .try{background:#24473d;border-color:#f5f0df}
+:root[data-theme="dark"] .worked li{color:#f5f0df;border-color:#f5f0df}
+:root[data-theme="dark"] .button {background:#d7f366;color:#151515;border-color:#f5f0df;box-shadow:4px 4px 0 #797aa3;}
+:root[data-theme="dark"] .button.light{background:#2e3442;color:#f5f0df;border-color:#f5f0df}
+:root[data-theme="dark"] .button.highlight{background:#d7f366;color:#151515;border-color:#f5f0df}
+:root[data-theme="dark"] .button.ghost{background:transparent;color:#f5f0df;border-color:#f5f0df}
+:root[data-theme="dark"] .button:hover:not(:disabled){box-shadow:2px 2px 0 #797aa3}
+:root[data-theme="dark"] .pill,:root[data-theme="dark"] .difficulty,:root[data-theme="dark"] .chip,:root[data-theme="dark"] .path span {
  background:#303d39;color:#f5f0df;border-color:#f5f0df;
 }
-html[data-theme="dark"] .difficulty.hard{background:#553c2c;color:#ffe0bc;}
-html[data-theme="dark"] .difficulty.medium{background:#454332;color:#fff0c3;}
-html[data-theme="dark"] .chip.active{background:#d7f366;color:#151515;}
-html[data-theme="dark"] .notice,html[data-theme="dark"] .flow-study-note{
+:root[data-theme="dark"] .difficulty.hard{background:#553c2c;color:#ffe0bc;}
+:root[data-theme="dark"] .difficulty.medium{background:#454332;color:#fff0c3;}
+:root[data-theme="dark"] .chip.active{background:#d7f366;color:#151515;}
+:root[data-theme="dark"] .notice,:root[data-theme="dark"] .flow-study-note{
  background:#30596c;color:#fff;border-color:#f5f0df;
 }
-html[data-theme="dark"] .answer-bar,html[data-theme="dark"] .answer-reveal,
-html[data-theme="dark"] .test-explain,html[data-theme="dark"] .lab-output{
+:root[data-theme="dark"] .answer-bar,:root[data-theme="dark"] .answer-reveal,
+:root[data-theme="dark"] .test-explain,:root[data-theme="dark"] .lab-output{
  background:#2a5343;color:#f5f0df;border-color:#f5f0df;
 }
-html[data-theme="dark"] .answer-reveal b,html[data-theme="dark"] .answer-reveal p,
-html[data-theme="dark"] .lab-output strong,html[data-theme="dark"] .lab-output em {color:#f5f0df}
-html[data-theme="dark"] .exam-tip{background:#764a33;color:#ffe8ce;border-color:#f5f0df;box-shadow:5px 5px 0 #797aa3}
-html[data-theme="dark"] .exam-tip strong,html[data-theme="dark"] .exam-tip p{color:#ffe8ce}
-html[data-theme="dark"] .formula-list .formula-chip{background:#463e68;color:#f5f0df;border-color:#f5f0df}
-html[data-theme="dark"] .choice{background:#272f39;color:#f5f0df;border-color:#f5f0df}
-html[data-theme="dark"] .choice:has(input:checked){background:#30596c}
-html[data-theme="dark"] .choice.right,html[data-theme="dark"] .flow-option.is-correct,
-html[data-theme="dark"] .flow-feedback.correct{background:#225940;color:#fff;border-color:#f5f0df}
-html[data-theme="dark"] .choice.wrong,html[data-theme="dark"] .flow-option.is-incorrect,
-html[data-theme="dark"] .flow-feedback.incorrect{background:#793e4d;color:#fff;border-color:#f5f0df}
-html[data-theme="dark"] .flow-feedback.correct strong,html[data-theme="dark"] .flow-feedback.correct p,
-html[data-theme="dark"] .flow-feedback.incorrect strong,html[data-theme="dark"] .flow-feedback.incorrect p{color:#fff}
-html[data-theme="dark"] .flow-steps>div {background:#2d303c;color:#f5f0df;border-color:#f5f0df;box-shadow:4px 4px 0 #797aa3}
-html[data-theme="dark"] .flow-steps small,html[data-theme="dark"] .flow-steps strong,html[data-theme="dark"] .flow-steps span{color:#f5f0df}
-html[data-theme="dark"] .flow-stage-tabs button{background:#2c3540;color:#f5f0df;border-color:#f5f0df}
-html[data-theme="dark"] .flow-stage-tabs button.active{background:#7462b4;color:#fff}
-html[data-theme="dark"] .flow-option{background:#26343d;color:#f5f0df;border-color:#f5f0df}
-html[data-theme="dark"] .flow-option:hover:not(:disabled){background:#30596c}
-html[data-theme="dark"] .flow-example{background:#26493e;color:#f5f0df;border-color:#f5f0df}
-html[data-theme="dark"] .flow-example strong,html[data-theme="dark"] .flow-example p{color:#f5f0df}
-html[data-theme="dark"] .flow-method{background:#665338;border-color:#f5f0df}
-html[data-theme="dark"] .flow-method strong,html[data-theme="dark"] .flow-method p{color:#fff3d4}
-html[data-theme="dark"] .flow-intuition,html[data-theme="dark"] .flow-question{color:#f5f0df}
-html[data-theme="dark"] .flow-review-reason{background:#30596c;color:#f5f0df;border-color:#f5f0df;box-shadow:4px 4px 0 #797aa3}
-html[data-theme="dark"] .flow-review-reason strong,html[data-theme="dark"] .flow-review-reason p{color:#f5f0df}
-html[data-theme="dark"] .flow-hint{background:#594c33;color:#fff0d1;border-color:#f5f0df}
-html[data-theme="dark"] .flow-hint strong,html[data-theme="dark"] .flow-hint p{color:#fff0d1}
-html[data-theme="dark"] .flow-stats .panel{background:#303b47;border-color:#f5f0df;color:#f5f0df}
-html[data-theme="dark"] .flow-stats .panel strong,html[data-theme="dark"] .flow-stats .panel small{color:#f5f0df}
-html[data-theme="dark"] .flow-insight-row small,html[data-theme="dark"] .flow-insight-row>span{color:#e2e9df}
-html[data-theme="dark"] .test-choice.active{background:#d7f366;color:#151515}
-html[data-theme="dark"] .test-choice.active strong,html[data-theme="dark"] .test-choice.active small{color:#151515}
-html[data-theme="dark"] .test-choice{background:#2c313b;color:#f5f0df;border-color:#f5f0df}
-html[data-theme="dark"] .test-choice.active{background:#d7f366;border-color:#f5f0df;color:#151515}
-html[data-theme="dark"] .score{background:#6a5eaa;color:#fff;border-color:#f5f0df}
-html[data-theme="dark"] .score span{color:#fff}
-html[data-theme="dark"] .theme-toggle,html[data-theme="dark"] .menu-toggle {
+:root[data-theme="dark"] .answer-reveal b,:root[data-theme="dark"] .answer-reveal p,
+:root[data-theme="dark"] .lab-output strong,:root[data-theme="dark"] .lab-output em {color:#f5f0df}
+:root[data-theme="dark"] .exam-tip{background:#764a33;color:#ffe8ce;border-color:#f5f0df;box-shadow:5px 5px 0 #797aa3}
+:root[data-theme="dark"] .exam-tip strong,:root[data-theme="dark"] .exam-tip p{color:#ffe8ce}
+:root[data-theme="dark"] .formula-list .formula-chip{background:#463e68;color:#f5f0df;border-color:#f5f0df}
+:root[data-theme="dark"] .choice{background:#272f39;color:#f5f0df;border-color:#f5f0df}
+:root[data-theme="dark"] .choice:has(input:checked){background:#30596c}
+:root[data-theme="dark"] .choice.right,:root[data-theme="dark"] .flow-option.is-correct,
+:root[data-theme="dark"] .flow-feedback.correct{background:#225940;color:#fff;border-color:#f5f0df}
+:root[data-theme="dark"] .choice.wrong,:root[data-theme="dark"] .flow-option.is-incorrect,
+:root[data-theme="dark"] .flow-feedback.incorrect{background:#793e4d;color:#fff;border-color:#f5f0df}
+:root[data-theme="dark"] .flow-feedback.correct strong,:root[data-theme="dark"] .flow-feedback.correct p,
+:root[data-theme="dark"] .flow-feedback.incorrect strong,:root[data-theme="dark"] .flow-feedback.incorrect p{color:#fff}
+:root[data-theme="dark"] .flow-steps>div {background:#2d303c;color:#f5f0df;border-color:#f5f0df;box-shadow:4px 4px 0 #797aa3}
+:root[data-theme="dark"] .flow-steps small,:root[data-theme="dark"] .flow-steps strong,:root[data-theme="dark"] .flow-steps span{color:#f5f0df}
+:root[data-theme="dark"] .flow-stage-tabs button{background:#2c3540;color:#f5f0df;border-color:#f5f0df}
+:root[data-theme="dark"] .flow-stage-tabs button.active{background:#7462b4;color:#fff}
+:root[data-theme="dark"] .flow-option{background:#26343d;color:#f5f0df;border-color:#f5f0df}
+:root[data-theme="dark"] .flow-option:hover:not(:disabled){background:#30596c}
+:root[data-theme="dark"] .flow-example{background:#26493e;color:#f5f0df;border-color:#f5f0df}
+:root[data-theme="dark"] .flow-example strong,:root[data-theme="dark"] .flow-example p{color:#f5f0df}
+:root[data-theme="dark"] .flow-method{background:#665338;border-color:#f5f0df}
+:root[data-theme="dark"] .flow-method strong,:root[data-theme="dark"] .flow-method p{color:#fff3d4}
+:root[data-theme="dark"] .flow-intuition,:root[data-theme="dark"] .flow-question{color:#f5f0df}
+:root[data-theme="dark"] .flow-review-reason{background:#30596c;color:#f5f0df;border-color:#f5f0df;box-shadow:4px 4px 0 #797aa3}
+:root[data-theme="dark"] .flow-review-reason strong,:root[data-theme="dark"] .flow-review-reason p{color:#f5f0df}
+:root[data-theme="dark"] .flow-hint{background:#594c33;color:#fff0d1;border-color:#f5f0df}
+:root[data-theme="dark"] .flow-hint strong,:root[data-theme="dark"] .flow-hint p{color:#fff0d1}
+:root[data-theme="dark"] .flow-stats .panel{background:#303b47;border-color:#f5f0df;color:#f5f0df}
+:root[data-theme="dark"] .flow-stats .panel strong,:root[data-theme="dark"] .flow-stats .panel small{color:#f5f0df}
+:root[data-theme="dark"] .flow-insight-row small,:root[data-theme="dark"] .flow-insight-row>span{color:#e2e9df}
+:root[data-theme="dark"] .test-choice.active{background:#d7f366;color:#151515}
+:root[data-theme="dark"] .test-choice.active strong,:root[data-theme="dark"] .test-choice.active small{color:#151515}
+:root[data-theme="dark"] .test-choice{background:#2c313b;color:#f5f0df;border-color:#f5f0df}
+:root[data-theme="dark"] .test-choice.active{background:#d7f366;border-color:#f5f0df;color:#151515}
+:root[data-theme="dark"] .score{background:#6a5eaa;color:#fff;border-color:#f5f0df}
+:root[data-theme="dark"] .score span{color:#fff}
+:root[data-theme="dark"] .theme-toggle,:root[data-theme="dark"] .menu-toggle {
  background:#323a44;color:#f5f0df;border-color:#f5f0df;box-shadow:4px 4px 0 #797aa3;
 }
-html[data-theme="dark"] .theme-toggle:hover,html[data-theme="dark"] .menu-toggle:hover{
+:root[data-theme="dark"] .theme-toggle:hover,:root[data-theme="dark"] .menu-toggle:hover{
  background:#d7f366;color:#151515;
 }
-html[data-theme="dark"] .filters select,html[data-theme="dark"] .field input,
-html[data-theme="dark"] .search-input,html[data-theme="dark"] input,html[data-theme="dark"] select{
+:root[data-theme="dark"] .filters select,:root[data-theme="dark"] .field input,
+:root[data-theme="dark"] .search-input,:root[data-theme="dark"] input,:root[data-theme="dark"] select{
  background:#242832;color:#f5f0df;border-color:#f5f0df;
 }
-html[data-theme="dark"] .sticky-actions{background:#242832;color:#f5f0df;border-color:#f5f0df;box-shadow:6px 6px 0 #797aa3}
-html[data-theme="dark"] .chapter-card .progress-track,html[data-theme="dark"] .flow-chapter .flow-meter{
+:root[data-theme="dark"] .sticky-actions{background:#242832;color:#f5f0df;border-color:#f5f0df;box-shadow:6px 6px 0 #797aa3}
+:root[data-theme="dark"] .chapter-card .progress-track,:root[data-theme="dark"] .flow-chapter .flow-meter{
  background:#3e444f;border-color:#f5f0df;
 }
-html[data-theme="dark"] .chapter-card .progress-track i,html[data-theme="dark"] .flow-chapter .flow-meter span{background:#d7f366}
-html[data-theme="dark"] .chapter-card:nth-child(4n+1),html[data-theme="dark"] .flow-chapter:nth-child(4n+1){background:#24435b}
-html[data-theme="dark"] .chapter-card:nth-child(4n+2),html[data-theme="dark"] .flow-chapter:nth-child(4n+2){background:#275344}
-html[data-theme="dark"] .chapter-card:nth-child(4n+3),html[data-theme="dark"] .flow-chapter:nth-child(4n+3){background:#6e3b59}
-html[data-theme="dark"] .chapter-card:nth-child(4n+4),html[data-theme="dark"] .flow-chapter:nth-child(4n+4){background:#514473}
+:root[data-theme="dark"] .chapter-card .progress-track i,:root[data-theme="dark"] .flow-chapter .flow-meter span{background:#d7f366}
+:root[data-theme="dark"] .chapter-card:nth-child(4n+1),:root[data-theme="dark"] .flow-chapter:nth-child(4n+1){background:#24435b}
+:root[data-theme="dark"] .chapter-card:nth-child(4n+2),:root[data-theme="dark"] .flow-chapter:nth-child(4n+2){background:#275344}
+:root[data-theme="dark"] .chapter-card:nth-child(4n+3),:root[data-theme="dark"] .flow-chapter:nth-child(4n+3){background:#6e3b59}
+:root[data-theme="dark"] .chapter-card:nth-child(4n+4),:root[data-theme="dark"] .flow-chapter:nth-child(4n+4){background:#514473}
 
 /* A deliberate responsive rhythm that avoids clipped offset shadows */
 @media(max-width:1100px){
