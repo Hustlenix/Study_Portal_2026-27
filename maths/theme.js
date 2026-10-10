@@ -13,7 +13,7 @@
     root.setAttribute('data-theme',theme);
     root.style.colorScheme=theme;
     var themeColor=document.querySelector('meta[name="theme-color"]');
-    if(themeColor)themeColor.setAttribute('content',theme==='dark'?'#0b1418':'#142b29');
+    if(themeColor)themeColor.setAttribute('content',theme==='dark'?'#13151c':'#f5f2e9');
     var control=document.getElementById('theme-toggle');
     if(control){
       control.setAttribute('aria-label',theme==='dark'?'Switch to light mode':'Switch to dark mode');
